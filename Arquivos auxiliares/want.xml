@@ -1,0 +1,2006 @@
+<project name="agribusiness" basedir="." default="build_all">
+	<tstamp>
+		<format property="when" pattern="yyyy,mm,dd,HH,nn,ss" />
+		<format property="date.tag" pattern="ddmmyyyy" />
+	</tstamp>
+  <!-- Destinos -->
+  <property name="output" value="%{OUTPUT}"/>
+  <property name="data_hora" value="?{wantconf.ini:date:datahora}" />
+  <property name="data_hora_aux" value="?{wantconf.ini:date:datahoraaux}" />
+  <property name="data_zip" value="?{wantconf.ini:date:datazip}" />
+  <property name="bin" value="?{wantconf.ini:dir:bin}" unless="output"/>
+  <property name="bin" value="@{${output}}" if="output"/>
+  <property name="zipdir" value="?{wantconf.ini:dir:zip}" />
+	<property name="teste" value="?{wantconf.ini:dir:teste}" />
+	<property name="HEAD" value="?{wantconf.ini:dir:HEAD}" />
+	<!-- Info -->
+	<property name="versao" value="?{wantconf.ini:info:versao}" />
+	<regexp property="comma.versaoaux" pattern="[a-zA-Z]" subst="" text="${versao}" />
+    <regexp property="comma.versao" pattern="\." subst="," text="${comma.versaoaux}" />
+	<property name="branch" value="?{wantconf.ini:info:branch}" />
+	<!-- parametros da compactação -->
+	<property name="param7z" value="a -t7z -sfx7z.sfx -m0=lzma" />
+	<!-- parametros para alteração da data dos executáveis-->
+	<property name="paramfde_date" value="${data_hora}" />
+	<property name="paramfde_dir" value="${bin}" />
+	<property name="paramfde_date_aux" value="${data_hora_aux}" />
+	<!-- parametros do FTP -->
+	<property name="sitehost" value="?{wantconf.ini:site:host}" />
+	<property name="siteuser" value="?{wantconf.ini:site:user}" />
+	<property name="sitepass" value="?{wantconf.ini:site:pass}" />
+	<property name="ftphost" value="?{wantconf.ini:ftp:host}" />
+	<property name="ftpuser" value="?{wantconf.ini:ftp:user}" />
+	<property name="ftppass" value="?{wantconf.ini:ftp:pass}" />
+	<property name="ftppasta" value="?{wantconf.ini:ftp:pasta}" />	
+	<!-- Nome dos arquivos zipados -->
+	<property name="nzipconv" value="${zipdir}/conversor${date.tag}.exe" />
+	<property name="nzipconf" value="${zipdir}/confrevenda${date.tag}.exe" />
+	<property name="nziplogin" value="${zipdir}/login${date.tag}.exe" />
+	<property name="nziploginmod" value="${zipdir}/login_modular${date.tag}.exe" />
+	<property name="nzipadap" value="${zipdir}/sagradap${date.tag}.exe" />
+	<property name="nzipcest" value="${zipdir}/sagrcest${date.tag}.exe" />
+	<property name="nzipcont" value="${zipdir}/sagrcont${date.tag}.exe" />
+	<property name="nzipefis" value="${zipdir}/sagrefis${date.tag}.exe" />
+	<property name="nzipfina" value="${zipdir}/sagrfina${date.tag}.exe" />
+	<property name="nzippatr" value="${zipdir}/sagrpatr${date.tag}.exe" />
+	<property name="nziprpar" value="${zipdir}/sagrrpar${date.tag}.exe" />
+	<property name="nziptran" value="${zipdir}/sagrtran${date.tag}.exe" />
+	<property name="nzipetl" value="${zipdir}/sagretl${date.tag}.exe" />
+	<property name="nziprea" value="${zipdir}/sagrrea${date.tag}.exe" />
+	<property name="nzipconfpaf" value="${zipdir}/confpaf${date.tag}.exe" />
+	<property name="nzipvfat" value="${zipdir}/sagrvfat${date.tag}.exe" />
+	<property name="nzipges" value="${zipdir}/sagrges${date.tag}.exe" />
+	<property name="nziptrsp" value="${zipdir}/sagrtrsp${date.tag}.exe" />
+	<property name="nziparmz" value="${zipdir}/sagrarmz${date.tag}.exe" />
+	<property name="nzipinfp" value="${zipdir}/sagrinfp${date.tag}.exe" />
+	<property name="nzipsisfpg" value="${zipdir}/sisfpg${date.tag}.exe" />
+	<property name="nzipctr" value="${zipdir}/sagrctr${date.tag}.exe" />
+	<property name="nzipback" value="${zipdir}/sagrback${date.tag}.exe" />
+	<property name="nzipofic" value="${zipdir}/sagrofic${date.tag}.exe" />
+	<property name="nzipapont" value="${zipdir}/sagrapont${date.tag}.exe" />
+	<property name="nzipexpo" value="${zipdir}/sagrexpo${date.tag}.exe" />
+	<property name="nzipplan" value="${zipdir}/sagrplan${date.tag}.exe" />
+	<property name="nzipvecf" value="${zipdir}/sagrvecf${date.tag}.exe" />
+	<property name="nzippaf" value="${zipdir}/sagrpaf${date.tag}.exe" />
+	<property name="nzippaf_new" value="${zipdir}/sagrpaf_new${date.tag}.exe" />
+	<property name="nzippto" value="${zipdir}/sagrpto${date.tag}.exe" />	
+	<property name="nzipsyn" value="${zipdir}/sagrsyn${date.tag}.exe" />
+	<property name="nzipsyn_new" value="${zipdir}/sagrsyn_new${date.tag}.exe" />
+	<property name="nzipfrot" value="${zipdir}/sagrfrot${date.tag}.exe" />
+	<property name="nzipubs" value="${zipdir}/sagrubs${date.tag}.exe" />
+	<property name="nzipcpto" value="${zipdir}/sagrcpto${date.tag}.exe" />
+	<property name="nziprepo" value="${zipdir}/sagrrepo${date.tag}.exe" />
+	<property name="nzipoms" value="${zipdir}/sagroms${date.tag}.exe" />
+	<property name="nzippcp" value="${zipdir}/sagrpcp${date.tag}.exe" />
+	<property name="nzipcrm" value="${zipdir}/sagrcrm${date.tag}.exe" />
+	<property name="nziplog" value="${zipdir}/sagrlog${date.tag}.exe" />
+	<property name="nzippalm" value="${zipdir}/sagrpalm${date.tag}.exe" />
+	<property name="nziptroca" value="${zipdir}/sagrtroca${date.tag}.exe" />
+	<property name="nzipbasf" value="${zipdir}/sagrbasf${date.tag}.exe" />
+	<!-- Incluindo caminhos de componentes definidos acima -->
+	<patternset id="sources">
+		<!-- Terceiros -->
+		<include name="${delphi_imports}" />
+		<include name="${boleto}" />
+		<include name="${except}" />
+		<include name="${extradev}" />
+		<include name="${fxcube}" />
+		<include name="${rdprint}" />
+		<include name="${synedit}" />
+		<include name="${repbuilders}" />
+		<include name="${repbuilderl}" />
+		<include name="${tponguard}" />
+		<include name="${jvcls}" />
+		<include name="${jvclc}" />
+		<include name="${jcl}" />
+		<include name="${oqb}" />
+		<include name="${oqb}/**" />
+		<include name="${apollo}" />
+		<include name="${zeos}" />
+		<!-- Siagri -->
+		<include name="${componenrw}" />
+	</patternset>
+	<target name="prepare">
+		<mkdir dir="${bin}" />
+		<mkdir dir="${zipdir}" />
+		<property name="final" value="%{final}" />
+		<property name="noproteq" value="%{noproteq}" />
+		<property name="nousers" value="%{nousers}" />
+  </target>
+  <target name="prepare_dlls">
+    <exec executable="7z" basedir="Login">
+      <arg value="-y e Dlls.7z"/>
+    </exec>
+  </target>
+	<target name="clean">
+		<delete dir="${basedir}" basedir="${basedir}">
+			<include name="*.dcu" />
+			<include name="**/*.dcu" />
+		</delete>
+	</target>
+	<target name="clean_files">
+		<delete dir="${bin}" basedir="${bin}">
+			<include name="*sagr*.exe" />
+			<include name="*sagr*.map" />
+			<include name="*login*.exe" />
+			<include name="*login*.map" />
+			<include name="*bywant*.exe" />			
+		</delete>
+		<delete dir="${zipdir}" basedir="${zipdir}">
+			<include name="*.*" />
+		</delete>		
+	</target>
+	<target name="clean_all">
+		<delete dir="${bin}" basedir="${bin}">
+			<include name="*.exe" />
+			<include name="*.map" />
+		</delete>
+		<delete dir="${zipdir}" basedir="${zipdir}">
+			<include name="*.exe" />
+		</delete>
+		<delete dir="${basedir}" basedir="${basedir}">
+			<include name="*.dcu" />
+			<include name="**/*.dcu" />
+		</delete>
+		<delete dir="@{${HEAD}/Componentes}" basedir="@{${HEAD}/Componentes">
+			<include name="*.dcu" />
+			<include name="**/*.dcu" />
+		</delete>
+	</target>
+	<!-- Desconecta DPrincipal da base de dados -->
+	<target name="closedb">
+		<edit file="${basedir}/SAgrTran/Dprincipal.dfm">
+			<search pattern="Connected = True">
+				<delete />
+			</search>
+			<write all="True" file="${basedir}/SAgrTran/Dprincipal.dfm" />
+		</edit>
+		<edit file="${basedir}/SAgrTroca/Dprincipal.dfm">
+			<search pattern="Connected = True">
+				<delete />
+			</search>
+			<write all="True" file="${basedir}/SAgrTroca/Dprincipal.dfm" />
+		</edit>		
+		<edit file="${basedir}/SAgrAdap/Dprincipal.dfm">
+			<search pattern="Connected = True">
+				<delete />
+			</search>
+			<write file="${basedir}/SAgrAdap/Dprincipal.dfm" />
+		</edit>
+	</target>
+	<target name="retirafinal">
+		<edit file="${basedir}/geral/defines.inc">
+			<search pattern="{$DEFINE FINAL}">
+				<delete />
+			</search>
+			<write file="${basedir}/geral/defines.inc" />
+		</edit>
+	</target>
+	<!-- Login -->
+	<target name="login" depends="prepare,prepare_dlls,closedb,reslogin">
+		<dcc dversion="BDS\4" basedir="${basedir}/login" source="login.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/login" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\login.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Login Modular -->
+	<target name="login_modular" depends="prepare,prepare_dlls,closedb,reslogin">
+		<dcc dversion="BDS\4" basedir="${basedir}/login" source="login.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<define name="LOGINMOD" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/login" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\login.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Integração Folha de Pagamento -->
+	<target name="sagrinfp" depends="prepare,closedb,resinfp">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrinfp" source="sagrinfp.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="EXPORTA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrinfp" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrinfp.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Folha de Pagamento -->
+	<target name="sagrsisfpg" depends="prepare,closedb,ressisfpg">
+		<dcc dversion="Delphi\7" basedir="${basedir}/folha" source="sisfpg.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="EXPORTA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/folha" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sisfpg.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>	
+	<!-- ConfRevenda -->
+	<target name="confrevenda" depends="prepare,closedb">
+		<dcc dversion="BDS\4" basedir="${basedir}/cadcfo" source="confrevenda.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/cadcfo" />
+			</resourcepath>
+		</dcc>
+	</target>
+	<!-- Conversor -->
+	<target name="conversor" depends="prepare,closedb">
+		<dcc dversion="BDS\4" basedir="${basedir}/conversor" source="conversor.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<unitpath refid="sources" />
+			<includepath refid="sources" />
+			<resourcepath>
+				<include name="${basedir}/conversor" />
+			</resourcepath>
+		</dcc>
+	</target>
+	<!-- PDV -->
+	<target name="sagrvecf" depends="prepare,closedb,retirafinal, resvecf">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrvecf" source="sagrvecf.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="TEF" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrvecf" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrvecf.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- PAF-ECF-->
+	<target name="sagrpaf" depends="prepare,closedb,retirafinal, respaf">
+		<dcc dversion="BDS\4" basedir="${basedir}/paf/revendawindows/sagrvecf" source="sagrvecf.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="TEF" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/paf/revendawindows/sagrvecf" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrvecf.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- PAF-ECF_NEW-->
+	<target name="sagrpaf_new" depends="prepare,closedb,retirafinal, respaf_new">
+		<dcc dversion="BDS\4" basedir="${basedir}/SAgrPAF" source="sagrvecf.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="PAF" />
+			<define name="TEF" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/SAgrPAF" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrvecf.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Focalização Syngenta -->
+	<target name="sagrsyn" depends="prepare,closedb,retirafinal, ressyn">
+		<dcc dversion="BDS\4" basedir="${basedir}/syngenta" source="sagrsyn.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="SYNGENTA" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrsyn" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrsyn.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Focalização Syngenta NEW -->
+	<target name="sagrsyn_new" depends="prepare,closedb,retirafinal, ressyn_new">
+		<dcc dversion="BDS\4" basedir="${basedir}/syngentaii" source="sagrsyn.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="SYNGENTA" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrsynii" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrsyn.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Exportação Site -->
+	<target name="sagrexpo" depends="prepare,closedb,retirafinal,resexpo">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrexpo" source="sagrexpo.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="EXPORTA" />
+			<define name="NAOUSAOPCOES" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrexpo" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrexpo.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Backup -->
+	<target name="sagrback" depends="prepare,closedb,retirafinal, resback">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrback" source="sagrback.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="BACKUP" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrback" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrback.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Ponto Eletrônico -->
+	<target name="sagrpto" depends="prepare,closedb,retirafinal, respto">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrpto" source="sagrpto.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrpto" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrpto.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Planejamento -->
+	<target name="sagrplan" depends="prepare,closedb,retirafinal, resplan">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrplan" source="sagrplan.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrplan" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrplan.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Armazéns Gerais -->
+	<target name="sagrarmz" depends="prepare,closedb,retirafinal, resarmz">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrarmz" source="sagrarmz.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrarmz" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrarmz.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Transportadora -->
+	<target name="sagrtrsp" depends="prepare,closedb,retirafinal, restrsp">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrtrsp" source="sagrtrsp.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<uselibrarypath value="true" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<resourcepath>
+				<include name="${basedir}/sagrtrsp" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrtrsp.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Contratos -->
+	<target name="sagrctr" depends="prepare,closedb,retirafinal,resctr">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrctr" source="sagrctr.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrctr" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrctr.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Central de Relacionamentos -->
+	<target name="sagrrpar" depends="prepare,closedb,retirafinal, resrpar">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrrpar" source="sagrrpar.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrrpar" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrrpar.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Patrimônio -->
+	<target name="sagrpatr" depends="prepare,closedb,retirafinal, respatr">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrpatr" source="sagrpatr.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrpatr" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrpatr.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Contabilidade -->
+	<target name="sagrcont" depends="prepare,closedb,retirafinal, rescont">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrcont" source="sagrcont.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrcont" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrcont.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Escrita Fiscal -->
+	<target name="sagrefis" depends="prepare,closedb,retirafinal,resefis">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrefis" source="sagrefis.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrefis" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrefis.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>	
+	<!-- Gestores -->
+	<target name="sagrges" depends="prepare,closedb,retirafinal, resges">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrges" source="sagrges.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrges" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrges.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Financeiro -->
+	<target name="sagrfina" depends="prepare,closedb,retirafinal, resfina">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrfina" source="sagrfina.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrfina" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrfina.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Vendas e Faturamento -->
+	<target name="sagrvfat" depends="prepare,prepare_dlls,closedb,retirafinal, resvfat">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrvfat" source="sagrvfat.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrvfat" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrvfat.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Compras e Estoque -->
+	<target name="sagrcest" depends="prepare,closedb,retirafinal, rescest">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrcest" source="sagrcest.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrcest" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrcest.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Transacionador -->
+	<target name="sagrtran" depends="prepare,closedb,retirafinal, restran">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrtran" source="sagrtran.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrtran" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrtran.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- ETL -->
+	<target name="sagretl" depends="prepare,retirafinal, resetl">
+		<dcc dversion="BDS\4" basedir="${basedir}/utils/siagrietl" source="siagrietl.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="CONFREVENDA" />
+			<define name="NAOUSAOPCOES" />
+			<define name="UTILS" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/utils/siagrietl" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\siagrietl.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- REA -->
+	<target name="sagrrea" depends="prepare,retirafinal, resrea">
+		<dcc dversion="BDS\4" basedir="${basedir}/utils/siagrirea" source="siagrirea.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="CONFREVENDA" />
+			<define name="NAOUSAOPCOES" />
+			<define name="UTILS" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/utils/siagrirea" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\siagrirea.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- CONFPAF -->
+	<target name="sagrconfpaf" depends="prepare,retirafinal, resconfpaf">
+		<dcc dversion="BDS\4" basedir="${basedir}/utils/ConfPAF" source="ConfPAF.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="CONFPAF" />			
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/utils/ConfPAF" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\ConfPAF.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Oficina -->
+	<target name="sagrofic" depends="prepare,closedb,retirafinal, resofic">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrofic" source="sagrofic.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrofic" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrofic.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Apontamento -->
+	<target name="sagrapont" depends="prepare,closedb,retirafinal, resapont">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrofic/sagrapont" source="sagrapont.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrofic/sagrapont" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrapont.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- UBS -->
+	<target name="sagrubs" depends="prepare,closedb,retirafinal, resubs">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrubs" source="sagrubs.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="UBS"/>
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrubs" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrubs.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+    <!-- Frota -->
+	<target name="sagrfrot" depends="prepare,closedb,retirafinal, resfrot">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrfrot" source="sagrfrot.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrfrot" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrfrot.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Controle de Ponto -->
+	<target name="sagrcpto" depends="prepare,closedb,retirafinal, rescpto">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrcpto" source="sagrcpto.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrcpto" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrcpto.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Report -->
+	<target name="sagrrepo" depends="prepare,closedb,retirafinal,resrepo">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrrepo" source="sagrrepo.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<define name="CONFREVENDA" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+      <!--<usepackage name="TeeUI"/>-->
+			<resourcepath>
+				<include name="${basedir}/sagrrepo" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrrepo.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- OMS -->
+	<target name="sagroms" depends="prepare,closedb,retirafinal, resoms">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagroms" source="sagroms.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagroms" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagroms.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- PCP -->
+	<target name="sagrpcp" depends="prepare,closedb,retirafinal, respcp">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrpcp" source="sagrpcp.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrpcp" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrpcp.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- CRM -->
+	<target name="sagrcrm" depends="prepare,closedb,retirafinal, rescrm">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrcrm" source="sagrcrm.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrcrm" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrcrm.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- PALM-->
+	<target name="sagrpalm" depends="prepare,closedb,retirafinal, respalm">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrpalm" source="sagrpalm.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrpalm" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrpalm.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Log e Auditoria -->
+	<target name="sagrlog" depends="prepare,closedb,retirafinal, reslog">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrlog" source="sagrlog.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="CONFREVENDA" />
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrlog" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrlog.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Troca -->
+	<target name="sagrtroca" depends="prepare,closedb,retirafinal, restroca">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrtroca" source="sagrtroca.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="TROCAS" />			
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrtroca" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrtroca.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Basf -->
+	<target name="sagrbasf" depends="prepare,closedb,retirafinal, resbasf">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagrbasf" source="sagrbasf.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />
+			<define name="CONFREVENDA" />
+			<define name="FINAL" if="final" />	
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagrbasf" />
+			</resourcepath>
+		</dcc>
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagrbasf.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Adaptador -->
+	<target name="sagradap" depends="prepare, closedb, resadap">
+		<dcc dversion="BDS\4" basedir="${basedir}/sagradap" source="sagradap.dpr">
+			<exeoutput path="${bin}" />
+			<build value="true" />
+			<optimize value="true" />
+			<hints value="false" />
+			<warnings value="false" />
+			<define name="NAOUSAOPCOES" />			
+			<define name="FINAL" if="final" />
+			<define name="NOPROTEQ" if="noproteq" />
+			<define name="NOUSERS" if="nousers" />
+			<define name="FORTEST" if="fortest" />
+			<td32 value="true" if="fortest" />
+			<uselibrarypath value="true" />
+			<resourcepath>
+				<include name="${basedir}/sagradap" />
+			</resourcepath>
+		</dcc>	
+		<echo message="Aguarde, alterando data do(s) arquivo(s)..." />
+		<exec executable="fde" basedir="@{${bin}}">	  
+			<arg value="${paramfde_date}"/>
+			<arg value="${paramfde_dir}\sagradap.exe"/>
+			<arg value="${paramfde_date_aux}"/>
+		</exec>	
+	</target>
+	<!-- Empacotamento em arquivos zip -->
+	<target name="zip_prepare">
+		<mkdir dir="${zipdir}" />
+	</target>
+	<target name="zip_login" depends="login">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziplogin}}" />
+			<arg value="login.*" />
+		</exec>
+	</target>
+	<target name="zip_login_modular" depends="login_modular">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziploginmod}}" />
+			<arg value="login.*" />
+		</exec>
+	</target>
+	<target name="zip_conversor" depends ="conversor">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipconv}}" />
+			<arg value="conversor.*" />
+		</exec>
+	</target>
+	<target name="zip_confrevenda" depends="confrevenda">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipconf}}" />
+			<arg value="confrevenda.*" />
+		</exec>
+	</target>
+	<target name="zip_cest" depends="sagrcest">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipcest}}" />
+			<arg value="sagrcest.*" />
+		</exec>
+	</target>
+	<target name="zip_cont" depends="sagrcont">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipcont}}" />
+			<arg value="sagrcont.*" />
+		</exec>
+	</target>
+	<target name="zip_efis" depends="sagrefis">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipefis}}" />
+			<arg value="sagrefis.*" />
+		</exec>
+	</target>
+	<target name="zip_fina" depends="sagrfina">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipfina}}" />
+			<arg value="sagrfina.*" />
+		</exec>
+	</target>
+	<target name="zip_ges" depends="sagrges">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipges}}" />
+			<arg value="sagrges.*" />
+		</exec>
+	</target>
+	<target name="zip_patr" depends="sagrpatr">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippatr}}" />
+			<arg value="sagrpatr.*" />
+		</exec>
+	</target>
+	<target name="zip_rpar" depends="sagrrpar">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziprpar}}" />
+			<arg value="sagrrpar.*" />
+		</exec>
+	</target>
+	<target name="zip_ofic" depends="sagrofic">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipofic}}" />
+			<arg value="sagrofic.*" />
+		</exec>
+	</target>
+	<target name="zip_apont" depends="sagrapont">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipapont}}" />
+			<arg value="sagrapont.*" />
+		</exec>
+	</target>
+	<target name="zip_frot" depends="sagrfrot">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipfrot}}" />
+			<arg value="sagrfrot.*" />
+		</exec>
+	</target>
+	<target name="zip_tran" depends="sagrtran">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziptran}}" />
+			<arg value="sagrtran.*" />
+		</exec>
+	</target>
+	<target name="zip_etl" depends="sagretl">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipetl}}" />
+			<arg value="siagrietl.*" />
+		</exec>
+	</target>
+	<target name="zip_rea" depends="sagrrea">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziprea}}" />
+			<arg value="siagrirea.*" />
+		</exec>
+	</target>
+	<target name="zip_confpaf" depends="sagrconfpaf">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipconfpaf}}" />
+			<arg value="confpaf.*" />
+		</exec>
+	</target>
+	<target name="zip_troca" depends="sagrtroca">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziptroca}}" />
+			<arg value="sagrtroca.*" />
+		</exec>
+	</target>	
+	<target name="zip_vfat" depends="sagrvfat">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipvfat}}" />
+			<arg value="sagrvfat.*" />
+		</exec>
+	</target>
+	<target name="zip_trsp" depends="sagrtrsp">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziptrsp}}" />
+			<arg value="sagrtrsp.*" />
+		</exec>
+	</target>
+	<target name="zip_armz" depends="sagrarmz">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziparmz}}" />
+			<arg value="sagrarmz.*" />
+			<arg value="@{${basedir}}\geral\lua5.1.dll" />
+		</exec>
+	</target>
+	<target name="zip_back" depends="sagrback">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipback}}" />
+			<arg value="sagrback.*" />
+		</exec>
+	</target>
+	<target name="zip_expo" depends="sagrexpo">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipexpo}}" />
+			<arg value="sagrexpo.*" />
+		</exec>
+	</target>
+	<target name="zip_vecf" depends="sagrvecf">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipvecf}}" />
+			<arg value="sagrvecf.*" />
+		</exec>
+	</target>
+	<target name="zip_paf" depends="sagrpaf">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippaf}}" />
+			<arg value="sagrvecf.*" />
+		</exec>
+	</target>
+	<target name="zip_paf_new" depends="sagrpaf_new">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippaf_new}}" />
+			<arg value="sagrvecf.*" />
+		</exec>
+	</target>
+	<target name="zip_plan" depends="sagrplan">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipplan}}" />
+			<arg value="sagrplan.*" />
+		</exec>
+	</target>
+	<target name="zip_pto" depends="sagrpto">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippto}}" />
+			<arg value="sagrpto.*" />
+		</exec>
+	</target>
+	<target name="zip_infp" depends="sagrinfp">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipinfp}}" />
+			<arg value="sagrinfp.*" />
+		</exec>
+	</target>
+	<target name="zip_sisfpg" depends="sagrsisfpg">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipsisfpg}}" />
+			<arg value="sisfpg.*" />
+		</exec>
+	</target>
+	<target name="zip_syn" depends="sagrsyn">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipsyn}}" />
+			<arg value="@{${basedir}}\Syngenta\ManualNeogrid.pdf" />
+			<arg value="@{${basedir}}\Syngenta\ManualDynamics\Integracao_Dinamics.pdf" />			
+			<arg value="sagrsyn.*" />
+		</exec>
+	</target>
+	<target name="zip_syn_new" depends="sagrsyn_new">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipsyn_new}}" />
+			<arg value="@{${basedir}}\SyngentaII\ManualNeogrid.pdf" />
+			<arg value="@{${basedir}}\SyngentaII\ManualDynamics\Integracao_Dinamics.pdf" />			
+			<arg value="sagrsyn.*" />
+		</exec>
+	</target>
+	<target name="zip_ctr" depends="sagrctr">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipctr}}" />
+			<arg value="sagrctr.*" />
+		</exec>
+	</target>
+	<target name="zip_ubs" depends="sagrubs">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipubs}}" />
+			<arg value="sagrubs.*" />
+		</exec>
+	</target>
+	<target name="zip_cpto" depends="sagrcpto">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipcpto}}" />
+			<arg value="sagrcpto.*" />
+		</exec>
+	</target>
+	<target name="zip_repo" depends="sagrrepo">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziprepo}}" />
+			<arg value="sagrrepo.*" />      
+		</exec>
+	</target>
+	<target name="zip_oms" depends="sagroms">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipoms}}" />
+			<arg value="sagroms.*" />
+		</exec>
+	</target>
+	<target name="zip_pcp" depends="sagrpcp">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippcp}}" />
+			<arg value="sagrpcp.*" />
+		</exec>
+	</target>
+	<target name="zip_crm" depends="sagrcrm">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipcrm}}" />
+			<arg value="sagrcrm.*" />
+		</exec>
+	</target>
+	<target name="zip_palm" depends="sagrpalm">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzippalm}}" />
+			<arg value="sagrpalm.*" />
+		</exec>
+	</target>
+	<target name="zip_log" depends="sagrlog">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziplog}}" />
+			<arg value="sagrlog.*" />
+		</exec>
+	</target>
+	<target name="zip_troca" depends="sagrtroca">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nziptroca}}" />
+			<arg value="sagrtroca.*" />
+		</exec>
+	</target>
+	<target name="zip_basf" depends="sagrbasf">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipbasf}}" />
+			<arg value="sagrbasf.*" />
+		</exec>
+	</target>
+	<target name="zip_adap" depends="sagradap">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="@{${nzipadap}}" />
+			<arg value="sagradap.*" />
+		</exec>
+	</target>
+	<target name="zip_files">
+		<exec basedir="@{${bin}}" executable="7z">
+			<arg value="${param7z}" />
+			<arg value="${branch}_bywant" />
+			<arg value="*.exe" />
+			<arg value="*.map" />
+		</exec>
+	</target>
+	<!-- CVS UPDATE ALL -->
+	<target name="cvsupdate">
+		<cvs command="-q update" />
+	</target>
+	<!-- Compilar mais comuns -->
+	<target name="build_all" depends="clean_all, login, sagrarmz, sagrback, sagrbasf, sagrcest, sagrcont, sagrctr, sagrefis, sagrfina, sagrfrot, sagrges, sagrinfp, sagrlog, sagrofic, sagrapont, sagrpatr, sagrplan, sagrpto, sagrrpar, sagrsyn, sagrsyn_new, sagrtran, sagrtroca, sagrtrsp, sagrubs, sagrvecf, sagrpaf, sagrpaf_new, sagretl, sagrrea, sagrconfpaf, sagrvfat, sagrsisfpg, sagradap" />
+	<target name="copy_teste">
+		<exec executable="xcopy">
+			<arg value="/y /i /d" />
+			<arg value="@{${bin}/*.*}" />
+			<arg value="@{${teste}}" />
+		</exec>
+	</target>
+	<!-- Definicoes do FTP -->
+	<target name="ftp_all" depends="site_prepare, cmd_site, site_enviar, ftp_prepare, cmd_ftp, ftp_enviar" />
+	<target name="ftp" depends="site_prepare, cmd_site, site_enviar, ftp_prepare, cmd_ftp, ftp_enviar" />	
+	<target name="ftp_infp" depends="site_prepare, cmd_infp, ftp_enviar">
+	</target>
+	<target name="ftp_sisfpg" depends="site_prepare, cmd_sisfpg, ftp_enviar">
+	</target>
+	<target name="ftp_efis" depends="site_prepare, cmd_efis, site_enviar">
+	</target>
+	<target name="ftp_vfat" depends="site_prepare, cmd_vfat, site_enviar">
+	</target>
+	<target name="ftp_rpar" depends="site_prepare, cmd_rpar, site_enviar">
+	</target>
+	<target name="ftp_ctr" depends="site_prepare, cmd_ctr, site_enviar">
+	</target>
+	<target name="ftp_adap" depends="site_prepare, cmd_adap, site_enviar">
+	</target>
+	<target name="ftp_cest" depends="site_prepare, cmd_cest, site_enviar">
+	</target>
+	<target name="cmd_site">
+		<edit file="comandossite.txt">
+            <append to="$" text="putfiles @{${zipdir}\*.exe}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_ftp">
+			<edit file="comandosftp.txt">
+				<append to="$" text="putfiles @{${zipdir}\*${date.tag}.exe}" />
+				<write file="comandosftp.txt" />
+			</edit>
+	</target>
+	<target name="cmd_infp">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipinfp}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_sisfpg">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipsisfpg}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_vfat">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipvfat}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_rpar">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nziprpar}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_efis">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipefis}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_ctr">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipctr}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="cmd_adap">
+		<edit file="comandosftp.txt">
+			<append to="$" text="put @{${nzipadap}}" />
+			<write file="comandosftp.txt" />
+		</edit>
+	</target>
+	<target name="cmd_cest">
+		<edit file="comandossite.txt">
+			<append to="$" text="put @{${nzipcest}}" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="site_enviar" depends="site_comum">
+		<exec executable="ftpth">
+			<arg value="comandossite.txt" />
+		</exec>
+	</target>
+	<target name="ftp_enviar" depends="ftp_comum,cmd_ftp">
+		<exec executable="ftpth">
+			<arg value="comandosftp.txt" />
+		</exec>
+	</target>	
+	<target name="site_comum">
+		<edit file="comandossite.txt">
+			<goto line="0" />
+			<insert text="connect ${sitehost} ${siteuser} ${sitepass}" />
+			<insert text="pasv" />
+			<insert text="cd /public_html/down_atualizacoes_naoestavel" />
+			<write file="comandossite.txt" />
+		</edit>
+	</target>
+	<target name="ftp_comum">
+		<edit file="comandosftp.txt">
+			<goto line="0" />
+			<append text="connect ${ftphost} ${ftpuser} ${ftppass}" />
+			<append text="pasv" />
+			<append text="cd ${ftppasta}" />
+			<write file="comandosftp.txt" />
+		</edit>
+	</target>	
+	<target name="site_prepare">
+		<delete dir="." basedir=".">
+			<include name="comandossite.txt" />
+		</delete>
+	</target>
+	<target name="ftp_prepare">
+		<delete dir="." basedir=".">
+			<include name="comandosftp.txt" />
+		</delete>
+	</target>	
+	<!-- Definicoes do rc -->
+	<target name="resadap">
+		<echo message="Compilando SagrAdap.res" />
+		<echo input="${basedir}/sagradap/sagradap.template.rc" file="${basedir}/sagradap/sagradap.rc" />
+    <brcc file="${basedir}/sagradap/sagradap.rc" output="${basedir}/sagradap/sagradap.res" />
+		<brcc file="${basedir}/sagradap/sqls.rc" output="${basedir}/sagradap/sqls.res" />    
+		<brcc file="${basedir}/sagradap/versoes.rc" output="${basedir}/sagradap/versoes.res" />    
+		<brcc file="${basedir}/sagradap/SQLRegSPEDPis.rc" output="${basedir}/sagradap/SQLRegSPEDPis.res" />    
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="reslogin">
+		<echo message="Compilando login.res" />
+		<echo input="${basedir}/login/login.template.rc" file="${basedir}/login/login.rc" />
+		<brcc file="${basedir}/login/login.rc" output="${basedir}/login/login.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resvfat">
+		<echo message="Compilando SagrVfat.res" />
+		<echo input="${basedir}/sagrvfat/sagrvfat.template.rc" file="${basedir}/sagrvfat/sagrvfat.rc" />
+		<brcc file="${basedir}/sagrvfat/sagrvfat.rc" output="${basedir}/sagrvfat/sagrvfat.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="rescest">
+		<echo message="Compilando SagrCest.res" />
+		<echo input="${basedir}/sagrcest/sagrcest.template.rc" file="${basedir}/sagrcest/sagrcest.rc" />
+		<brcc file="${basedir}/sagrcest/sagrcest.rc" output="${basedir}/sagrcest/sagrcest.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resctr">
+		<echo message="Compilando SagrCtr.res" />
+		<echo input="${basedir}/sagrctr/sagrctr.template.rc" file="${basedir}/sagrctr/sagrctr.rc" />
+		<brcc file="${basedir}/sagrctr/sagrctr.rc" output="${basedir}/sagrctr/sagrctr.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resefis">
+		<echo message="Compilando SagrEfis.res" />
+		<echo input="${basedir}/sagrefis/sagrefis.template.rc" file="${basedir}/sagrefis/sagrefis.rc" />
+		<brcc file="${basedir}/sagrefis/sagrefis.rc" output="${basedir}/sagrefis/sagrefis.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resvecf">
+		<echo message="Compilando SagrVEcf.res" />
+		<echo input="${basedir}/sagrvecf/sagrvecf.template.rc" file="${basedir}/sagrvecf/sagrvecf.rc" />
+		<brcc file="${basedir}/sagrvecf/sagrvecf.rc" output="${basedir}/sagrvecf/sagrvecf.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="respaf">
+		<echo message="Compilando SagrVEcf.res" />
+		<echo input="${basedir}/paf/revendawindows/sagrvecf/sagrvecf.template.rc" file="${basedir}/paf/revendawindows/sagrvecf/sagrvecf.rc" />
+		<brcc file="${basedir}/paf/revendawindows/sagrvecf/sagrvecf.rc" output="${basedir}/paf/revendawindows/sagrvecf/sagrvecf.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="respaf_new">
+		<echo message="Compilando SagrVEcf.res" />
+		<echo input="${basedir}/SAgrPAF/SAgrVEcf.template.rc" file="${basedir}/SAgrPAF/sagrvecf.rc" />
+		<brcc file="${basedir}/SAgrPAF/sagrvecf.rc" output="${basedir}/SAgrPAF/sagrvecf.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resback">
+		<echo message="Compilando SagrBack.res" />
+		<echo input="${basedir}/sagrback/sagrback.template.rc" file="${basedir}/sagrback/sagrback.rc" />
+		<brcc file="${basedir}/sagrback/sagrback.rc" output="${basedir}/sagrback/sagrback.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="rescont">
+		<echo message="Compilando SagrCont.res" />
+		<echo input="${basedir}/sagrcont/sagrcont.template.rc" file="${basedir}/sagrcont/sagrcont.rc" />
+		<brcc file="${basedir}/sagrcont/sagrcont.rc" output="${basedir}/sagrcont/sagrcont.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resplan">
+		<echo message="Compilando SagrPlan.res" />
+		<echo input="${basedir}/sagrplan/sagrplan.template.rc" file="${basedir}/sagrplan/sagrplan.rc" />
+		<brcc file="${basedir}/sagrplan/sagrplan.rc" output="${basedir}/sagrplan/sagrplan.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resges">
+		<echo message="Compilando SagrGes.res" />
+		<echo input="${basedir}/sagrges/sagrges.template.rc" file="${basedir}/sagrges/sagrges.rc" />
+		<brcc file="${basedir}/sagrges/sagrges.rc" output="${basedir}/sagrges/sagrges.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="respto">
+		<echo message="Compilando SagrPto.res" />
+		<echo input="${basedir}/sagrpto/sagrpto.template.rc" file="${basedir}/sagrpto/sagrpto.rc" />
+		<brcc file="${basedir}/sagrpto/sagrpto.rc" output="${basedir}/sagrpto/sagrpto.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resfina">
+		<echo message="Compilando SagrFina.res" />
+		<echo input="${basedir}/sagrfina/sagrfina.template.rc" file="${basedir}/sagrfina/sagrfina.rc" />
+		<brcc file="${basedir}/sagrfina/sagrfina.rc" output="${basedir}/sagrfina/sagrfina.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="respatr">
+		<echo message="Compilando SagrPatr.res" />
+		<echo input="${basedir}/sagrpatr/sagrpatr.template.rc" file="${basedir}/sagrpatr/sagrpatr.rc" />
+		<brcc file="${basedir}/sagrpatr/sagrpatr.rc" output="${basedir}/sagrpatr/sagrpatr.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resrpar">
+		<echo message="Compilando SagrRpar.res" />
+		<echo input="${basedir}/sagrrpar/sagrrpar.template.rc" file="${basedir}/sagrrpar/sagrrpar.rc" />
+		<brcc file="${basedir}/sagrrpar/sagrrpar.rc" output="${basedir}/sagrrpar/sagrrpar.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resinfp">
+		<echo message="Compilando SagrInfp.res" />
+		<echo input="${basedir}/sagrinfp/sagrinfp.template.rc" file="${basedir}/sagrinfp/sagrinfp.rc" />
+		<brcc file="${basedir}/sagrinfp/sagrinfp.rc" output="${basedir}/sagrinfp/sagrinfp.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="ressisfpg">
+		<echo message="Compilando sisfpg.res" />
+		<echo input="${basedir}/folha/sisfpg.template.rc" file="${basedir}/folha/sisfpg.rc" />
+		<brcc file="${basedir}/folha/sisfpg.rc" output="${basedir}/folha/sisfpg.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resexpo">
+		<echo message="Compilando SagrExpo.res" />
+		<echo input="${basedir}/sagrexpo/sagrexpo.template.rc" file="${basedir}/sagrexpo/sagrexpo.rc" />
+		<brcc file="${basedir}/sagrexpo/sagrexpo.rc" output="${basedir}/sagrexpo/sagrexpo.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="restran">
+		<echo message="Compilando SagrTran.res" />
+		<echo input="${basedir}/sagrtran/sagrtran.template.rc" file="${basedir}/sagrtran/sagrtran.rc" />
+		<brcc file="${basedir}/sagrtran/sagrtran.rc" output="${basedir}/sagrtran/sagrtran.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resetl">
+		<echo message="Compilando SiagriETL.res" />
+		<echo input="${basedir}/utils/siagrietl/siagrietl.template.rc" file="${basedir}/utils/siagrietl/siagrietl.rc" />
+		<brcc file="${basedir}/utils/siagrietl/siagrietl.rc" output="${basedir}/utils/siagrietl/siagrietl.res" />
+	</target>
+	<target name="resrea">
+		<echo message="Compilando SiagriREA.res" />
+		<echo input="${basedir}/utils/siagrirea/siagrirea.template.rc" file="${basedir}/utils/siagrirea/siagrirea.rc" />
+		<brcc file="${basedir}/utils/siagrirea/siagrirea.rc" output="${basedir}/utils/siagrirea/siagrirea.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resconfpaf">
+		<echo message="Compilando ConfPAF.res" />
+		<echo input="${basedir}/utils/ConfPAF/ConfPAF.template.rc" file="${basedir}/utils/ConfPAF/ConfPAF.rc" />
+		<brcc file="${basedir}/utils/ConfPAF/ConfPAF.rc" output="${basedir}/utils/ConfPAF/ConfPAF.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="restroca">
+		<echo message="Compilando SagrTroca.res" />
+		<echo input="${basedir}/sagrtroca/sagrtroca.template.rc" file="${basedir}/sagrtroca/sagrtroca.rc" />
+		<brcc file="${basedir}/sagrtroca/sagrtroca.rc" output="${basedir}/sagrtroca/sagrtroca.res" />
+	</target>	
+	<!-- Definicoes do rc -->
+	<target name="restrsp">
+		<echo message="Compilando SagrTrsp.res" />
+		<echo input="${basedir}/sagrtrsp/sagrtrsp.template.rc" file="${basedir}/sagrtrsp/sagrtrsp.rc" />
+		<brcc file="${basedir}/sagrtrsp/sagrtrsp.rc" output="${basedir}/sagrtrsp/sagrtrsp.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resarmz">
+		<echo message="Compilando SagrArmz.res" />
+		<echo input="${basedir}/sagrarmz/sagrarmz.template.rc" file="${basedir}/sagrarmz/sagrarmz.rc" />
+		<brcc file="${basedir}/sagrarmz/sagrarmz.rc" output="${basedir}/sagrarmz/sagrarmz.res" />
+	</target>
+	<!-- Definicoes do rc -->
+	<target name="resofic">
+		<echo message="Compilando SagrOfic.res" />
+		<echo input="${basedir}/sagrofic/sagrofic.template.rc" file="${basedir}/sagrofic/sagrofic.rc" />
+		<brcc file="${basedir}/sagrofic/sagrofic.rc" output="${basedir}/sagrofic/sagrofic.res" />
+	</target>
+	<target name="resapont">
+		<echo message="Compilando SagrApont.res" />
+		<echo input="${basedir}/sagrofic/sagrapont/sagrapont.template.rc" file="${basedir}/sagrofic/sagrapont/sagrapont.rc" />
+		<brcc file="${basedir}/sagrofic/sagrapont/sagrapont.rc" output="${basedir}/sagrofic/sagrapont/sagrapont.res" />
+	</target>
+	<target name="ressyn">
+		<echo message="Compilando SagrSyn.res" />
+		<echo input="${basedir}/syngenta/sagrsyn.template.rc" file="${basedir}/syngenta/sagrsyn.rc" />
+		<brcc file="${basedir}/syngenta/sagrsyn.rc" output="${basedir}/syngenta/sagrsyn.res" />
+	</target>
+	<target name="ressyn_new">
+		<echo message="Compilando SagrSynII.res" />
+		<echo input="${basedir}/syngentaII/sagrsyn.template.rc" file="${basedir}/syngentaII/sagrsyn.rc" />
+		<brcc file="${basedir}/syngentaII/sagrsyn.rc" output="${basedir}/syngentaII/sagrsyn.res" />
+	</target>
+	<target name="resubs">
+		<echo message="Compilando SagrUBS.res" />
+		<echo input="${basedir}/sagrubs/sagrubs.template.rc" file="${basedir}/sagrubs/sagrubs.rc" />
+		<brcc file="${basedir}/sagrubs/sagrubs.rc" output="${basedir}/sagrubs/sagrubs.res" />
+	</target>
+	<target name="resfrot">
+		<echo message="Compilando SagrFrot.res" />
+		<echo input="${basedir}/sagrfrot/sagrfrot.template.rc" file="${basedir}/sagrfrot/sagrfrot.rc" />
+		<brcc file="${basedir}/sagrfrot/sagrfrot.rc" output="${basedir}/sagrfrot/sagrfrot.res" />
+	</target>
+	<target name="rescpto">
+		<echo message="Compilando SagrCPto.res" />
+		<echo input="${basedir}/sagrcpto/sagrcpto.template.rc" file="${basedir}/sagrcpto/sagrcpto.rc" />
+		<brcc file="${basedir}/sagrcpto/sagrcpto.rc" output="${basedir}/sagrcpto/sagrcpto.res" />
+	</target>
+	<target name="resrepo">
+		<echo message="Compilando SagrRepo.res" />
+		<echo input="${basedir}/sagrrepo/sagrrepo.template.rc" file="${basedir}/sagrrepo/sagrrepo.rc" />
+		<brcc file="${basedir}/sagrrepo/sagrrepo.rc" output="${basedir}/sagrrepo/sagrrepo.res" />
+	</target>
+	<target name="resoms">
+		<echo message="Compilando SagrOMS.res" />
+		<echo input="${basedir}/sagroms/sagroms.template.rc" file="${basedir}/sagroms/sagroms.rc" />
+		<brcc file="${basedir}/sagroms/sagroms.rc" output="${basedir}/sagroms/sagroms.res" />
+	</target>
+	<target name="respcp">
+		<echo message="Compilando SagrPCP.res" />
+		<echo input="${basedir}/sagrpcp/sagrpcp.template.rc" file="${basedir}/sagrpcp/sagrpcp.rc" />
+		<brcc file="${basedir}/sagrpcp/sagrpcp.rc" output="${basedir}/sagrpcp/sagrpcp.res" />
+	</target>
+	<target name="rescrm">
+		<echo message="Compilando SagrCRM.res" />
+		<echo input="${basedir}/sagrcrm/sagrcrm.template.rc" file="${basedir}/sagrcrm/sagrcrm.rc" />
+		<brcc file="${basedir}/sagrcrm/sagrcrm.rc" output="${basedir}/sagrcrm/sagrcrm.res" />
+	</target>
+	<target name="respalm">
+		<echo message="Compilando SagrPALM.res" />
+		<echo input="${basedir}/sagrpalm/sagrpalm.template.rc" file="${basedir}/sagrpalm/sagrpalm.rc" />
+		<brcc file="${basedir}/sagrpalm/sagrpalm.rc" output="${basedir}/sagrpalm/sagrpalm.res" />
+	</target>
+	<target name="reslog">
+		<echo message="Compilando SagrLOG.res" />
+		<echo input="${basedir}/sagrlog/sagrlog.template.rc" file="${basedir}/sagrlog/sagrlog.rc" />
+		<brcc file="${basedir}/sagrlog/sagrlog.rc" output="${basedir}/sagrlog/sagrlog.res" />
+	</target>
+	<target name="restroca">
+		<echo message="Compilando SagrTROCA.res" />
+		<echo input="${basedir}/sagrtroca/sagrtroca.template.rc" file="${basedir}/sagrtroca/sagrtroca.rc" />
+		<brcc file="${basedir}/sagrtroca/sagrtroca.rc" output="${basedir}/sagrtroca/sagrtroca.res" />
+	</target>
+	<target name="resbasf">
+		<echo message="Compilando SagrBASF.res" />
+		<echo input="${basedir}/sagrbasf/sagrbasf.template.rc" file="${basedir}/sagrbasf/sagrbasf.rc" />
+		<brcc file="${basedir}/sagrbasf/sagrbasf.rc" output="${basedir}/sagrbasf/sagrbasf.res" />
+	</target>
+	<!-- Zipar todos módulos -->
+	<target name="zip_all" depends="build_all, zip_prepare, zip_adap, zip_armz, zip_back, zip_basf, zip_cest, zip_cont, zip_ctr, zip_efis, zip_fina, zip_frot, zip_ges, zip_infp, zip_sisfpg, zip_login, zip_ofic, zip_apont, zip_patr, zip_plan, zip_pto, zip_rpar, zip_syn, zip_syn_new, zip_tran, zip_trsp, zip_ubs, zip_vecf, zip_paf, zip_paf_new, zip_etl, zip_rea, zip_confpaf, zip_vfat, zip_log, zip_troca" />
+	<target name="site" depends="build_all, zip_all, ftp_all" />
+	<target name="ftp" depends="ftp" />	
+</project>

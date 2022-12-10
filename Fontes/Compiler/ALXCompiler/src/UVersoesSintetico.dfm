@@ -7,10 +7,6 @@ inherited frmVersoesSinteticos: TfrmVersoesSinteticos
   ExplicitHeight = 225
   PixelsPerInch = 96
   TextHeight = 13
-  inherited JvEnterAsTab1: TJvEnterAsTab
-    ExplicitWidth = 28
-    ExplicitHeight = 28
-  end
   inherited stbMaster: TAdvOfficeStatusBar
     Top = 182
     Width = 676

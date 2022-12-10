@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, UMasterCad, ActnList, JvComponentBase, JvEnterTab, ImgList,
   AdvOfficeStatusBar, AdvOfficeStatusBarStylers, StdCtrls, Buttons,
-  AdvSmoothPanel, Mask, DBCtrls, DB, JvBaseDlg, JvSelectDirectory, JvExControls;
+  AdvSmoothPanel, Mask, DBCtrls, DB, JvBaseDlg, JvSelectDirectory;
 
 type
   TfrmVersoesSinteticos = class(TfrmMasterCad)

@@ -6,6 +6,10 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
   ExplicitHeight = 337
   PixelsPerInch = 96
   TextHeight = 13
+  inherited JvEnterAsTab1: TJvEnterAsTab
+    ExplicitWidth = 28
+    ExplicitHeight = 28
+  end
   inherited stbMaster: TAdvOfficeStatusBar
     Top = 294
     Width = 623
@@ -55,7 +59,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Alterar a data e a hora dos execut'#225'veis'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'IDEX_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -72,7 +76,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Atualizar o library path do Delphi'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'LIBR_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -89,7 +93,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Alterar a vers'#227'o e os diret'#243'rios de compila'#231#227'o'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'IVER_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -106,7 +110,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Alterar os par'#226'metros de compila'#231#227'o'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'IPAR_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -135,7 +139,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'E&xecutar os m'#243'dulos do diret'#243'rio local'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'EMAC_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -152,7 +156,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = '&Gerar os links para download'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'GLNK_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -169,7 +173,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = '&Enviar os arquivos compactados individualmente para o FTP'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'EFTP_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -186,7 +190,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Copiar os arquivos compilados para o diret'#243'rio local'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'CPYL_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -203,7 +207,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Copiar os arquivos compactados para o diret'#243'rio remoto'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'CPYR_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -220,7 +224,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Enviar o arquivo '#250'nico compactado para o FTP'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'AFTP_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -249,7 +253,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Separadamente'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'EXEC_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -266,7 +270,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
         Alignment = taLeftJustify
         Caption = 'Em um '#250'nico arquivo'
         ReturnIsTab = False
-        Version = '1.0.0.3'
+        Version = '1.0.0.5'
         DataField = 'ALLC_CFG'
         DataSource = dtsParametros
         ValueChecked = 'S'
@@ -287,7 +291,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
       Alignment = taLeftJustify
       Caption = 'Alertar sobre &erros durante compila'#231#227'o'
       ReturnIsTab = False
-      Version = '1.0.0.3'
+      Version = '1.0.0.5'
       DataField = 'ALER_CFG'
       DataSource = dtsParametros
       ValueChecked = 'S'
@@ -307,7 +311,7 @@ inherited frmParametrosSintetico: TfrmParametrosSintetico
       Alignment = taLeftJustify
       Caption = 'Compilar no servidor remoto'
       ReturnIsTab = False
-      Version = '1.0.0.3'
+      Version = '1.0.0.5'
       DataField = 'REQU_CFG'
       DataSource = dtsParametros
       ValueChecked = 'S'

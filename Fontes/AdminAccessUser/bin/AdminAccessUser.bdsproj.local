@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/12/26 00:22:03.742.pas,C:\Users\Alex\Documents\Borland Studio Projects\Unit1.pas=D:\ALXSystem\Fontes\AdminAccessUser\src\UPrincipal.pas</Transaction>
+    <Transaction>2010/12/26 00:22:03.742.dfm,C:\Users\Alex\Documents\Borland Studio Projects\Unit1.dfm=D:\ALXSystem\Fontes\AdminAccessUser\src\UPrincipal.dfm</Transaction>
+    <Transaction>2010/12/26 00:22:24.027.bdsproj,C:\Users\Alex\Documents\Borland Studio Projects\Project1.bdsproj=D:\ALXSystem\Fontes\AdminAccessUser\src\AdminAccessUser.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>

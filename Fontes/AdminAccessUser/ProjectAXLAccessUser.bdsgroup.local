@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/12/26 01:12:58.265.bdsgroup,C:\Users\Alex\Documents\Borland Studio Projects\ProjectGroup1.bdsgroup=D:\ALXSystem\Fontes\AdminAccessUser\ProjectAXLAccessUser.bdsgroup</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="AdminAccessUser.exe"/>
+	</Default.Personality>
+</BorlandProject>

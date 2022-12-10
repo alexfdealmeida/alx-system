@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Time2HELP 1.0; Standard Template">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>TTestCase</TITLE>
+<Style>Body, TD {font-family: "Verdana"; font-size: 10pt};
+PRE {font-size: 10pt; margin-top: 0; margin-bottom: 0}</Style>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<BASEFONT NAME="verdana" Size="2"><Table Border="0" Width="100%" BGColor="#FFFF00"><TR><TD Width="100%"><Font Size="5">TTestCase Object<Br/></Font><Font Size="1"><A HRef="#Methods">Methods</A> </Font></TD></TR></Table>A test case defines the fixture to run multiple tests.<P><B>Unit</B><Br><A HREF="IDH_Unit_TestFramework.htm">TestFramework</A><P><B>Declaration</B><Br><Font Face="Courier New">TTestCase = <B>class</B>(<A HREF="IDH_Class_TAbstractTest.htm">TAbstractTest</A>, <A HREF="IDH_Interface_ITest.htm">ITest</A>)</Font><P><B>Description</B><Br>To define a test case<Br/>1) implement a subclass of TestCase<Br/>2) define instance variables that store the state of the fixture<Br/>3) initialize the fixture state by overriding <EM>setUp</EM><Br/>4) clean-up after a test by overriding <EM>tearDown</EM>.<Br/>Each test runs in its own fixture so there can be no side effects among test runs. Here is an example: <table border="0" bgcolor="#FFFED9"  style="margin-top: 10; margin-bottom: 10;"> <tr> <td><pre>  <B>interface</B>
+
+  <B>type</B>
+    TMathTest = <B>class</B>(TTestCase)
+    <B>private</B>
+      fValue1,
+      fValue2: Float;
+      <B>procedure</B> testAdd;
+    <B>public</B>
+      <B>procedure</B> setUp; <B>override</B>;
+    <B>end</B>;
+
+  <B>implementation</B>
+
+  <B>procedure</B> TMathTest.setUp;
+  <B>begin</B>
+    fValue1 := 2.0;
+    fValue2 := 3.0;
+  <B>end</B>;</pre></td></tr></Table> For each test implement a method which interacts with the fixture. Verify the expected results with tests specified by calling <EM>check</EM> with a boolean and an optional message. <table border="0" bgcolor="#FFFED9"  style="margin-top: 10; margin-bottom: 10;"> <tr> <td><pre>  <B>procedure</B> TMathTest.testAdd;
+  <B>var</B>
+    testResult: Float;
+  <B>begin</B>
+    testResult := fValue1 + fValue2;
+    check(testResult = 5.0);
+  <B>end</B>;</pre></td></tr></Table> see TTestResult see TTestSuite<Br/><Br/><A Name="Methods"><Table Border="0" Width="100%" BGColor="#000000"><TR><TD><Font Color="#FFFFFF"><B>Introduced Methods</B></Font></TD></TR></Table><Font Size="2"><Table BGColor="#EEEEEE" Width="100%" CellSpacing="0"><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_Check.htm">Check </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Checks that a condition is met.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_CheckEquals.htm">CheckEquals </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_CheckNotEquals.htm">CheckNotEquals </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_CheckNotNull.htm">CheckNotNull </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_CheckNull.htm">CheckNull </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_CheckSame.htm">CheckSame </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/public.gif"/></TD><TD><B><A HREF="IDH_TTestCase_Create.htm">Create </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Create an instance of a test fixture to run the named test.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_EqualsErrorMessage.htm">EqualsErrorMessage </A>    </TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_Fail.htm">Fail </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Report a test failure.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_FailEquals.htm">FailEquals </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_FailNotEquals.htm">FailNotEquals </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_FailNotSame.htm">FailNotSame </A>        <Img Src="images/virtual2.gif"/></TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_NotEqualsErrorMessage.htm">NotEqualsErrorMessage </A>    </TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><A HREF="IDH_TTestCase_NotSameErrorMessage.htm">NotSameErrorMessage </A>    </TD></TR><TR><TD><Img Src="images/public.gif"/></TD><TD><A HREF="IDH_TTestCase_Run.htm">Run </A>    </TD></TR><TR><TD><Img Src="images/public.gif"/></TD><TD><B><A HREF="IDH_TTestCase_RunBare.htm">RunBare </A></B>       <Img Src="images/overrid2.gif"/>&nbsp;</TD><TD>Runs the test case and collects the results in TestResult.</TD></TR><TR><TD><Img Src="images/public.gif"/></TD><TD><B><A HREF="IDH_TTestCase_RunTest.htm">RunTest </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Perform the test.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_SetUp.htm">SetUp </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Sets up the fixture, for example, open a network connection.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_StopTests.htm">StopTests </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Stops testing.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_Suite.htm">Suite </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Create a test suite.</TD></TR><TR><TD><Img Src="images/protect.gif"/></TD><TD><B><A HREF="IDH_TTestCase_TearDown.htm">TearDown </A></B>       <Img Src="images/virtual2.gif"/>&nbsp;</TD><TD>Tears down the fixture, for example, close a network connection.</TD></TR></Table></Font><P><HR>
+<TABLE BORDER="0" WIDTH="100%" BGCOLOR="#000000"><TR><TD>
+<Font Color=White><Large>HTML generated by <B>Time2HELP</B></Large></Font>
+</TD></TR></Table>
+<Small><A HREF="http://www.time2help.com">http://www.time2help.com</A></Small></Body></HTML>

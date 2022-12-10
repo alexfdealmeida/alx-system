@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2008/12/20 23:34:48.420.pas,C:\Users\walmart\Documents\RAD Studio\Projects\Unit1.pas=C:\1stONE\Exemplos\Microsoft Agent\src\UPrincipal.pas</Transaction>
+    <Transaction>2008/12/20 23:34:48.420.dfm,C:\Users\walmart\Documents\RAD Studio\Projects\Unit1.dfm=C:\1stONE\Exemplos\Microsoft Agent\src\UPrincipal.dfm</Transaction>
+    <Transaction>2008/12/20 23:35:03.079.dproj,C:\Users\walmart\Documents\RAD Studio\Projects\Project1.dproj=C:\1stONE\Exemplos\Microsoft Agent\bin\MicrosoftAgent.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

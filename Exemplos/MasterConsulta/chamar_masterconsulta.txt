@@ -1,0 +1,126 @@
+FMasterPes := TFMasterPes.Create(Application);
+FMasterPes.DefineParametros(TabelaMaster, edtCodigo, FFuncaoNaTabela, nil, '', '', tsTodos);
+FMasterPes.ShowModal;
+ 
+---
+ 
+procedure TFMaster.HintControl(Sender: TObject);
+var
+   i : Integer;
+   j : Integer;
+   K : TDBRadioGroup;
+   
+begin
+   if Screen.ActiveControl = nil then
+      Exit;
+
+   for i :=  0 to Screen.ActiveCustomForm.ComponentCount -1 do
+   begin
+      if Screen.ActiveCustomForm.Components[i] = nil then
+         Continue;
+
+      if Screen.ActiveCustomForm.Components[i] is TCustomEdit then
+      begin                                                       
+         if (TCustomEdit(Screen.ActiveCustomForm.Components[i]).Focused) and
+            (TCustomEdit(Screen.ActiveCustomForm.Components[i]).TabStop) and
+            (TCustomEdit(Screen.ActiveCustomForm.Components[i]).Enabled) then
+         begin
+            if Screen.ActiveCustomForm.Components[i] is TControl then
+              TControlWrap(Screen.ActiveCustomForm.Components[i]).Color := clInfoBk;
+
+            if Screen.ActiveCustomForm.Components[i] is TJvCustomDateEdit then
+            begin
+               TJvDBDateEdit(Screen.ActiveCustomForm.Components[i]).ClickKey      := 113;
+               TJvDBDateEdit(Screen.ActiveCustomForm.Components[i]).CalendarStyle := csPopup;
+               TJvDBDateEdit(Screen.ActiveCustomForm.Components[i]).DialogTitle   := 'Selecione uma data';
+            end
+            else if Screen.ActiveCustomForm.Components[i] is TJvCustomCalcEdit then
+            begin
+               TJvDBCalcEdit(Screen.ActiveCustomForm.Components[i]).ClickKey      := 113;
+            end;
+         end
+         else if (TCustomEdit(Screen.ActiveCustomForm.Components[i]).TabStop) and
+                 (TCustomEdit(Screen.ActiveCustomForm.Components[i]).Enabled) then
+         begin
+            if Screen.ActiveCustomForm.Components[i] is TControl then
+              TControlWrap(Screen.ActiveCustomForm.Components[i]).Color := clWindow;
+              
+            if (Screen.ActiveCustomForm.Components[i] is TMemo) then
+            begin
+               TMemo(Screen.ActiveCustomForm.Components[i]).OnEnter := MemoOnEnter;
+            end
+            else if (Screen.ActiveCustomForm.Components[i] is TDBMemo) then
+            begin
+               TDBMemo(Screen.ActiveCustomForm.Components[i]).OnEnter := MemoOnEnter;
+            end;
+         end;
+      end;
+
+      if Screen.ActiveCustomForm.Components[i] is TDBRadioGroup then
+      begin
+
+         K := TDBRadioGroup(Screen.ActiveCustomForm.Components[i]);
+
+         for J := 0 to K.Items.Count -1 do
+         begin
+            if TDBRadioGroup(K.Controls[J]).Focused then
+               TDBRadioGroup(K.Controls[J]).Font.Color := clMaroon
+            else
+            begin
+               TDBRadioGroup(K.Controls[J]).Font.Color := clWindowText;
+
+               if (K.ItemIndex = J) then
+                  TDBRadioGroup(K.Controls[J]).Font.Color := clMaroon
+               else
+                  TDBRadioGroup(K.Controls[J]).Font.Color := clWindowText;
+            end;
+         end;
+      end;
+
+
+{      if Components[i] is TWinControl then
+         if TWinControl(Components[i]).Focused then
+            if FMaster.StatusBar1 <> nil then
+               FMaster.StatusBar1.SimpleText := TControl(Components[i]).Hint;}
+
+   end;
+
+   if Screen.ActiveControl <> nil then
+      if (not Screen.ActiveControl.ShowHint) then
+         for I := 0 to Screen.ActiveCustomForm.ComponentCount - 1 do
+             if Screen.ActiveCustomForm.Components[I].Name = 'StatusBar1' then
+                TStatusBar(Screen.ActiveCustomForm.Components[I]).SimpleText := Screen.ActiveControl.Hint;
+end;
+
+---
+
+No create:
+	Screen.OnActiveControlChange := HintControl;
+	
+---
+
+procedure TFMaster.ValidaData(Sender: TObject; const DateString: string;
+  var NewDate: TDateTime; var Accept: Boolean);
+begin
+   Erro('Atenção: "' + DateString + '" não é uma data válida!');
+   Abort;
+end;
+
+---
+
+No create:
+
+   for i := 0 to self.ComponentCount - 1 do
+   begin
+      if (Components[i] is TJvCustomDateEdit) or (Components[i] is TJvDBDateEdit) then
+      begin        
+         if (Components[i] is TJvDateEdit) then
+            TJvDateEdit(Components[i]).OnInvalidDate := ValidaData;
+      end;
+   end;	
+   
+---
+
+	
+	
+	

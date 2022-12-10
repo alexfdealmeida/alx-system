@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/10/08 13:44:53.984.pas,C:\Documents and Settings\muller.antunes\Meus documentos\Borland Studio Projects\Unit1.pas=D:\Analise\Sistema\Principal.pas</Transaction>
+    <Transaction>2010/10/08 13:44:53.984.dfm,C:\Documents and Settings\muller.antunes\Meus documentos\Borland Studio Projects\Unit1.dfm=D:\Analise\Sistema\Principal.dfm</Transaction>
+    <Transaction>2010/10/08 13:45:01.296.bdsproj,C:\Documents and Settings\muller.antunes\Meus documentos\Borland Studio Projects\Project1.bdsproj=D:\Analise\Sistema\AnaliseMAS.bdsproj</Transaction>
+    <Transaction>2010/10/08 14:08:52.484.pas,D:\Analise\Sistema\Unit1.pas=D:\Analise\Sistema\MasterCad.pas</Transaction>
+    <Transaction>2010/10/08 14:08:52.484.dfm,D:\Analise\Sistema\Unit1.dfm=D:\Analise\Sistema\MasterCad.dfm</Transaction>
+    <Transaction>2010/10/08 14:21:39.437.pas,D:\Analise\Sistema\Unit1.pas=D:\Analise\Sistema\FTicket.pas</Transaction>
+    <Transaction>2010/10/08 14:21:39.437.dfm,D:\Analise\Sistema\Unit1.dfm=D:\Analise\Sistema\FTicket.dfm</Transaction>
+    <Transaction>2010/10/08 14:22:00.468.pas,D:\Analise\Sistema\FTicket.pas=</Transaction>
+    <Transaction>2010/10/08 14:22:00.468.dfm,D:\Analise\Sistema\FTicket.dfm=</Transaction>
+    <Transaction>2010/10/08 14:23:50.843.pas,D:\Analise\Sistema\Unit1.pas=D:\Analise\Sistema\Ticket.pas</Transaction>
+    <Transaction>2010/10/08 14:23:50.843.dfm,D:\Analise\Sistema\Unit1.dfm=D:\Analise\Sistema\Ticket.dfm</Transaction>
+    <Transaction>2010/10/08 14:32:13.578.pas,D:\Analise\Sistema\Unit1.pas=D:\Analise\Sistema\DTicket.pas</Transaction>
+    <Transaction>2010/10/08 14:32:13.578.dfm,D:\Analise\Sistema\Unit1.dfm=D:\Analise\Sistema\DTicket.dfm</Transaction>
+    <Transaction>2010/10/08 17:14:55.921.pas,D:\Analise\Sistema\Unit1.pas=D:\Analise\Sistema\Validacao.pas</Transaction>
+    <Transaction>2010/10/08 17:14:55.921.dfm,D:\Analise\Sistema\Unit1.dfm=D:\Analise\Sistema\Validacao.dfm</Transaction>
+    <Transaction>2010/10/10 05:49:45.734.pas,C:\Projetos\Sistema\Unit1.pas=C:\Projetos\Sistema\Validacao.pas</Transaction>
+    <Transaction>2010/10/10 05:49:45.750.dfm,C:\Projetos\Sistema\Unit1.dfm=C:\Projetos\Sistema\Validacao.dfm</Transaction>
+    <Transaction>2010/10/10 06:33:34.984.pas,C:\Projetos\Sistema\Unit1.pas=C:\Projetos\Sistema\Funcoes.pas</Transaction>
+    <Transaction>2010/11/30 10:30:12.265.pas,D:\Analise\Sistema\Funcoes.pas=</Transaction>
+    <Transaction>2010/11/30 10:30:49.171.pas,D:\Analise\Sistema\Validacao.pas=</Transaction>
+    <Transaction>2010/11/30 10:30:49.171.dfm,D:\Analise\Sistema\Validacao.dfm=</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{BA9B05DF-6378-4208-9AF9-0E5CBE018917}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TurboCompiler.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\..\Adaptador ALXCompiler\bin\AdapTurboCompiler.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\..\Atualizador ALXCompiler\bin\AtualizadorTurbo.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TurboCompiler">
+			<MSBuild Projects="TurboCompiler.dproj"/>
+		</Target>
+		<Target Name="TurboCompiler:Clean">
+			<MSBuild Targets="Clean" Projects="TurboCompiler.dproj"/>
+		</Target>
+		<Target Name="TurboCompiler:Make">
+			<MSBuild Targets="Make" Projects="TurboCompiler.dproj"/>
+		</Target>
+		<Target Name="AdapTurboCompiler">
+			<MSBuild Projects="..\..\Adaptador ALXCompiler\bin\AdapTurboCompiler.dproj"/>
+		</Target>
+		<Target Name="AdapTurboCompiler:Clean">
+			<MSBuild Targets="Clean" Projects="..\..\Adaptador ALXCompiler\bin\AdapTurboCompiler.dproj"/>
+		</Target>
+		<Target Name="AdapTurboCompiler:Make">
+			<MSBuild Targets="Make" Projects="..\..\Adaptador ALXCompiler\bin\AdapTurboCompiler.dproj"/>
+		</Target>
+		<Target Name="AtualizadorTurbo">
+			<MSBuild Projects="..\..\Atualizador ALXCompiler\bin\AtualizadorTurbo.dproj"/>
+		</Target>
+		<Target Name="AtualizadorTurbo:Clean">
+			<MSBuild Targets="Clean" Projects="..\..\Atualizador ALXCompiler\bin\AtualizadorTurbo.dproj"/>
+		</Target>
+		<Target Name="AtualizadorTurbo:Make">
+			<MSBuild Targets="Make" Projects="..\..\Atualizador ALXCompiler\bin\AtualizadorTurbo.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TurboCompiler;AdapTurboCompiler;AtualizadorTurbo"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TurboCompiler:Clean;AdapTurboCompiler:Clean;AtualizadorTurbo:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TurboCompiler:Make;AdapTurboCompiler:Make;AtualizadorTurbo:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

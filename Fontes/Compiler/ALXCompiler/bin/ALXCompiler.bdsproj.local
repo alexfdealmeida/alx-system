@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/01/04 22:09:03.436.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\USubDiretorios.pas=</Transaction>
+    <Transaction>2011/01/04 22:09:03.436.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\USubDiretorios.dfm=</Transaction>
+    <Transaction>2011/01/15 14:14:24.727.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UDiretorios.pas=</Transaction>
+    <Transaction>2011/01/15 14:14:24.727.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UDiretorios.dfm=</Transaction>
+    <Transaction>2011/01/15 14:15:38.339.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UManutDiretorios.pas=</Transaction>
+    <Transaction>2011/01/15 14:15:38.339.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UManutDiretorios.dfm=</Transaction>
+    <Transaction>2011/01/15 16:39:37.703.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UManutAuto.pas=</Transaction>
+    <Transaction>2011/01/15 16:39:37.703.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UManutAuto.dfm=</Transaction>
+    <Transaction>2011/01/15 16:41:47.486.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UAuto.pas=</Transaction>
+    <Transaction>2011/01/15 16:41:47.486.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UAuto.dfm=</Transaction>
+    <Transaction>2011/01/15 16:42:23.528.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DAuto.pas=</Transaction>
+    <Transaction>2011/01/15 16:42:23.529.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DAuto.dfm=</Transaction>
+    <Transaction>2011/01/15 20:55:51.691.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UUsuariosBD.pas=</Transaction>
+    <Transaction>2011/01/15 20:55:51.691.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UUsuariosBD.dfm=</Transaction>
+    <Transaction>2011/01/15 20:56:40.992.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DUsuariosBD.pas=</Transaction>
+    <Transaction>2011/01/15 20:56:40.992.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DUsuariosBD.dfm=</Transaction>
+    <Transaction>2011/02/13 20:23:26.454.pas,D:\ALXSystem\Fontes\Biblioteca\Formulários\UPermissao.pas=</Transaction>
+    <Transaction>2011/02/13 20:23:26.454.dfm,D:\ALXSystem\Fontes\Biblioteca\Formulários\UPermissao.dfm=</Transaction>
+    <Transaction>2011/02/20 17:27:45.884.pas,D:\ALXSystem\Fontes\Biblioteca\Herança\UMasterPes.pas=</Transaction>
+    <Transaction>2011/02/20 17:27:45.884.dfm,D:\ALXSystem\Fontes\Biblioteca\Herança\UMasterPes.dfm=</Transaction>
+    <Transaction>2011/02/20 18:16:45.713.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.pas=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UVersoesSintetico.pas</Transaction>
+    <Transaction>2011/02/20 18:16:45.713.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.dfm=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UVersoesSintetico.dfm</Transaction>
+    <Transaction>2011/02/20 18:35:13.453.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.pas=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UParametrosSintetico.pas</Transaction>
+    <Transaction>2011/02/20 18:35:13.453.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.dfm=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UParametrosSintetico.dfm</Transaction>
+    <Transaction>2011/03/22 17:18:56.798.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.pas=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UResumo.pas</Transaction>
+    <Transaction>2011/03/22 17:18:56.798.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.dfm=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UResumo.dfm</Transaction>
+    <Transaction>2011/03/24 22:10:36.735.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.pas=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UCompilacaoRemota.pas</Transaction>
+    <Transaction>2011/03/24 22:10:36.735.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.dfm=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\UCompilacaoRemota.dfm</Transaction>
+    <Transaction>2011/03/24 22:12:35.880.pas,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.pas=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DCompilacaoRemota.pas</Transaction>
+    <Transaction>2011/03/24 22:12:35.880.dfm,D:\ALXSystem\Fontes\Compiler\ALXCompiler\bin\Unit1.dfm=D:\ALXSystem\Fontes\Compiler\ALXCompiler\src\DCompilacaoRemota.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

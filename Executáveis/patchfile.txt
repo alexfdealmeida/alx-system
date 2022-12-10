@@ -1,0 +1,1 @@
+git branch |grep ^*|sed "s/* //" > "D:\Meus Arquivos\branch_atual.txt"

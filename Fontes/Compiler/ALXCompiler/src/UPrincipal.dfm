@@ -1,0 +1,4260 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Action = actAtualiza
+  Caption = 
+    'ALXCompiler -Sistema Automatizador de Compila'#231#245'es e Configura'#231#227'o' +
+    ' de Vers'#245'es de Software'
+  ClientHeight = 758
+  ClientWidth = 792
+  Color = clBtnFace
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 800
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  Menu = AdvMainMenu1
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClick = actAtualizaExecute
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Agent1: TAgent
+    Left = 328
+    Top = 344
+    Width = 32
+    Height = 32
+    ControlData = {000300004F0300004F030000}
+  end
+  object pnlInfo: TPanel
+    Left = 0
+    Top = 0
+    Width = 515
+    Height = 718
+    Align = alLeft
+    ParentColor = True
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 1
+    object pgcModulos: TAdvOfficePager
+      Left = 1
+      Top = 126
+      Width = 513
+      Height = 591
+      Align = alClient
+      ActivePage = tabModulos
+      ButtonSettings.CloseButtonPicture.Data = {
+        424DA20400000000000036040000280000000900000009000000010008000000
+        00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001000001010100000100
+        0000000202000100020200000000000202020002020200000000010002020202
+        0200010000000101000202020001010000000100020202020200010000000002
+        0202000202020000000000020200010002020000000001000001010100000100
+        0000}
+      ButtonSettings.PageListButtonPicture.Data = {
+        424DA20400000000000036040000280000000900000009000000010008000000
+        00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+        0000010101000200010101000000010100020202000101000000010002020202
+        0200010000000002020200020202000000000002020001000202000000000100
+        0001010100000100000001010101010101010100000001010101010101010100
+        0000}
+      ButtonSettings.ScrollButtonPrevPicture.Data = {
+        424DA20400000000000036040000280000000900000009000000010008000000
+        00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000001010100
+        0000010101000202000101000000010100020202000101000000010002020200
+        0101010000000002020200010101010000000100020202000101010000000101
+        0002020200010100000001010100020200010100000001010101000001010100
+        0000}
+      ButtonSettings.ScrollButtonNextPicture.Data = {
+        424DA20400000000000036040000280000000900000009000000010008000000
+        00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010000010101010100
+        0000010002020001010101000000010002020200010101000000010100020202
+        0001010000000101010002020200010000000101000202020001010000000100
+        0202020001010100000001000202000101010100000001010000010101010100
+        0000}
+      ButtonSettings.ScrollButtonFirstPicture.Data = {
+        424DC60400000000000036040000280000001000000009000000010008000000
+        000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+        FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF01010101010000010101
+        0101000001010101010100020200010101000202000101010100020202000101
+        0002020200010101000202020001010002020200010101000202020001010002
+        0202000101010101000202020001010002020200010101010100020202000101
+        0002020200010101010100020200010101000202000101010101010000010101
+        010100000101}
+      ButtonSettings.ScrollButtonLastPicture.Data = {
+        424DC60400000000000036040000280000001000000009000000010008000000
+        000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+        FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF01010000010101010100
+        0001010101010100020200010101000202000101010101000202020001010002
+        0202000101010101000202020001010002020200010101010100020202000101
+        0002020200010101000202020001010002020200010101000202020001010002
+        0202000101010100020200010101000202000101010101010000010101010100
+        000101010101}
+      ButtonSettings.ClosedListButtonPicture.Data = {
+        424DA20400000000000036040000280000000900000009000000010008000000
+        00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+        0000010101000200010101000000010100020202000101000000010002020202
+        0200010000000002020200020202000000000002020001000202000000000100
+        0001010100000100000001010101010101010100000001010101010101010100
+        0000}
+      ButtonSettings.CloseButtonHint = 'Close'
+      ButtonSettings.PageListButtonHint = 'Page List'
+      ButtonSettings.ScrollButtonNextHint = 'Next'
+      ButtonSettings.ScrollButtonPrevHint = 'Previous'
+      ButtonSettings.ScrollButtonFirstHint = 'First'
+      ButtonSettings.ScrollButtonLastHint = 'Last'
+      ButtonSettings.ClosedListButtonHint = 'Closed Pages'
+      TabSettings.Shape = tsLeftRightRamp
+      ShowShortCutHints = False
+      TabOrder = 0
+      NextPictureChanged = False
+      PrevPictureChanged = False
+      object tabModulos: TAdvOfficePage
+        Left = 1
+        Top = 26
+        Width = 511
+        Height = 563
+        Caption = 'M'#243'dulos'
+        PageAppearance.BorderColor = 14922381
+        PageAppearance.Color = 16445929
+        PageAppearance.ColorTo = 15587527
+        PageAppearance.ColorMirror = 15587527
+        PageAppearance.ColorMirrorTo = 16773863
+        PageAppearance.Gradient = ggVertical
+        PageAppearance.GradientMirror = ggVertical
+        TabAppearance.BorderColor = clNone
+        TabAppearance.BorderColorHot = 15383705
+        TabAppearance.BorderColorSelected = 14922381
+        TabAppearance.BorderColorSelectedHot = 6343929
+        TabAppearance.BorderColorDisabled = clNone
+        TabAppearance.BorderColorDown = clNone
+        TabAppearance.Color = clBtnFace
+        TabAppearance.ColorTo = clWhite
+        TabAppearance.ColorSelected = 16709360
+        TabAppearance.ColorSelectedTo = 16445929
+        TabAppearance.ColorDisabled = clWhite
+        TabAppearance.ColorDisabledTo = clSilver
+        TabAppearance.ColorHot = 14542308
+        TabAppearance.ColorHotTo = 16768709
+        TabAppearance.ColorMirror = clWhite
+        TabAppearance.ColorMirrorTo = clWhite
+        TabAppearance.ColorMirrorHot = 14016477
+        TabAppearance.ColorMirrorHotTo = 10736609
+        TabAppearance.ColorMirrorSelected = 16445929
+        TabAppearance.ColorMirrorSelectedTo = 16181984
+        TabAppearance.ColorMirrorDisabled = clWhite
+        TabAppearance.ColorMirrorDisabledTo = clSilver
+        TabAppearance.Font.Charset = DEFAULT_CHARSET
+        TabAppearance.Font.Color = clWindowText
+        TabAppearance.Font.Height = -11
+        TabAppearance.Font.Name = 'Tahoma'
+        TabAppearance.Font.Style = []
+        TabAppearance.Gradient = ggVertical
+        TabAppearance.GradientMirror = ggVertical
+        TabAppearance.GradientHot = ggRadial
+        TabAppearance.GradientMirrorHot = ggVertical
+        TabAppearance.GradientSelected = ggVertical
+        TabAppearance.GradientMirrorSelected = ggVertical
+        TabAppearance.GradientDisabled = ggVertical
+        TabAppearance.GradientMirrorDisabled = ggVertical
+        TabAppearance.TextColor = 9126421
+        TabAppearance.TextColorHot = 9126421
+        TabAppearance.TextColorSelected = 9126421
+        TabAppearance.TextColorDisabled = clGray
+        TabAppearance.ShadowColor = 15255470
+        TabAppearance.HighLightColor = 16775871
+        TabAppearance.HighLightColorHot = 16643309
+        TabAppearance.HighLightColorSelected = 6540536
+        TabAppearance.HighLightColorSelectedHot = 12451839
+        TabAppearance.HighLightColorDown = 16776144
+        TabAppearance.BackGround.Color = 16767935
+        TabAppearance.BackGround.ColorTo = clNone
+        TabAppearance.BackGround.Direction = gdHorizontal
+        object grdModulos: TDBAdvGrid
+          Left = 2
+          Top = 40
+          Width = 507
+          Height = 483
+          Cursor = crDefault
+          Align = alClient
+          ColCount = 9
+          Ctl3D = True
+          DefaultRowHeight = 24
+          DefaultDrawing = True
+          RowCount = 2
+          FixedRows = 1
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing]
+          ParentCtl3D = False
+          ParentFont = False
+          ScrollBars = ssBoth
+          TabOrder = 0
+          OnDrawCell = grdModulosDrawCell
+          OnKeyDown = grdModulosKeyDown
+          ActiveRowShow = True
+          ActiveRowColor = 16383935
+          GridFixedLineColor = clNone
+          ActiveCellFont.Charset = DEFAULT_CHARSET
+          ActiveCellFont.Color = clDefault
+          ActiveCellFont.Height = -11
+          ActiveCellFont.Name = 'Tahoma'
+          ActiveCellFont.Style = [fsBold]
+          AutoSize = True
+          ControlLook.FixedGradientFrom = 15130800
+          ControlLook.FixedGradientTo = 11840082
+          ControlLook.FixedGradientHoverFrom = 16775139
+          ControlLook.FixedGradientHoverTo = 16775139
+          ControlLook.FixedGradientHoverMirrorFrom = 16772541
+          ControlLook.FixedGradientHoverMirrorTo = 16508855
+          ControlLook.FixedGradientDownFrom = 16377020
+          ControlLook.FixedGradientDownTo = 16377020
+          ControlLook.FixedGradientDownMirrorFrom = 16242317
+          ControlLook.FixedGradientDownMirrorTo = 16109962
+          ControlLook.FixedGradientDownBorder = 11440207
+          ControlLook.ControlStyle = csWinXP
+          ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+          ControlLook.DropDownHeader.Font.Color = clWindowText
+          ControlLook.DropDownHeader.Font.Height = -11
+          ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+          ControlLook.DropDownHeader.Font.Style = []
+          ControlLook.DropDownHeader.Visible = True
+          ControlLook.DropDownHeader.Buttons = <>
+          ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+          ControlLook.DropDownFooter.Font.Color = clWindowText
+          ControlLook.DropDownFooter.Font.Height = -11
+          ControlLook.DropDownFooter.Font.Name = 'Tahoma'
+          ControlLook.DropDownFooter.Font.Style = []
+          ControlLook.DropDownFooter.Visible = True
+          ControlLook.DropDownFooter.Buttons = <>
+          Filter = <>
+          FilterDropDown.Font.Charset = DEFAULT_CHARSET
+          FilterDropDown.Font.Color = clWindowText
+          FilterDropDown.Font.Height = -11
+          FilterDropDown.Font.Name = 'Tahoma'
+          FilterDropDown.Font.Style = []
+          FilterDropDownClear = '(All)'
+          FixedColWidth = 20
+          FixedRowHeight = 22
+          FixedFont.Charset = DEFAULT_CHARSET
+          FixedFont.Color = clWindowText
+          FixedFont.Height = -11
+          FixedFont.Name = 'Tahoma'
+          FixedFont.Style = [fsBold]
+          FloatFormat = '%.2f'
+          Grouping.HeaderColor = 16383935
+          Grouping.HeaderColorTo = 15130800
+          Grouping.SummaryColor = 13664560
+          PrintSettings.DateFormat = 'dd/mm/yyyy'
+          PrintSettings.Font.Charset = DEFAULT_CHARSET
+          PrintSettings.Font.Color = clWindowText
+          PrintSettings.Font.Height = -11
+          PrintSettings.Font.Name = 'Tahoma'
+          PrintSettings.Font.Style = []
+          PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+          PrintSettings.FixedFont.Color = clWindowText
+          PrintSettings.FixedFont.Height = -11
+          PrintSettings.FixedFont.Name = 'Tahoma'
+          PrintSettings.FixedFont.Style = []
+          PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+          PrintSettings.HeaderFont.Color = clWindowText
+          PrintSettings.HeaderFont.Height = -11
+          PrintSettings.HeaderFont.Name = 'Tahoma'
+          PrintSettings.HeaderFont.Style = []
+          PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+          PrintSettings.FooterFont.Color = clWindowText
+          PrintSettings.FooterFont.Height = -11
+          PrintSettings.FooterFont.Name = 'Tahoma'
+          PrintSettings.FooterFont.Style = []
+          PrintSettings.PageNumSep = '/'
+          ScrollWidth = 19
+          SearchFooter.Color = 15130800
+          SearchFooter.ColorTo = 11840082
+          SearchFooter.FindNextCaption = 'Pr'#243'xima'
+          SearchFooter.FindPrevCaption = 'Anterior'
+          SearchFooter.Font.Charset = DEFAULT_CHARSET
+          SearchFooter.Font.Color = clWindowText
+          SearchFooter.Font.Height = -11
+          SearchFooter.Font.Name = 'Tahoma'
+          SearchFooter.Font.Style = []
+          SearchFooter.HighLightCaption = 'Highlight'
+          SearchFooter.HintClose = 'Fechar'
+          SearchFooter.HintFindNext = 'Localiza pr'#243'xima ocorr'#234'ncia'
+          SearchFooter.HintFindPrev = 'Localiza ocorr'#234'ncia anterior'
+          SearchFooter.HintHighlight = 'Highlight occurences'
+          SearchFooter.MatchCaseCaption = 'Case Sensitive'
+          SearchFooter.ShowClose = False
+          SearchFooter.ShowHighLight = False
+          SelectionColor = 13664560
+          SelectionColorTo = 15130800
+          SortSettings.Show = True
+          SortSettings.HeaderColor = 16579058
+          SortSettings.HeaderColorTo = 16579058
+          SortSettings.HeaderMirrorColor = 16380385
+          SortSettings.HeaderMirrorColorTo = 16182488
+          Version = '2.2.0.1'
+          AutoCreateColumns = False
+          AutoRemoveColumns = False
+          Columns = <
+            item
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              Width = 20
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'STATUS'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = ' '
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'SELECIONA'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Compilar?'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              HeaderAlignment = taCenter
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              Width = 12
+            end
+            item
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'DESC_MOD'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Descri'#231#227'o do M'#243'dulo'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'WANT_MOD'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Alias'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clBlack
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              HeaderAlignment = taCenter
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clBlack
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = [fsBold]
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'DATE_TMP'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Dt. M'#243'dulo'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clBlack
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              HeaderAlignment = taCenter
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clBlack
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = [fsBold]
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'COMP_TMP'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Total'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              HeaderAlignment = taCenter
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Alignment = taCenter
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'DULT_TMP'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = 'Dt. Compila'#231#227'o'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              HeaderAlignment = taCenter
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              ReadOnly = True
+              Width = 12
+            end
+            item
+              Borders = []
+              BorderPen.Color = clSilver
+              CheckFalse = 'N'
+              CheckTrue = 'Y'
+              Color = clWindow
+              FieldName = 'VULT_TMP'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              Header = #218'ltima Vers'#227'o Compilada'
+              HeaderFont.Charset = DEFAULT_CHARSET
+              HeaderFont.Color = clWindowText
+              HeaderFont.Height = -11
+              HeaderFont.Name = 'Tahoma'
+              HeaderFont.Style = []
+              PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+              PrintFont.Charset = DEFAULT_CHARSET
+              PrintFont.Color = clWindowText
+              PrintFont.Height = -11
+              PrintFont.Name = 'Tahoma'
+              PrintFont.Style = []
+              ReadOnly = True
+              Width = 12
+            end>
+          DataSource = dtsModulos
+          DatasetTypeAuto = False
+          DataSetType = dtNonSequenced
+          InvalidPicture.Data = {
+            055449636F6E0000010001002020200000000000A81000001600000028000000
+            2000000040000000010020000000000000100000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000003000000290000005C0000008B000000AF000000C1
+            000000CA000000CB000000C9000000C1000000AF0000008A0000005E0000002C
+            0000000400000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000220000007100001CBE000047F401015DFF01016CFF000074FF
+            000075FF00006CFF01015EFF010145FF000020FF000001F3000000DE000000AE
+            0000006B00000026000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000005401013DC5010175FF010186FF010189FF000085FF000082FF000081FF
+            000080FF000080FF000080FF000083FF000082FF01016EFF01013FFF000007FB
+            000000E0000000A10000004D0000000700000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000300003A8B
+            010178FF010191FF00008AFF000085FF000085FF000085FF000085FF000086FF
+            000086FF000084FF000081FF000080FF00007FFF000081FF000085FF010172FF
+            000030FF000000F5000000C3000000610000000A000000000000000000000000
+            000000000000000000000000000000000000000000000001010159A5010193FF
+            01018EFF000089FF000089FF00008CFF00008CFF00008FFF000090FF000090FF
+            000090FF00008FFF00008BFF00008AFF000086FF000082FF00007EFF000081FF
+            010182FF00004FFF000000FC000000CB0000005F000000080000000000000000
+            0000000000000000000000000000000000000000010167AA02029EFF01018EFF
+            00008CFF00008FFF000092FF000095FF000098FF000099FF000098FF00009BFF
+            00009AFF000098FF000097FF000094FF00008FFF00008BFF000087FF000082FF
+            00007FFF010188FF00005BFF000000FC000000C4000000530000000000000000
+            00000000000000000000000000000000010169850202A4FF010191FF000090FF
+            000095FF000093FF000096FF00009DFF0000A2FF0000A2FF0000A2FF0000A3FF
+            0000A2FF0000A1FF00009FFF00009BFF000097FF00008DFF00008BFF00008AFF
+            000084FF00007FFF01018BFF000054FF000000F6000000AC0000003000000000
+            000000000000000000000000000168400202A6FF020294FF000094FF00009AFF
+            000098FF4949BFFF5353C4FF00009DFF0000A7FF0000A9FF0101AAFF0101AAFF
+            0101A9FF0101A8FF0000A5FF0000A2FF00009AFF5F5FC5FF3A3AB3FF00008AFF
+            00008BFF000086FF010183FF01018BFF000037FF000000E50000007900000009
+            0000000000000000000000000202A2D803039EFF00009AFF0000A0FF0000A1FF
+            2929ABFFFFFFFAFFFFFFFFFF4A4AC8FF0000A5FF0000AFFF0000AFFF0101AEFF
+            0101B0FF0000AFFF0000ACFF0000A5FF4848B6FFFFFFFFFFFFFFFFFF2424AEFF
+            00008FFF000090FF000089FF01018BFF010180FF00000CFF000000BB00000038
+            00000000000000000101655C0303B2FF02029EFF0000A4FF0000AAFF2F2FA9FF
+            CCCCC0FFFFFFF4FFFFFFFFFFFFFFFFFF4141CAFF0000ACFF0000B3FF0000B3FF
+            0000B3FF0000B2FF0000ADFF4343B5FFEDEDD9FFFFFFFFFFFFFFFFFFFFFFFFFF
+            3232AFFF000095FF000092FF01018BFF020293FF010155FF000000E50000006F
+            00000000000000000303A6D70303A2FF0202A5FF0000ACFF0000B2FF78788DFF
+            CBCBA5FFFFFFFCFFFFFFFFFFFFFFFFFFFFFFFFFF4F4FCEFF0000AEFF0000B5FF
+            0000B6FF0000B2FF4B4BBDFFF2F2D9FFFFFFF8FFFFFFFFFFFFFFFFFFF8F8D4FF
+            8282AEFF0000A2FF00009DFF010194FF020291FF02028CFF000110FD0000009F
+            000000180000C5200404A3FF0404A7FF0202ADFF0101B3FF0000BCFF0000B0FF
+            606073FFC4C4A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4040CFFF0000B1FF
+            0000B3FF4E4EC8FFF6F6DFFFFFFFF6FFFFFFFFFFFFFFFFFFE7E7CBFF737393FF
+            0000A9FF0000ABFF0000A4FF01019BFF020292FF02029BFF010139FF000000C2
+            000000370201BE6D0505A7FF0404AEFF0303B6FF0303BBFF0101C1FF0000CDFF
+            0000B9FF56566EFFC0C0A5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3B3BCFFF
+            5050D7FFFFFFFAFFFFFFF5FFFFFFFFFFFFFFFFFFE0E0C8FF6D6D8FFF0000B2FF
+            0000B8FF0000B1FF0101ABFF0101A3FF01019AFF02029EFF02026FFF000000DC
+            0000004D0405BAA10707ADFF0606B5FF0404BBFF0505C2FF0505C8FF0303CBFF
+            0000D2FF0000BAFF616177FFC6C6ABFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE9E9CDFF747495FF0000B7FF0000C2FF
+            0101BDFF0202B8FF0202B2FF0101AAFF02029FFF03039EFF020289FF000004E6
+            000000550606B9CB0808B5FF0606BBFF0606C4FF0606C9FF0606CDFF0606D0FF
+            0202CFFF0000D4FF0000BDFF6E6E86FFDADABDFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFF5F5DAFF8181A4FF0000BCFF0000C5FF0000C4FF
+            0303C1FF0303BEFF0202B8FF0202B0FF0202A6FF0303A1FF03039FFF00000CEC
+            000000590909BBE80909BAFF0808C2FF0808CAFF0808D0FF0909D4FF0707D4FF
+            0303D2FF0000D0FF0000D4FF0000C2FF8A8AAEFFF7F7EAFFFFFFFFFFFEFEFEFF
+            FEFEFEFFFFFFFFFFFFFFF9FF9393C8FF0000C3FF0000C8FF0000C6FF0101C6FF
+            0404C6FF0505C5FF0303BEFF0202B6FF0202ACFF0303A3FF0606AEFF010113ED
+            0000005A0A0ABFF80C0CC2FF0B0BC9FF0B0BD0FF0B0BD8FF0D0DDCFF0808D9FF
+            0303D5FF0000D2FF0000D2FF0000D4FF4648C5FFF9F9E6FFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFF6FF3A3ACEFF0000C6FF0000CBFF0000C9FF0303CAFF
+            0505CAFF0505CAFF0505C4FF0404BEFF0404B2FF0505A9FF0505B9FF010115EB
+            000000570B0BC6EA1010C9FF0E0ED0FF0E0EDAFF0F0FE1FF0F0FE2FF0B0BE0FF
+            0303DAFF0000D6FF0000D4FF4242CBFFE9E9D5FFFFFFFBFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFEFFFFFFF9FF4949DEFF0000C6FF0000CCFF0101CDFF
+            0606CFFF0707CFFF0606C9FF0505C3FF0505B7FF0606ADFF0707B8FF010113E2
+            0000004F0C0CCDCE1313CFFF1212D7FF1313E1FF1313E9FF1313ECFF0C0CE7FF
+            0000E0FF0000DCFF3F3FCDFFEAEAD2FFFFFFF6FFFFFFFFFFFFFFFFFFFFFFF5FF
+            FFFFF3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4343DCFF0000CAFF0000D2FF
+            0606D4FF0A0AD3FF0808CEFF0808C6FF0707BBFF0808B4FF0606B3FF01010ED4
+            000000410909D7A41515D4FF1717E0FF1818E9FF1A1AF2FF1A1AF5FF0E0EF3FF
+            0000EBFF4848D2FFECECD0FFFFFFF5FFFFFFFFFFFFFFFFFFEEEED6FF8585BBFF
+            8787ADFFDDDDC5FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF4E4EE2FF0000D2FF
+            0505DBFF0C0CD9FF0B0BD3FF0A0ACAFF0A0ABEFF0B0BBCFF0606A5FF000004B1
+            000000200608DE751919D6FF1C1CE6FF1E1EF2FF2121FCFF1E1EFFFF0606FFFF
+            4D4DE0FFE6E6CBFFFFFFF4FFFFFFFFFFFFFFFFFFEAEACAFF7B7BA3FF0000D9FF
+            0000D4FF737389FFCBCBABFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4F4FEEFF
+            0000E4FF0B0BE1FF0D0DDAFF0C0CCEFF0C0CC2FF0F0FC7FF060690FF00000085
+            000000050000E6221717DCFF2222E9FF2626F9FF2727FFFF2424FFFF5E5ED6FF
+            DFDFC0FFFFFFF5FFFFFFFFFFFFFFFFFFDFDFC2FF72729BFF0000DDFF0000E8FF
+            0000E9FF0000D1FF605F7AFFC2C2A4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFF
+            5656DFFF0606E8FF1010E0FF1111D4FF0F0FC7FF0E0ECEFF020253E200000047
+            00000000000000001010E3D92424ECFF2D2DFFFF3131FFFF2F2FFFFF7C7C9FFF
+            D8D8B2FFFFFFFFFFFFFFFFFFE1E1C0FF696996FF0000E0FF0000E9FF0000E6FF
+            0000E4FF0000ECFF0000D4FF595971FFBEBE9DFFFFFFFFFFFFFFFDFFD6D6A6FF
+            7272BFFF1010F6FF1616E4FF1515D6FF1313CFFF0D0DC5FF000021A200000012
+            00000000000000000607E85C2121EDFF3030FFFF3C3CFFFF3E3EFFFF3B3BF8FF
+            71719AFFD8D8BDFFD9D9BAFF6C6C99FF0000F1FF0000F6FF0000E9FF0000E6FF
+            0000E7FF0000E8FF0000F5FF0000DEFF565674FFBBBB98FFC1C19BFF5F5FA8FF
+            1717FFFF1919FAFF1C1CE7FF1919D9FF1515DBFF05058CF20000004300000000
+            0000000000000000000000001313EED32E2EFDFF4040FFFF4B4BFFFF4F4FFFFF
+            4C4CFBFF696981FF6B6B80FF2525FBFF1212FFFF0D0DFFFF0707FAFF0404F3FF
+            0505F2FF0606F5FF0A0AFCFF0C0CFFFF1A1AF4FF606067FF5B5B8FFF2323FFFF
+            2626FFFF2727FBFF2222E9FF1D1DE0FF1010D2FF000025880000000800000000
+            0000000000000000000000000202F1352020F8FF3B3BFFFF4D4DFFFF5C5CFFFF
+            6666FFFF6464FCFF5F5FF7FF5555FFFF4343FFFF3131FFFF2121FFFF1919FFFF
+            1818FFFF1C1CFFFF2525FFFF3131FFFF3737FFFF3D3DF6FF3939FEFF3535FFFF
+            3333FFFF2C2CFAFF2525EAFF1A1AE8FF030380C1000000170000000000000000
+            000000000000000000000000000000000909F3712B2BFEFF4646FFFF5D5DFFFF
+            6E6EFFFF7B7BFFFF8080FFFF8181FFFF7575FFFF6767FFFF5555FFFF4949FFFF
+            4646FFFF4848FFFF4E4EFFFF5454FFFF5757FFFF5050FFFF4949FFFF4040FFFF
+            3838FFFF2D2DF6FF2020F6FF0808B6DF00000423000000000000000000000000
+            00000000000000000000000000000000000000000D0EF6902F2FFFFF4D4DFFFF
+            6666FFFF7C7CFFFF8B8BFFFF9494FFFF9696FFFF9191FFFF8A8AFFFF7E7EFFFF
+            7878FFFF7373FFFF7171FFFF6C6CFFFF6464FFFF5B5BFFFF5050FFFF4343FFFF
+            3636FFFF2626FFFF0D0ECCE30000072800000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000A0AF8782B2BFDFF
+            4E4EFFFF6868FFFF7F7FFFFF9292FFFFA0A0FFFFA5A5FFFFA7A7FFFFA2A2FFFF
+            9999FFFF8E8EFFFF8282FFFF7575FFFF6868FFFF5959FFFF4B4BFFFF3A3AFFFF
+            2727FFFF0B0BCEC600000A150000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000001F841
+            2121FCDD4545FFFF6262FFFF7979FFFF8C8CFFFF9B9BFFFFA4A4FFFFA3A3FFFF
+            9B9BFFFF8E8EFFFF7E7EFFFF6C6CFFFF5D5DFFFF4B4BFFFF3838FFFF1F1FEFFF
+            0405B77D00000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000708F96B2827FDE24646FEFF6464FFFF7474FFFF8080FFFF8484FFFF
+            7E7EFFFF7373FFFF6363FFFF5353FFFF3F3FFEFF2323FAF40C0CE69800007B1C
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000A0AF9321415F9802727F9B03C3CFBD84949FFF1
+            4848FFF53939FCDE2727F9BB1516F88B0608F9480708E4070000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000FF8000FFFF00007FFE00001FF800000FF0000007F0000007E0000003
+            C0000001C0000001800000018000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000180000001
+            80000003C0000003C0000007E000000FF000001FF800003FFC0000FFFF0001FF
+            FFC007FF}
+          RefreshOnInsert = True
+          ShowBooleanFields = True
+          ShowUnicode = False
+          ColWidths = (
+            20
+            12
+            12
+            12
+            12
+            12
+            12
+            12
+            12)
+        end
+        object pnlModulosManut: TAdvSmoothPanel
+          Left = 2
+          Top = 2
+          Width = 507
+          Height = 38
+          Cursor = crDefault
+          Caption.HTMLFont.Charset = DEFAULT_CHARSET
+          Caption.HTMLFont.Color = clWindowText
+          Caption.HTMLFont.Height = -11
+          Caption.HTMLFont.Name = 'Tahoma'
+          Caption.HTMLFont.Style = []
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = clWindowText
+          Caption.Font.Height = -16
+          Caption.Font.Name = 'Tahoma'
+          Caption.Font.Style = []
+          Caption.ColorStart = 11563548
+          Caption.ColorEnd = 10446362
+          Fill.Color = 16445929
+          Fill.ColorTo = 15587527
+          Fill.ColorMirror = 15587527
+          Fill.ColorMirrorTo = 16773863
+          Fill.GradientMirrorType = gtVertical
+          Fill.BorderColor = 14922381
+          Fill.Rounding = 0
+          Fill.RoundingType = rtNone
+          Fill.ShadowOffset = 0
+          Version = '1.0.9.2'
+          Align = alTop
+          TabOrder = 1
+          object btnIncluirMod: TAdvGlowButton
+            Left = 275
+            Top = 6
+            Width = 75
+            Height = 25
+            Hint = 'Cadastra novo m'#243'dulo'
+            Caption = 'Incluir'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 16
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            OnClick = btnIncluirModClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnAlterarMod: TAdvGlowButton
+            Left = 352
+            Top = 6
+            Width = 75
+            Height = 25
+            Hint = 'Altera m'#243'dulo selecionado'
+            Caption = 'Alterar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 17
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            OnClick = btnAlterarModClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnExcluirMod: TAdvGlowButton
+            Left = 429
+            Top = 6
+            Width = 75
+            Height = 25
+            Hint = 'Exclui m'#243'dulo selecionado'
+            Caption = 'Excluir'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 0
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = btnExcluirModClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object edtDESC_MOD: TDBEdit
+            Left = 3
+            Top = 10
+            Width = 270
+            Height = 21
+            TabStop = False
+            Color = clBlack
+            DataField = 'DESC_MOD'
+            DataSource = dtsModulos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clAqua
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ReadOnly = True
+            TabOrder = 3
+          end
+        end
+        object pnlModulosAcoes: TAdvSmoothPanel
+          Left = 2
+          Top = 523
+          Width = 507
+          Height = 38
+          Cursor = crDefault
+          Caption.HTMLFont.Charset = DEFAULT_CHARSET
+          Caption.HTMLFont.Color = clWindowText
+          Caption.HTMLFont.Height = -11
+          Caption.HTMLFont.Name = 'Tahoma'
+          Caption.HTMLFont.Style = []
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = clWindowText
+          Caption.Font.Height = -16
+          Caption.Font.Name = 'Tahoma'
+          Caption.Font.Style = []
+          Caption.ColorStart = 11563548
+          Caption.ColorEnd = 10446362
+          Fill.Color = 16445929
+          Fill.ColorTo = 15587527
+          Fill.ColorMirror = 15587527
+          Fill.ColorMirrorTo = 16773863
+          Fill.GradientMirrorType = gtVertical
+          Fill.BorderColor = 14922381
+          Fill.Rounding = 0
+          Fill.RoundingType = rtNone
+          Fill.ShadowOffset = 0
+          Version = '1.0.9.2'
+          Align = alBottom
+          TabOrder = 2
+          DesignSize = (
+            507
+            38)
+          object chkMarcarDesmarcar: TAdvOfficeCheckBox
+            Left = 123
+            Top = 7
+            Width = 107
+            Height = 20
+            Hint = 'Utilize esta op'#231#227'o para marcar ou desmarcar todos os m'#243'dulos'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ShowHint = True
+            TabOrder = 0
+            TabStop = True
+            OnClick = chkMarcarDesmarcarClick
+            Alignment = taLeftJustify
+            Caption = 'Selecionar todos'
+            ReturnIsTab = False
+            Version = '1.2.5.0'
+          end
+          object edtTotalModulos: TJvValidateEdit
+            Left = 4
+            Top = 8
+            Width = 40
+            Height = 21
+            Alignment = taCenter
+            Color = clBlack
+            CriticalPoints.MaxValueIncluded = False
+            CriticalPoints.MinValueIncluded = False
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clAqua
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+          end
+          object btnSelecionarModulos: TAdvGlowButton
+            Left = 45
+            Top = 6
+            Width = 75
+            Height = 25
+            Hint = 'Seleciona os m'#243'dulos a serem compilados'
+            Caption = 'Localizar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 18
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = btnSelecionarModulosClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnCompilar: TAdvGlowButton
+            Left = 428
+            Top = 6
+            Width = 75
+            Height = 25
+            Hint = 'Compila os m'#243'dulos selecionados'
+            Anchors = [akRight, akBottom]
+            Caption = '&Compilar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 2
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+            OnClick = btnCompilarClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnTeste: TBitBtn
+            Left = 225
+            Top = 6
+            Width = 75
+            Height = 25
+            Caption = 'Teste'
+            TabOrder = 4
+            Visible = False
+            OnClick = btnTesteClick
+          end
+        end
+      end
+    end
+    object pnlCabecalho: TPanel
+      Left = 1
+      Top = 1
+      Width = 513
+      Height = 125
+      Align = alTop
+      Color = clSkyBlue
+      TabOrder = 1
+      object pgcVersao: TAdvOfficePager
+        Left = 1
+        Top = 1
+        Width = 244
+        Height = 123
+        Align = alClient
+        ActivePage = tabVersao
+        ButtonSettings.CloseButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001000001010100000100
+          0000000202000100020200000000000202020002020200000000010002020202
+          0200010000000101000202020001010000000100020202020200010000000002
+          0202000202020000000000020200010002020000000001000001010100000100
+          0000}
+        ButtonSettings.PageListButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+          0000010101000200010101000000010100020202000101000000010002020202
+          0200010000000002020200020202000000000002020001000202000000000100
+          0001010100000100000001010101010101010100000001010101010101010100
+          0000}
+        ButtonSettings.ScrollButtonPrevPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000001010100
+          0000010101000202000101000000010100020202000101000000010002020200
+          0101010000000002020200010101010000000100020202000101010000000101
+          0002020200010100000001010100020200010100000001010101000001010100
+          0000}
+        ButtonSettings.ScrollButtonNextPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010000010101010100
+          0000010002020001010101000000010002020200010101000000010100020202
+          0001010000000101010002020200010000000101000202020001010000000100
+          0202020001010100000001000202000101010100000001010000010101010100
+          0000}
+        ButtonSettings.ScrollButtonFirstPicture.Data = {
+          424DC60400000000000036040000280000001000000009000000010008000000
+          000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF01010101010000010101
+          0101000001010101010100020200010101000202000101010100020202000101
+          0002020200010101000202020001010002020200010101000202020001010002
+          0202000101010101000202020001010002020200010101010100020202000101
+          0002020200010101010100020200010101000202000101010101010000010101
+          010100000101}
+        ButtonSettings.ScrollButtonLastPicture.Data = {
+          424DC60400000000000036040000280000001000000009000000010008000000
+          000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF01010000010101010100
+          0001010101010100020200010101000202000101010101000202020001010002
+          0202000101010101000202020001010002020200010101010100020202000101
+          0002020200010101000202020001010002020200010101000202020001010002
+          0202000101010100020200010101000202000101010101010000010101010100
+          000101010101}
+        ButtonSettings.ClosedListButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+          0000010101000200010101000000010100020202000101000000010002020202
+          0200010000000002020200020202000000000002020001000202000000000100
+          0001010100000100000001010101010101010100000001010101010101010100
+          0000}
+        ButtonSettings.CloseButtonHint = 'Close'
+        ButtonSettings.PageListButtonHint = 'Page List'
+        ButtonSettings.ScrollButtonNextHint = 'Next'
+        ButtonSettings.ScrollButtonPrevHint = 'Previous'
+        ButtonSettings.ScrollButtonFirstHint = 'First'
+        ButtonSettings.ScrollButtonLastHint = 'Last'
+        ButtonSettings.ClosedListButtonHint = 'Closed Pages'
+        TabSettings.Shape = tsLeftRightRamp
+        ShowShortCutHints = False
+        TabOrder = 0
+        NextPictureChanged = False
+        PrevPictureChanged = False
+        object tabVersao: TAdvOfficePage
+          Left = 1
+          Top = 26
+          Width = 242
+          Height = 95
+          Caption = 'Vers'#227'o'
+          PageAppearance.BorderColor = 14922381
+          PageAppearance.Color = 16445929
+          PageAppearance.ColorTo = 15587527
+          PageAppearance.ColorMirror = 15587527
+          PageAppearance.ColorMirrorTo = 16773863
+          PageAppearance.Gradient = ggVertical
+          PageAppearance.GradientMirror = ggVertical
+          TabAppearance.BorderColor = clNone
+          TabAppearance.BorderColorHot = 15383705
+          TabAppearance.BorderColorSelected = 14922381
+          TabAppearance.BorderColorSelectedHot = 6343929
+          TabAppearance.BorderColorDisabled = clNone
+          TabAppearance.BorderColorDown = clNone
+          TabAppearance.Color = clBtnFace
+          TabAppearance.ColorTo = clWhite
+          TabAppearance.ColorSelected = 16709360
+          TabAppearance.ColorSelectedTo = 16445929
+          TabAppearance.ColorDisabled = clWhite
+          TabAppearance.ColorDisabledTo = clSilver
+          TabAppearance.ColorHot = 14542308
+          TabAppearance.ColorHotTo = 16768709
+          TabAppearance.ColorMirror = clWhite
+          TabAppearance.ColorMirrorTo = clWhite
+          TabAppearance.ColorMirrorHot = 14016477
+          TabAppearance.ColorMirrorHotTo = 10736609
+          TabAppearance.ColorMirrorSelected = 16445929
+          TabAppearance.ColorMirrorSelectedTo = 16181984
+          TabAppearance.ColorMirrorDisabled = clWhite
+          TabAppearance.ColorMirrorDisabledTo = clSilver
+          TabAppearance.Font.Charset = DEFAULT_CHARSET
+          TabAppearance.Font.Color = clWindowText
+          TabAppearance.Font.Height = -11
+          TabAppearance.Font.Name = 'Tahoma'
+          TabAppearance.Font.Style = []
+          TabAppearance.Gradient = ggVertical
+          TabAppearance.GradientMirror = ggVertical
+          TabAppearance.GradientHot = ggRadial
+          TabAppearance.GradientMirrorHot = ggVertical
+          TabAppearance.GradientSelected = ggVertical
+          TabAppearance.GradientMirrorSelected = ggVertical
+          TabAppearance.GradientDisabled = ggVertical
+          TabAppearance.GradientMirrorDisabled = ggVertical
+          TabAppearance.TextColor = 9126421
+          TabAppearance.TextColorHot = 9126421
+          TabAppearance.TextColorSelected = 9126421
+          TabAppearance.TextColorDisabled = clGray
+          TabAppearance.ShadowColor = 15255470
+          TabAppearance.HighLightColor = 16775871
+          TabAppearance.HighLightColorHot = 16643309
+          TabAppearance.HighLightColorSelected = 6540536
+          TabAppearance.HighLightColorSelectedHot = 12451839
+          TabAppearance.HighLightColorDown = 16776144
+          TabAppearance.BackGround.Color = 16767935
+          TabAppearance.BackGround.ColorTo = clNone
+          TabAppearance.BackGround.Direction = gdHorizontal
+          object cbxVersao: TDBLookupComboBox
+            Left = 3
+            Top = 7
+            Width = 234
+            Height = 21
+            Hint = 'Informe a vers'#227'o que deseja compilar'
+            Color = clBlack
+            DropDownRows = 15
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clAqua
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            KeyField = 'CODI_VER'
+            ListField = 'DESC_VER'
+            ListSource = dtsVersoes
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 0
+            TabStop = False
+            OnCloseUp = cbxVersaoCloseUp
+          end
+          object btnIncluirVer: TAdvGlowButton
+            Left = 3
+            Top = 61
+            Width = 75
+            Height = 25
+            Hint = 'Cadastra nova vers'#227'o '
+            Caption = 'Incluir'
+            ImageIndex = 16
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            OnClick = btnIncluirVerClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnAlterarVer: TAdvGlowButton
+            Left = 83
+            Top = 61
+            Width = 75
+            Height = 25
+            Hint = 'Altera vers'#227'o selecionada'
+            Caption = 'Alterar'
+            ImageIndex = 17
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = btnAlterarVerClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnExcluirVer: TAdvGlowButton
+            Left = 162
+            Top = 61
+            Width = 75
+            Height = 25
+            Hint = 'Exclui vers'#227'o selecionada'
+            Caption = 'Excluir'
+            ImageIndex = 0
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+            OnClick = btnExcluirVerClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object btnPesquisarVer: TAdvGlowButton
+            Left = 162
+            Top = 30
+            Width = 75
+            Height = 25
+            Hint = 'Seleciona a vers'#227'o na qual se iniciar'#225' a compila'#231#227'o dos m'#243'dulos'
+            Caption = 'Localizar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ImageIndex = 18
+            Images = ImageListImagens
+            NotesFont.Charset = DEFAULT_CHARSET
+            NotesFont.Color = clWindowText
+            NotesFont.Height = -11
+            NotesFont.Name = 'Tahoma'
+            NotesFont.Style = []
+            ParentFont = False
+            Spacing = 4
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 4
+            OnClick = btnPesquisarVerClick
+            Appearance.ColorChecked = 16111818
+            Appearance.ColorCheckedTo = 16367008
+            Appearance.ColorDisabled = 15921906
+            Appearance.ColorDisabledTo = 15921906
+            Appearance.ColorDown = 16111818
+            Appearance.ColorDownTo = 16367008
+            Appearance.ColorHot = 16117985
+            Appearance.ColorHotTo = 16372402
+            Appearance.ColorMirrorHot = 16107693
+            Appearance.ColorMirrorHotTo = 16775412
+            Appearance.ColorMirrorDown = 16102556
+            Appearance.ColorMirrorDownTo = 16768988
+            Appearance.ColorMirrorChecked = 16102556
+            Appearance.ColorMirrorCheckedTo = 16768988
+            Appearance.ColorMirrorDisabled = 11974326
+            Appearance.ColorMirrorDisabledTo = 15921906
+          end
+          object edtVersao: TDBEdit
+            Left = 93
+            Top = 34
+            Width = 70
+            Height = 21
+            TabStop = False
+            Color = clBlack
+            DataField = 'VERS_VER'
+            DataSource = dtsVersoes
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clAqua
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ReadOnly = True
+            TabOrder = 5
+          end
+          object edtDELP_VER: TDBEdit
+            Left = 3
+            Top = 34
+            Width = 86
+            Height = 21
+            TabStop = False
+            Color = clBlack
+            DataField = 'DELP_VER'
+            DataSource = dtsVersoes
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clAqua
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ReadOnly = True
+            TabOrder = 6
+          end
+        end
+      end
+      object pgcDiretivas: TAdvOfficePager
+        Left = 245
+        Top = 1
+        Width = 267
+        Height = 123
+        Align = alRight
+        ActivePage = tabDiretivas
+        ButtonSettings.CloseButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001000001010100000100
+          0000000202000100020200000000000202020002020200000000010002020202
+          0200010000000101000202020001010000000100020202020200010000000002
+          0202000202020000000000020200010002020000000001000001010100000100
+          0000}
+        ButtonSettings.PageListButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+          0000010101000200010101000000010100020202000101000000010002020202
+          0200010000000002020200020202000000000002020001000202000000000100
+          0001010100000100000001010101010101010100000001010101010101010100
+          0000}
+        ButtonSettings.ScrollButtonPrevPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000001010100
+          0000010101000202000101000000010100020202000101000000010002020200
+          0101010000000002020200010101010000000100020202000101010000000101
+          0002020200010100000001010100020200010100000001010101000001010100
+          0000}
+        ButtonSettings.ScrollButtonNextPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010000010101010100
+          0000010002020001010101000000010002020200010101000000010100020202
+          0001010000000101010002020200010000000101000202020001010000000100
+          0202020001010100000001000202000101010100000001010000010101010100
+          0000}
+        ButtonSettings.ScrollButtonFirstPicture.Data = {
+          424DC60400000000000036040000280000001000000009000000010008000000
+          000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF01010101010000010101
+          0101000001010101010100020200010101000202000101010100020202000101
+          0002020200010101000202020001010002020200010101000202020001010002
+          0202000101010101000202020001010002020200010101010100020202000101
+          0002020200010101010100020200010101000202000101010101010000010101
+          010100000101}
+        ButtonSettings.ScrollButtonLastPicture.Data = {
+          424DC60400000000000036040000280000001000000009000000010008000000
+          000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF01010000010101010100
+          0001010101010100020200010101000202000101010101000202020001010002
+          0202000101010101000202020001010002020200010101010100020202000101
+          0002020200010101000202020001010002020200010101000202020001010002
+          0202000101010100020200010101000202000101010101010000010101010100
+          000101010101}
+        ButtonSettings.ClosedListButtonPicture.Data = {
+          424DA20400000000000036040000280000000900000009000000010008000000
+          00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+          0000010101000200010101000000010100020202000101000000010002020202
+          0200010000000002020200020202000000000002020001000202000000000100
+          0001010100000100000001010101010101010100000001010101010101010100
+          0000}
+        ButtonSettings.CloseButtonHint = 'Close'
+        ButtonSettings.PageListButtonHint = 'Page List'
+        ButtonSettings.ScrollButtonNextHint = 'Next'
+        ButtonSettings.ScrollButtonPrevHint = 'Previous'
+        ButtonSettings.ScrollButtonFirstHint = 'First'
+        ButtonSettings.ScrollButtonLastHint = 'Last'
+        ButtonSettings.ClosedListButtonHint = 'Closed Pages'
+        TabSettings.Shape = tsLeftRightRamp
+        ShowShortCutHints = False
+        TabOrder = 1
+        NextPictureChanged = False
+        PrevPictureChanged = False
+        object tabDiretivas: TAdvOfficePage
+          Left = 1
+          Top = 26
+          Width = 265
+          Height = 95
+          Caption = 'Diretivas de compila'#231#227'o'
+          PageAppearance.BorderColor = 14922381
+          PageAppearance.Color = 16445929
+          PageAppearance.ColorTo = 15587527
+          PageAppearance.ColorMirror = 15587527
+          PageAppearance.ColorMirrorTo = 16773863
+          PageAppearance.Gradient = ggVertical
+          PageAppearance.GradientMirror = ggVertical
+          TabAppearance.BorderColor = clNone
+          TabAppearance.BorderColorHot = 15383705
+          TabAppearance.BorderColorSelected = 14922381
+          TabAppearance.BorderColorSelectedHot = 6343929
+          TabAppearance.BorderColorDisabled = clNone
+          TabAppearance.BorderColorDown = clNone
+          TabAppearance.Color = clBtnFace
+          TabAppearance.ColorTo = clWhite
+          TabAppearance.ColorSelected = 16709360
+          TabAppearance.ColorSelectedTo = 16445929
+          TabAppearance.ColorDisabled = clWhite
+          TabAppearance.ColorDisabledTo = clSilver
+          TabAppearance.ColorHot = 14542308
+          TabAppearance.ColorHotTo = 16768709
+          TabAppearance.ColorMirror = clWhite
+          TabAppearance.ColorMirrorTo = clWhite
+          TabAppearance.ColorMirrorHot = 14016477
+          TabAppearance.ColorMirrorHotTo = 10736609
+          TabAppearance.ColorMirrorSelected = 16445929
+          TabAppearance.ColorMirrorSelectedTo = 16181984
+          TabAppearance.ColorMirrorDisabled = clWhite
+          TabAppearance.ColorMirrorDisabledTo = clSilver
+          TabAppearance.Font.Charset = DEFAULT_CHARSET
+          TabAppearance.Font.Color = clWindowText
+          TabAppearance.Font.Height = -11
+          TabAppearance.Font.Name = 'Tahoma'
+          TabAppearance.Font.Style = []
+          TabAppearance.Gradient = ggVertical
+          TabAppearance.GradientMirror = ggVertical
+          TabAppearance.GradientHot = ggRadial
+          TabAppearance.GradientMirrorHot = ggVertical
+          TabAppearance.GradientSelected = ggVertical
+          TabAppearance.GradientMirrorSelected = ggVertical
+          TabAppearance.GradientDisabled = ggVertical
+          TabAppearance.GradientMirrorDisabled = ggVertical
+          TabAppearance.TextColor = 9126421
+          TabAppearance.TextColorHot = 9126421
+          TabAppearance.TextColorSelected = 9126421
+          TabAppearance.TextColorDisabled = clGray
+          TabAppearance.ShadowColor = 15255470
+          TabAppearance.HighLightColor = 16775871
+          TabAppearance.HighLightColorHot = 16643309
+          TabAppearance.HighLightColorSelected = 6540536
+          TabAppearance.HighLightColorSelectedHot = 12451839
+          TabAppearance.HighLightColorDown = 16776144
+          TabAppearance.BackGround.Color = 16767935
+          TabAppearance.BackGround.ColorTo = clNone
+          TabAppearance.BackGround.Direction = gdHorizontal
+          object grdDiretivas: TDBAdvGrid
+            Left = 2
+            Top = 2
+            Width = 261
+            Height = 91
+            Cursor = crDefault
+            Align = alClient
+            ColCount = 3
+            Ctl3D = True
+            DefaultRowHeight = 24
+            DefaultDrawing = True
+            RowCount = 2
+            FixedRows = 1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing]
+            ParentCtl3D = False
+            ParentFont = False
+            ScrollBars = ssBoth
+            TabOrder = 0
+            ActiveRowShow = True
+            ActiveRowColor = 16383935
+            GridFixedLineColor = clNone
+            ActiveCellFont.Charset = DEFAULT_CHARSET
+            ActiveCellFont.Color = clDefault
+            ActiveCellFont.Height = -11
+            ActiveCellFont.Name = 'Tahoma'
+            ActiveCellFont.Style = [fsBold]
+            AutoSize = True
+            ControlLook.FixedGradientFrom = 15130800
+            ControlLook.FixedGradientTo = 11840082
+            ControlLook.FixedGradientHoverFrom = 16775139
+            ControlLook.FixedGradientHoverTo = 16775139
+            ControlLook.FixedGradientHoverMirrorFrom = 16772541
+            ControlLook.FixedGradientHoverMirrorTo = 16508855
+            ControlLook.FixedGradientDownFrom = 16377020
+            ControlLook.FixedGradientDownTo = 16377020
+            ControlLook.FixedGradientDownMirrorFrom = 16242317
+            ControlLook.FixedGradientDownMirrorTo = 16109962
+            ControlLook.FixedGradientDownBorder = 11440207
+            ControlLook.ControlStyle = csWinXP
+            ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+            ControlLook.DropDownHeader.Font.Color = clWindowText
+            ControlLook.DropDownHeader.Font.Height = -11
+            ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+            ControlLook.DropDownHeader.Font.Style = []
+            ControlLook.DropDownHeader.Visible = True
+            ControlLook.DropDownHeader.Buttons = <>
+            ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+            ControlLook.DropDownFooter.Font.Color = clWindowText
+            ControlLook.DropDownFooter.Font.Height = -11
+            ControlLook.DropDownFooter.Font.Name = 'Tahoma'
+            ControlLook.DropDownFooter.Font.Style = []
+            ControlLook.DropDownFooter.Visible = True
+            ControlLook.DropDownFooter.Buttons = <>
+            Filter = <>
+            FilterDropDown.Font.Charset = DEFAULT_CHARSET
+            FilterDropDown.Font.Color = clWindowText
+            FilterDropDown.Font.Height = -11
+            FilterDropDown.Font.Name = 'Tahoma'
+            FilterDropDown.Font.Style = []
+            FilterDropDownClear = '(All)'
+            FixedColWidth = 20
+            FixedRowHeight = 22
+            FixedFont.Charset = DEFAULT_CHARSET
+            FixedFont.Color = clWindowText
+            FixedFont.Height = -11
+            FixedFont.Name = 'Tahoma'
+            FixedFont.Style = [fsBold]
+            FloatFormat = '%.2f'
+            Grouping.HeaderColor = 16383935
+            Grouping.HeaderColorTo = 15130800
+            Grouping.SummaryColor = 13664560
+            PrintSettings.DateFormat = 'dd/mm/yyyy'
+            PrintSettings.Font.Charset = DEFAULT_CHARSET
+            PrintSettings.Font.Color = clWindowText
+            PrintSettings.Font.Height = -11
+            PrintSettings.Font.Name = 'Tahoma'
+            PrintSettings.Font.Style = []
+            PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+            PrintSettings.FixedFont.Color = clWindowText
+            PrintSettings.FixedFont.Height = -11
+            PrintSettings.FixedFont.Name = 'Tahoma'
+            PrintSettings.FixedFont.Style = []
+            PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+            PrintSettings.HeaderFont.Color = clWindowText
+            PrintSettings.HeaderFont.Height = -11
+            PrintSettings.HeaderFont.Name = 'Tahoma'
+            PrintSettings.HeaderFont.Style = []
+            PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+            PrintSettings.FooterFont.Color = clWindowText
+            PrintSettings.FooterFont.Height = -11
+            PrintSettings.FooterFont.Name = 'Tahoma'
+            PrintSettings.FooterFont.Style = []
+            PrintSettings.PageNumSep = '/'
+            ScrollWidth = 19
+            SearchFooter.Color = 15130800
+            SearchFooter.ColorTo = 11840082
+            SearchFooter.FindNextCaption = 'Pr'#243'xima'
+            SearchFooter.FindPrevCaption = 'Anterior'
+            SearchFooter.Font.Charset = DEFAULT_CHARSET
+            SearchFooter.Font.Color = clWindowText
+            SearchFooter.Font.Height = -11
+            SearchFooter.Font.Name = 'Tahoma'
+            SearchFooter.Font.Style = []
+            SearchFooter.HighLightCaption = 'Highlight'
+            SearchFooter.HintClose = 'Fechar'
+            SearchFooter.HintFindNext = 'Localiza pr'#243'xima ocorr'#234'ncia'
+            SearchFooter.HintFindPrev = 'Localiza ocorr'#234'ncia anterior'
+            SearchFooter.HintHighlight = 'Highlight occurences'
+            SearchFooter.MatchCaseCaption = 'Case Sensitive'
+            SearchFooter.ShowClose = False
+            SearchFooter.ShowHighLight = False
+            SelectionColor = 13664560
+            SelectionColorTo = 15130800
+            SortSettings.Show = True
+            SortSettings.HeaderColor = 16579058
+            SortSettings.HeaderColorTo = 16579058
+            SortSettings.HeaderMirrorColor = 16380385
+            SortSettings.HeaderMirrorColorTo = 16182488
+            Version = '2.2.0.1'
+            AutoCreateColumns = False
+            AutoRemoveColumns = False
+            Columns = <
+              item
+                Borders = []
+                BorderPen.Color = clSilver
+                CheckFalse = 'N'
+                CheckTrue = 'Y'
+                Color = clWindow
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                HeaderFont.Charset = DEFAULT_CHARSET
+                HeaderFont.Color = clWindowText
+                HeaderFont.Height = -11
+                HeaderFont.Name = 'Tahoma'
+                HeaderFont.Style = []
+                PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+                PrintFont.Charset = DEFAULT_CHARSET
+                PrintFont.Color = clWindowText
+                PrintFont.Height = -11
+                PrintFont.Name = 'Tahoma'
+                PrintFont.Style = []
+                Width = 20
+              end
+              item
+                Alignment = taCenter
+                Borders = []
+                BorderPen.Color = clSilver
+                CheckFalse = 'N'
+                CheckTrue = 'Y'
+                Color = clWindow
+                FieldName = 'SELECIONA'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Header = 'Utilizar?'
+                HeaderFont.Charset = DEFAULT_CHARSET
+                HeaderFont.Color = clWindowText
+                HeaderFont.Height = -11
+                HeaderFont.Name = 'Tahoma'
+                HeaderFont.Style = []
+                HeaderAlignment = taCenter
+                PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+                PrintFont.Charset = DEFAULT_CHARSET
+                PrintFont.Color = clWindowText
+                PrintFont.Height = -11
+                PrintFont.Name = 'Tahoma'
+                PrintFont.Style = []
+                Width = 12
+              end
+              item
+                Borders = []
+                BorderPen.Color = clSilver
+                CheckFalse = 'N'
+                CheckTrue = 'Y'
+                Color = clWindow
+                FieldName = 'DESC_DTV'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Header = 'Descri'#231#227'o da diretiva'
+                HeaderFont.Charset = DEFAULT_CHARSET
+                HeaderFont.Color = clWindowText
+                HeaderFont.Height = -11
+                HeaderFont.Name = 'Tahoma'
+                HeaderFont.Style = []
+                PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+                PrintFont.Charset = DEFAULT_CHARSET
+                PrintFont.Color = clWindowText
+                PrintFont.Height = -11
+                PrintFont.Name = 'Tahoma'
+                PrintFont.Style = []
+                ReadOnly = True
+                Width = 12
+              end>
+            DataSource = dtsDiretivas
+            DatasetTypeAuto = False
+            DataSetType = dtNonSequenced
+            InvalidPicture.Data = {
+              055449636F6E0000010001002020200000000000A81000001600000028000000
+              2000000040000000010020000000000000100000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000003000000290000005C0000008B000000AF000000C1
+              000000CA000000CB000000C9000000C1000000AF0000008A0000005E0000002C
+              0000000400000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000000000220000007100001CBE000047F401015DFF01016CFF000074FF
+              000075FF00006CFF01015EFF010145FF000020FF000001F3000000DE000000AE
+              0000006B00000026000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000005401013DC5010175FF010186FF010189FF000085FF000082FF000081FF
+              000080FF000080FF000080FF000083FF000082FF01016EFF01013FFF000007FB
+              000000E0000000A10000004D0000000700000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000300003A8B
+              010178FF010191FF00008AFF000085FF000085FF000085FF000085FF000086FF
+              000086FF000084FF000081FF000080FF00007FFF000081FF000085FF010172FF
+              000030FF000000F5000000C3000000610000000A000000000000000000000000
+              000000000000000000000000000000000000000000000001010159A5010193FF
+              01018EFF000089FF000089FF00008CFF00008CFF00008FFF000090FF000090FF
+              000090FF00008FFF00008BFF00008AFF000086FF000082FF00007EFF000081FF
+              010182FF00004FFF000000FC000000CB0000005F000000080000000000000000
+              0000000000000000000000000000000000000000010167AA02029EFF01018EFF
+              00008CFF00008FFF000092FF000095FF000098FF000099FF000098FF00009BFF
+              00009AFF000098FF000097FF000094FF00008FFF00008BFF000087FF000082FF
+              00007FFF010188FF00005BFF000000FC000000C4000000530000000000000000
+              00000000000000000000000000000000010169850202A4FF010191FF000090FF
+              000095FF000093FF000096FF00009DFF0000A2FF0000A2FF0000A2FF0000A3FF
+              0000A2FF0000A1FF00009FFF00009BFF000097FF00008DFF00008BFF00008AFF
+              000084FF00007FFF01018BFF000054FF000000F6000000AC0000003000000000
+              000000000000000000000000000168400202A6FF020294FF000094FF00009AFF
+              000098FF4949BFFF5353C4FF00009DFF0000A7FF0000A9FF0101AAFF0101AAFF
+              0101A9FF0101A8FF0000A5FF0000A2FF00009AFF5F5FC5FF3A3AB3FF00008AFF
+              00008BFF000086FF010183FF01018BFF000037FF000000E50000007900000009
+              0000000000000000000000000202A2D803039EFF00009AFF0000A0FF0000A1FF
+              2929ABFFFFFFFAFFFFFFFFFF4A4AC8FF0000A5FF0000AFFF0000AFFF0101AEFF
+              0101B0FF0000AFFF0000ACFF0000A5FF4848B6FFFFFFFFFFFFFFFFFF2424AEFF
+              00008FFF000090FF000089FF01018BFF010180FF00000CFF000000BB00000038
+              00000000000000000101655C0303B2FF02029EFF0000A4FF0000AAFF2F2FA9FF
+              CCCCC0FFFFFFF4FFFFFFFFFFFFFFFFFF4141CAFF0000ACFF0000B3FF0000B3FF
+              0000B3FF0000B2FF0000ADFF4343B5FFEDEDD9FFFFFFFFFFFFFFFFFFFFFFFFFF
+              3232AFFF000095FF000092FF01018BFF020293FF010155FF000000E50000006F
+              00000000000000000303A6D70303A2FF0202A5FF0000ACFF0000B2FF78788DFF
+              CBCBA5FFFFFFFCFFFFFFFFFFFFFFFFFFFFFFFFFF4F4FCEFF0000AEFF0000B5FF
+              0000B6FF0000B2FF4B4BBDFFF2F2D9FFFFFFF8FFFFFFFFFFFFFFFFFFF8F8D4FF
+              8282AEFF0000A2FF00009DFF010194FF020291FF02028CFF000110FD0000009F
+              000000180000C5200404A3FF0404A7FF0202ADFF0101B3FF0000BCFF0000B0FF
+              606073FFC4C4A9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4040CFFF0000B1FF
+              0000B3FF4E4EC8FFF6F6DFFFFFFFF6FFFFFFFFFFFFFFFFFFE7E7CBFF737393FF
+              0000A9FF0000ABFF0000A4FF01019BFF020292FF02029BFF010139FF000000C2
+              000000370201BE6D0505A7FF0404AEFF0303B6FF0303BBFF0101C1FF0000CDFF
+              0000B9FF56566EFFC0C0A5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3B3BCFFF
+              5050D7FFFFFFFAFFFFFFF5FFFFFFFFFFFFFFFFFFE0E0C8FF6D6D8FFF0000B2FF
+              0000B8FF0000B1FF0101ABFF0101A3FF01019AFF02029EFF02026FFF000000DC
+              0000004D0405BAA10707ADFF0606B5FF0404BBFF0505C2FF0505C8FF0303CBFF
+              0000D2FF0000BAFF616177FFC6C6ABFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE9E9CDFF747495FF0000B7FF0000C2FF
+              0101BDFF0202B8FF0202B2FF0101AAFF02029FFF03039EFF020289FF000004E6
+              000000550606B9CB0808B5FF0606BBFF0606C4FF0606C9FF0606CDFF0606D0FF
+              0202CFFF0000D4FF0000BDFF6E6E86FFDADABDFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFF5F5DAFF8181A4FF0000BCFF0000C5FF0000C4FF
+              0303C1FF0303BEFF0202B8FF0202B0FF0202A6FF0303A1FF03039FFF00000CEC
+              000000590909BBE80909BAFF0808C2FF0808CAFF0808D0FF0909D4FF0707D4FF
+              0303D2FF0000D0FF0000D4FF0000C2FF8A8AAEFFF7F7EAFFFFFFFFFFFEFEFEFF
+              FEFEFEFFFFFFFFFFFFFFF9FF9393C8FF0000C3FF0000C8FF0000C6FF0101C6FF
+              0404C6FF0505C5FF0303BEFF0202B6FF0202ACFF0303A3FF0606AEFF010113ED
+              0000005A0A0ABFF80C0CC2FF0B0BC9FF0B0BD0FF0B0BD8FF0D0DDCFF0808D9FF
+              0303D5FF0000D2FF0000D2FF0000D4FF4648C5FFF9F9E6FFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFF6FF3A3ACEFF0000C6FF0000CBFF0000C9FF0303CAFF
+              0505CAFF0505CAFF0505C4FF0404BEFF0404B2FF0505A9FF0505B9FF010115EB
+              000000570B0BC6EA1010C9FF0E0ED0FF0E0EDAFF0F0FE1FF0F0FE2FF0B0BE0FF
+              0303DAFF0000D6FF0000D4FF4242CBFFE9E9D5FFFFFFFBFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFEFFFFFFF9FF4949DEFF0000C6FF0000CCFF0101CDFF
+              0606CFFF0707CFFF0606C9FF0505C3FF0505B7FF0606ADFF0707B8FF010113E2
+              0000004F0C0CCDCE1313CFFF1212D7FF1313E1FF1313E9FF1313ECFF0C0CE7FF
+              0000E0FF0000DCFF3F3FCDFFEAEAD2FFFFFFF6FFFFFFFFFFFFFFFFFFFFFFF5FF
+              FFFFF3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4343DCFF0000CAFF0000D2FF
+              0606D4FF0A0AD3FF0808CEFF0808C6FF0707BBFF0808B4FF0606B3FF01010ED4
+              000000410909D7A41515D4FF1717E0FF1818E9FF1A1AF2FF1A1AF5FF0E0EF3FF
+              0000EBFF4848D2FFECECD0FFFFFFF5FFFFFFFFFFFFFFFFFFEEEED6FF8585BBFF
+              8787ADFFDDDDC5FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFF4E4EE2FF0000D2FF
+              0505DBFF0C0CD9FF0B0BD3FF0A0ACAFF0A0ABEFF0B0BBCFF0606A5FF000004B1
+              000000200608DE751919D6FF1C1CE6FF1E1EF2FF2121FCFF1E1EFFFF0606FFFF
+              4D4DE0FFE6E6CBFFFFFFF4FFFFFFFFFFFFFFFFFFEAEACAFF7B7BA3FF0000D9FF
+              0000D4FF737389FFCBCBABFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4F4FEEFF
+              0000E4FF0B0BE1FF0D0DDAFF0C0CCEFF0C0CC2FF0F0FC7FF060690FF00000085
+              000000050000E6221717DCFF2222E9FF2626F9FF2727FFFF2424FFFF5E5ED6FF
+              DFDFC0FFFFFFF5FFFFFFFFFFFFFFFFFFDFDFC2FF72729BFF0000DDFF0000E8FF
+              0000E9FF0000D1FF605F7AFFC2C2A4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFF
+              5656DFFF0606E8FF1010E0FF1111D4FF0F0FC7FF0E0ECEFF020253E200000047
+              00000000000000001010E3D92424ECFF2D2DFFFF3131FFFF2F2FFFFF7C7C9FFF
+              D8D8B2FFFFFFFFFFFFFFFFFFE1E1C0FF696996FF0000E0FF0000E9FF0000E6FF
+              0000E4FF0000ECFF0000D4FF595971FFBEBE9DFFFFFFFFFFFFFFFDFFD6D6A6FF
+              7272BFFF1010F6FF1616E4FF1515D6FF1313CFFF0D0DC5FF000021A200000012
+              00000000000000000607E85C2121EDFF3030FFFF3C3CFFFF3E3EFFFF3B3BF8FF
+              71719AFFD8D8BDFFD9D9BAFF6C6C99FF0000F1FF0000F6FF0000E9FF0000E6FF
+              0000E7FF0000E8FF0000F5FF0000DEFF565674FFBBBB98FFC1C19BFF5F5FA8FF
+              1717FFFF1919FAFF1C1CE7FF1919D9FF1515DBFF05058CF20000004300000000
+              0000000000000000000000001313EED32E2EFDFF4040FFFF4B4BFFFF4F4FFFFF
+              4C4CFBFF696981FF6B6B80FF2525FBFF1212FFFF0D0DFFFF0707FAFF0404F3FF
+              0505F2FF0606F5FF0A0AFCFF0C0CFFFF1A1AF4FF606067FF5B5B8FFF2323FFFF
+              2626FFFF2727FBFF2222E9FF1D1DE0FF1010D2FF000025880000000800000000
+              0000000000000000000000000202F1352020F8FF3B3BFFFF4D4DFFFF5C5CFFFF
+              6666FFFF6464FCFF5F5FF7FF5555FFFF4343FFFF3131FFFF2121FFFF1919FFFF
+              1818FFFF1C1CFFFF2525FFFF3131FFFF3737FFFF3D3DF6FF3939FEFF3535FFFF
+              3333FFFF2C2CFAFF2525EAFF1A1AE8FF030380C1000000170000000000000000
+              000000000000000000000000000000000909F3712B2BFEFF4646FFFF5D5DFFFF
+              6E6EFFFF7B7BFFFF8080FFFF8181FFFF7575FFFF6767FFFF5555FFFF4949FFFF
+              4646FFFF4848FFFF4E4EFFFF5454FFFF5757FFFF5050FFFF4949FFFF4040FFFF
+              3838FFFF2D2DF6FF2020F6FF0808B6DF00000423000000000000000000000000
+              00000000000000000000000000000000000000000D0EF6902F2FFFFF4D4DFFFF
+              6666FFFF7C7CFFFF8B8BFFFF9494FFFF9696FFFF9191FFFF8A8AFFFF7E7EFFFF
+              7878FFFF7373FFFF7171FFFF6C6CFFFF6464FFFF5B5BFFFF5050FFFF4343FFFF
+              3636FFFF2626FFFF0D0ECCE30000072800000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000A0AF8782B2BFDFF
+              4E4EFFFF6868FFFF7F7FFFFF9292FFFFA0A0FFFFA5A5FFFFA7A7FFFFA2A2FFFF
+              9999FFFF8E8EFFFF8282FFFF7575FFFF6868FFFF5959FFFF4B4BFFFF3A3AFFFF
+              2727FFFF0B0BCEC600000A150000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000001F841
+              2121FCDD4545FFFF6262FFFF7979FFFF8C8CFFFF9B9BFFFFA4A4FFFFA3A3FFFF
+              9B9BFFFF8E8EFFFF7E7EFFFF6C6CFFFF5D5DFFFF4B4BFFFF3838FFFF1F1FEFFF
+              0405B77D00000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000708F96B2827FDE24646FEFF6464FFFF7474FFFF8080FFFF8484FFFF
+              7E7EFFFF7373FFFF6363FFFF5353FFFF3F3FFEFF2323FAF40C0CE69800007B1C
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000A0AF9321415F9802727F9B03C3CFBD84949FFF1
+              4848FFF53939FCDE2727F9BB1516F88B0608F9480708E4070000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000FF8000FFFF00007FFE00001FF800000FF0000007F0000007E0000003
+              C0000001C0000001800000018000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000180000001
+              80000003C0000003C0000007E000000FF000001FF800003FFC0000FFFF0001FF
+              FFC007FF}
+            RefreshOnInsert = True
+            ShowBooleanFields = True
+            ShowUnicode = False
+            ColWidths = (
+              20
+              12
+              12)
+          end
+        end
+      end
+    end
+  end
+  object pgcLog: TAdvOfficePager
+    Left = 515
+    Top = 0
+    Width = 277
+    Height = 718
+    Align = alClient
+    ActivePage = tabLog
+    ButtonSettings.CloseButtonPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001000001010100000100
+      0000000202000100020200000000000202020002020200000000010002020202
+      0200010000000101000202020001010000000100020202020200010000000002
+      0202000202020000000000020200010002020000000001000001010100000100
+      0000}
+    ButtonSettings.PageListButtonPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+      0000010101000200010101000000010100020202000101000000010002020202
+      0200010000000002020200020202000000000002020001000202000000000100
+      0001010100000100000001010101010101010100000001010101010101010100
+      0000}
+    ButtonSettings.ScrollButtonPrevPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000001010100
+      0000010101000202000101000000010100020202000101000000010002020200
+      0101010000000002020200010101010000000100020202000101010000000101
+      0002020200010100000001010100020200010100000001010101000001010100
+      0000}
+    ButtonSettings.ScrollButtonNextPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010000010101010100
+      0000010002020001010101000000010002020200010101000000010100020202
+      0001010000000101010002020200010000000101000202020001010000000100
+      0202020001010100000001000202000101010100000001010000010101010100
+      0000}
+    ButtonSettings.ScrollButtonFirstPicture.Data = {
+      424DC60400000000000036040000280000001000000009000000010008000000
+      000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+      FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF01010101010000010101
+      0101000001010101010100020200010101000202000101010100020202000101
+      0002020200010101000202020001010002020200010101000202020001010002
+      0202000101010101000202020001010002020200010101010100020202000101
+      0002020200010101010100020200010101000202000101010101010000010101
+      010100000101}
+    ButtonSettings.ScrollButtonLastPicture.Data = {
+      424DC60400000000000036040000280000001000000009000000010008000000
+      000000000000C40E0000C40E00000001000000010000427B84FFDEEFEFFFFFFF
+      FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF01010000010101010100
+      0001010101010100020200010101000202000101010101000202020001010002
+      0202000101010101000202020001010002020200010101010100020202000101
+      0002020200010101000202020001010002020200010101000202020001010002
+      0202000101010100020200010101000202000101010101010000010101010100
+      000101010101}
+    ButtonSettings.ClosedListButtonPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001010101000101010100
+      0000010101000200010101000000010100020202000101000000010002020202
+      0200010000000002020200020202000000000002020001000202000000000100
+      0001010100000100000001010101010101010100000001010101010101010100
+      0000}
+    ButtonSettings.CloseButtonHint = 'Close'
+    ButtonSettings.PageListButtonHint = 'Page List'
+    ButtonSettings.ScrollButtonNextHint = 'Next'
+    ButtonSettings.ScrollButtonPrevHint = 'Previous'
+    ButtonSettings.ScrollButtonFirstHint = 'First'
+    ButtonSettings.ScrollButtonLastHint = 'Last'
+    ButtonSettings.ClosedListButtonHint = 'Closed Pages'
+    TabSettings.Shape = tsLeftRightRamp
+    ShowShortCutHints = False
+    TabOrder = 2
+    NextPictureChanged = False
+    PrevPictureChanged = False
+    object tabLog: TAdvOfficePage
+      Left = 1
+      Top = 26
+      Width = 275
+      Height = 690
+      Caption = 'Log'
+      PageAppearance.BorderColor = 14922381
+      PageAppearance.Color = 16445929
+      PageAppearance.ColorTo = 15587527
+      PageAppearance.ColorMirror = 15587527
+      PageAppearance.ColorMirrorTo = 16773863
+      PageAppearance.Gradient = ggVertical
+      PageAppearance.GradientMirror = ggVertical
+      TabAppearance.BorderColor = clNone
+      TabAppearance.BorderColorHot = 15383705
+      TabAppearance.BorderColorSelected = 14922381
+      TabAppearance.BorderColorSelectedHot = 6343929
+      TabAppearance.BorderColorDisabled = clNone
+      TabAppearance.BorderColorDown = clNone
+      TabAppearance.Color = clBtnFace
+      TabAppearance.ColorTo = clWhite
+      TabAppearance.ColorSelected = 16709360
+      TabAppearance.ColorSelectedTo = 16445929
+      TabAppearance.ColorDisabled = clWhite
+      TabAppearance.ColorDisabledTo = clSilver
+      TabAppearance.ColorHot = 14542308
+      TabAppearance.ColorHotTo = 16768709
+      TabAppearance.ColorMirror = clWhite
+      TabAppearance.ColorMirrorTo = clWhite
+      TabAppearance.ColorMirrorHot = 14016477
+      TabAppearance.ColorMirrorHotTo = 10736609
+      TabAppearance.ColorMirrorSelected = 16445929
+      TabAppearance.ColorMirrorSelectedTo = 16181984
+      TabAppearance.ColorMirrorDisabled = clWhite
+      TabAppearance.ColorMirrorDisabledTo = clSilver
+      TabAppearance.Font.Charset = DEFAULT_CHARSET
+      TabAppearance.Font.Color = clWindowText
+      TabAppearance.Font.Height = -11
+      TabAppearance.Font.Name = 'Tahoma'
+      TabAppearance.Font.Style = []
+      TabAppearance.Gradient = ggVertical
+      TabAppearance.GradientMirror = ggVertical
+      TabAppearance.GradientHot = ggRadial
+      TabAppearance.GradientMirrorHot = ggVertical
+      TabAppearance.GradientSelected = ggVertical
+      TabAppearance.GradientMirrorSelected = ggVertical
+      TabAppearance.GradientDisabled = ggVertical
+      TabAppearance.GradientMirrorDisabled = ggVertical
+      TabAppearance.TextColor = 9126421
+      TabAppearance.TextColorHot = 9126421
+      TabAppearance.TextColorSelected = 9126421
+      TabAppearance.TextColorDisabled = clGray
+      TabAppearance.ShadowColor = 15255470
+      TabAppearance.HighLightColor = 16775871
+      TabAppearance.HighLightColorHot = 16643309
+      TabAppearance.HighLightColorSelected = 6540536
+      TabAppearance.HighLightColorSelectedHot = 12451839
+      TabAppearance.HighLightColorDown = 16776144
+      TabAppearance.BackGround.Color = 16767935
+      TabAppearance.BackGround.ColorTo = clNone
+      TabAppearance.BackGround.Direction = gdHorizontal
+      object mmoLog: TJvMemo
+        Left = 2
+        Top = 2
+        Width = 271
+        Height = 686
+        Align = alClient
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        PopupMenu = popLog
+        ReadOnly = True
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+    end
+  end
+  object stbInfo: TAdvOfficeStatusBar
+    Left = 0
+    Top = 739
+    Width = 792
+    Height = 19
+    AnchorHint = False
+    Panels = <
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'dd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'hh:mm:ss'
+        Width = 80
+      end
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'dd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'hh:mm:ss'
+        Width = 50
+      end>
+    SimplePanel = False
+    URLColor = clBlue
+    Styler = stbStylerInfo
+    Version = '1.3.0.2'
+  end
+  object edtBaseUtilizada: TJvEdit
+    Left = 0
+    Top = 718
+    Width = 792
+    Height = 21
+    TabStop = False
+    Align = alBottom
+    Color = clBlack
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clAqua
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+    Text = 'edtBaseUtilizada'
+  end
+  object JvEnterAsTab1: TJvEnterAsTab
+    Left = 607
+    Top = 50
+  end
+  object JvBalloonHint1: TJvBalloonHint
+    Left = 648
+    Top = 50
+  end
+  object JvTrayIcon1: TJvTrayIcon
+    Active = True
+    Animated = True
+    IconIndex = 0
+    Icons = ImageListTray
+    Hint = 'ALXCompiler'
+    PopupMenu = popAplicacao
+    Delay = 500
+    OnDblClick = JvTrayIcon1DblClick
+    OnBalloonClick = JvTrayIcon1BalloonClick
+    Left = 680
+    Top = 50
+  end
+  object actLstAtualiza: TActionList
+    Left = 688
+    Top = 82
+    object actAtualiza: TAction
+      Caption = 'actAtualiza'
+      OnExecute = actAtualizaExecute
+      OnUpdate = actAtualizaUpdate
+    end
+  end
+  object ImageListImagens: TImageList
+    Left = 528
+    Top = 82
+    Bitmap = {
+      494C0101130018000C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000005000000001002000000000000050
+      0000000000000000000000000000000000000000000000000000A4676900A467
+      6900A4676900A4676900A4676900A4676900A4676900A4676900A4676900A467
+      6900A4676900A4676900A4676900000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000314B6200AC7D7E000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000B7918400FEE9
+      C700F4DAB500F3D5AA00F2D0A000EFCB9600EFC68B00EDC18200EBC17F00EBC1
+      8000EBC18000F2C78200A467690000000000A4676900A4676900A4676900A467
+      6900A4676900A4676900A4676900A4676900A4676900A4676900A4676900A467
+      6900A46769000000000000000000000000005084B2000F6FE100325F8C00B87E
+      7A00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000B7918700FCEA
+      CE00F3DABC00F2D5B100F0D0A700EECB9E00EDC79300EDC28B00E9BD8100E9BD
+      7F00E9BD7F00EFC48100A467690000000000A4676900FCEACE00F0D8BA00DCC1
+      A000C4AA8900BFA48000CFAF8200DCB58100E2B87E00E7BC7E00E9BD7F00EFC4
+      8100A467690000000000000000000000000032A0FE0037A1FF00106FE200325F
+      8B00B67D79000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000B7938A00FEEF
+      DA00F6E0C600F2DABC00F2D5B200EFD0A900EECB9E00EDC79600EBC28C00E9BD
+      8200E9BD7F00EFC48100A467690000000000A0675B00FEEFDA00F6E0C600302D
+      2D00212527003745460099846800AD926F00C2A07400DCB27A00E7BC7E00EFC4
+      8100A46769000000000000000000000000000000000037A4FE00379FFF000E6D
+      DE00355F8900BB7F790000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000BA978F00FFF4
+      E500F7E5CF00F4E0C500F3DABB00F2D5B100F0D0A600EECB9E00EDC79500EBC2
+      8A00EABF8100EFC48000A467690000000000A0675B00FFF4E500F7E5CF009C8F
+      80000D466300036292000B3B54004B474100917B5E00B5976C00D1AB7400E9BF
+      7D00A4676900000000000000000000000000000000000000000037A4FE00359E
+      FF000F6FDE0035608B00A67B7F00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000C09E9500FFFB
+      F000F8EADC00F6E3CF00F4E0C600F2D9BC00F2D5B100F0D0A900EDCB9E00EDC6
+      9500EBC28A00EFC58300A467690000000000A7756B00FFFBF000F8EADC00EEDD
+      CA0022576C00165E8200745D65007D5254005E3F390086725800A78C6600CEAA
+      7300A065670000000000000000000000000000000000000000000000000038A5
+      FE00329DFF00156DCE00444F5B00000000009C6B6500AF887B00AF887E00AA80
+      7500000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000C6A49A00FFFF
+      FC00FAF0E600F8EADA00F7E5CF00F4E0C500F2DABA00F2D5B100F0D0A700EECB
+      9D00EBC79300F2C98C00A467690000000000A7756B00FFFFFC00FAF0E600F8EA
+      DA008F9F9D0062555D00DD908C00B87979008E5757005B3D37007D6B51009A81
+      5D00925C5E000000000000000000000000000000000000000000000000000000
+      00003BABFF00A1CAE700AD867900A9837300E0CFB100FFFFDA00FFFFDD00FCF8
+      CF00CCB29F00A1746B0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000CBA99E00FFFF
+      FF00FEF7F200FAEFE600F8EAD900F7E3CF00F6E0C500F2DABB00F2D4B100F0D0
+      A700EECC9E00F3CE9700A467690000000000BC826800FFFFFF00FEF7F200FAEF
+      E600F0E5D5006B5D6200E9A4A100CF909000B275750087535300583C35007A69
+      5000815354000000000000000000000000000000000000000000000000000000
+      00000000000000000000C0917D00FCE9AC00FFFFCC00FFFFCF00FFFFD000FFFF
+      DE00FFFFFA00E3D3D10099696500000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000CFAC9F00FFFF
+      FF00FFFEFC00FCF6F000FAEFE600F7EADA00F6E3CF00F4E0C500F3D9BB00F3D4
+      B000F0D0A600F6D3A000A467690000000000BC826800FFFFFF00FFFEFC00FCF6
+      F000FAEFE600EBDCCE008C5E5D00E2A1A100CE8F8F00B4767600865252005C3F
+      3800764C4E000000000000000000000000000000000000000000000000000000
+      00000000000000000000B0897800FAD19200FEF4C200FFFFD000FFFFDA00FFFF
+      F600FFFFFC00FFFFFC00B6938400000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000D4B0A100FFFF
+      FF00FFFFFF00FFFEFC00FEF7F000FAEFE500F8EAD900F7E5CE00F6DEC400F3D9
+      B800F4D8B100EBCFA400A467690000000000D1926D00FFFFFF00FFFFFF00FFFE
+      FC00FEF7F000FAEFE500E1CEC00087595800E1A1A100CC8E8E00B07474008651
+      5100633B3C000000000000000000000000000000000000000000000000000000
+      000000000000B0897800FEDA9700EDB47800FBEEBB00FFFFD300FFFFDC00FFFF
+      F400FFFFF400FFFFE200E9DDBC00A67B73000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000D9B5A100FFFF
+      FF00FFFFFF00FFFFFF00FFFEFC00FCF7F000FAEFE500F8E9D900F8E7D100FBEA
+      CE00DECEB400B6AA9300A467690000000000D1926D00FFFFFF00FFFFFF00FFFF
+      FF00FFFEFC00FCF7F000FAEFE500D7C1B5008A5B5B00E6A6A600CA8B8B00B675
+      75007E4442003E41450000000000000000000000000000000000000000000000
+      000000000000B18A7800FFDE9900E9A16700F4D19900FEFCCC00FFFFD500FFFF
+      DA00FFFFDC00FFFFD700EFE6C500A97E75000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000DDB7A400FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFEFC00FCF6EF00FCF3E600EDD8C900B68A
+      7B00A17B6F009C766700A467690000000000DA9D7500FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFEFC00FCF6EF00FCF3E600CFB5AA0097666600EFAAA9008C6D
+      73001E799F000C98BD000C98BD00000000000000000000000000000000000000
+      000000000000AA7F7300FAE0A400F0B77800EEBA7B00F6DDA600FEFBCC00FFFF
+      D300FFFFD100FFFFD700D9C5A700A3756C000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E2BCA500FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFEFB00FFFEF700DAC1BA00AD73
+      5B00E19E5500E68F3100B56D4D0000000000DA9D7500FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFEFB00FFFEF700DAC1BA00955F56009E5D58002D84
+      A70006BBF000008EDE00000F9500000081000000000000000000000000000000
+      00000000000000000000CEB29300FFFEDD00F4D1A500EEBA7B00F2C78F00F8E1
+      AB00FCF0BA00FCFACA00A3776F00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E6BFA700FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00DCC7C500B882
+      6500F8B55C00BF7A5C000000000000000000E7AB7900FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00DCC7C500A56B5F00D1914F00068F
+      C1000393DE000320BA000318B200010B99000000000000000000000000000000
+      00000000000000000000A1746B00E1D4D300FFFEEE00F7CC8C00F0B47300F7C7
+      8800FCE3A500C2A08800A5776C00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E4BCA400FBF4
+      F000FBF4EF00FAF3EF00FAF3EF00F8F2EF00F7F2EF00F7F2EF00D8C2C000B77F
+      6200C1836C00000000000000000000000000E7AB7900FBF4F000FBF4EF00FAF3
+      EF00FAF3EF00F8F2EF00F7F2EF00F7F2EF00D8C2C000A56B5F00C1836C000000
+      00000263BF002F45ED001031D300010A95000000000000000000000000000000
+      000000000000000000000000000098686500BA958700EAD7A400EAD59E00E0C0
+      9700A5776C00A5776C0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E8C4AD00EBCB
+      B700EBCBB700EACBB700EACAB600EACAB600EACAB600EACAB600E3C2B100A56B
+      5F0000000000000000000000000000000000E7AB7900D1926D00D1926D00D192
+      6D00D1926D00D1926D00D1926D00D1926D00D1926D00A56B5F00000000000000
+      0000000000002732D0000C19B400000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000A77E7000A9807300A478
+      6E00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000002D2D2D002D2D2D002D2D2D002D2D2D002D2D2D000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000043E9000043E9000043E9000043E9000043E9000043E90000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000525152002D2D2D00DEDCE000BCB8BD009D959C008D8283007B7073002D2D
+      2D0000000000000000000000000000000000000000000000000000000000034B
+      B400034BB4000C5DCF004586CF006392C7005E8CBF003D73B40008479F00003A
+      9900043E900000000000000000000000000000000000A46769008E5D59008E5D
+      59008E5D59008E5D59008E5D59008E5D59008E5D59008E5D59008E5D59008E5D
+      59008E5D590080504B0000000000000000000000000000000000000000000000
+      00000000000000000000004B0000004B00000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00002D2D2D00FFFFFF009A9A9A003A3737003A37370052515200756C6D002D2D
+      2D00000000000000000000000000000000000000000000000000034BB400045B
+      DE0077B1F000F6F4F600D9E6F000B7D3F000B5D0EE00CFDAE600DED9D5005580
+      B0000141A400043E9000000000000000000000000000A4676900FCEACE00F3DA
+      BC00F2D5B100F0D0A700EECB9E00EDC79300EDC28B00E9BD8100E9BD7F00E9BD
+      7F00EFC4810080504B0000000000000000000000000000000000000000000000
+      000000000000004B00000E9D1D000E9D1D00004B000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000045454600908F91003A373700807275008F7A7D003A3737003A3737002D2D
+      2D000000000000000000000000000000000000000000034BB400045BDE009ECA
+      F800FEFEFF00599EEF001069E500025CE200025CE2001069E5005CA0EF00F8F4
+      EF00809EBC000141A400043E90000000000000000000A0675B00FEEFDA00811E
+      0000811E0000811E0000811E0000811E0000811E0000811E0000811E0000E9BD
+      7F00EFC4810080504B0000000000000000000000000000000000000000000000
+      0000004B00001CB1350011A422000E9D1D0011A42200004B0000000000000000
+      0000000000000000000000000000000000000000000000000000000000002D2D
+      2D009DA1B00090919E0078757D005A555800443E3E00413737002D2D2D000000
+      00000000000000000000000000000000000000000000034BB4007AB5F600FEFE
+      FF00297EE900004FE0000051E0003585EA001872E6000051E000004FE0003688
+      ED00F8FAF6005E8CBF00043E90000000000000000000A0675B00FFF4E500811E
+      0000FEFEFE00FEFEFE00FEFEFE00758EFC00A5B6FC00FEFEFE00811E0000EABF
+      8100EFC4800080504B000000000000000000000000000000000000000000004B
+      00002EC6520024BC430013922400004B00000D931A000E9D1D00004B00000000
+      00000000000000000000000000000000000000000000000000002D2D2D008D82
+      8300FFB84F00FFC26700F3C48100E2C6A300C9C1C000A19A9D006F6B72004645
+      4C002D3032000000000000000000000000000F6ADE001169DE00FEFEFF00579E
+      EE000051E0000051E0004F99ED00FEFEFF007AB5F600004EDE00025CE2000051
+      E00062A6F200EEEAE700094FAF00043E900000000000A7756B00FFFBF000811E
+      0000FEFEFE00F8FAFE006480FB00011FFA003F5FFB00FEFEFE00811E0000EBC2
+      8A00EFC5830080504B0000000000000000000000000000000000004B000035CA
+      5E0039D465001CA13400004B000000000000004B00000A8615000E9D1D00004B
+      0000000000000000000000000000000000000000000000000000363636009089
+      8800F8880500FF910900FF981100FF9E1800FFA42400F6B04A00E1B16F00BC9E
+      7D007F7269003636360000000000000000000F6ADE005DA4F100E6F2FD001674
+      E7000561E3005DA4F100FEFEFF00FEFEFF00CCE2FA000561E3000051E0000051
+      E0000F6AE500E3EEF7004787D100043E900000000000A7756B00FFFFFC00811E
+      0000CAD4FE002B4DFB00011FFA00284BFB000120FA00CED7FE00811E0000EBC7
+      9300F2C98C0080504B000000000000000000000000000000000000000000004B
+      000029B54800004B0000C0515100A42626000000000000000000004B00000D93
+      1A00004B00000000000000000000000000000000000000000000454546009089
+      8800F7931300FEA01F00FEA62800FFAB2D00FFAB2D00FFA42400FF981100FF9E
+      1800E1912900534A3E0000000000000000000F6ADE0082BCF600CCE2FA001176
+      EA004F9FF000FEFEFF00CCE2FA003688ED00E9F3FC003585EA000051E0000051
+      E0000561E300C4DDF90070A9E600043E900000000000BC826800FFFFFF00811E
+      00003859FB00092AFA00AABAFC00EAEEFE000C2EFA003557FB007F1E0100EECC
+      9E00F3CE970080504B000000000000000000000000000000000000000000A426
+      2600004B0000C0515100BF4E4E00C0515100A42626000000000000000000004B
+      00000A861500004B000000000000000000000000000000000000454546009089
+      8800FFA42400FFB03600FEB84100FFB84F00FEB84100FEB84100FFB63A00FFAA
+      2400EB921B00493E2D0000000000000000000F6ADE0089C4F700CCE2FA001884
+      F000288AEF007FBDF6001884F000025CE20062A6F2009DC7F6000051E000025C
+      E200025CE200C4DDF90077B1F000043E900000000000BC826800FFFFFF00811E
+      0000DCE3FE00CED7FE00FEFEFE00FEFEFE008097FC00011FFA00491F3F00F0D0
+      A600F6D3A00080504B0000000000000000000000000000000000A4262600CF77
+      7700CB6C6C00BF4E4E00A4262600BF4E4E00BF4E4E00A4262600000000000000
+      000000000000004B0000004B00000000000000000000000000004B4B4B009591
+      9000F8AC3600FFB84F00FFC95600FFCC6400FFCE6800FFC95600FFC04E00FFB6
+      3A00E2982D00423C320000000000000000000F6ADE0076BDF900E9F3FC003298
+      F2001884F000117EEE00117EEE000C73E9000F6AE500A7CFF7001069E5000051
+      E0001069E500E6F2FD00529EF400043E900000000000D1926D00FFFFFF00811E
+      0000FEFEFE00FEFEFE00FEFEFE00FEFEFE00FEFEFE003C5CFB00011FFA00F4D8
+      B100EBCFA40080504B00000000000000000000000000A4262600D17D7D00D483
+      8300C55C5C00A426260000000000A4262600BB444400BF4E4E00A42626000000
+      00000000000000000000004B0000004B000000000000000000004B4B4B009591
+      9000FEB84100FFC95600FFD87400FFDA7B00FFDA7B00FFD87400FFCC6400FFC0
+      4E00DD9E3F003F3C390000000000000000000F6ADE003298F200FEFEFF007FC5
+      FA002091F3002091F3001884F000117EEE000F6AE500207DE900579EEE000051
+      E00066A7EF00FEFEFF000561E300043E900000000000D1926D00FFFFFF00811E
+      0000811E0000811E0000811E0000811E0000811E0000761E0700111FB800011F
+      FA00B6AA930080504B0000000000000000000000000000000000A4262600CB6C
+      6C00A426260000000000000000000000000000000000A4262600BF4E4E00A426
+      26000000000000000000000000000000000000000000000000004B4B4B009591
+      9000FAC55500FFD36D00FFE08400FEE79200FEE99500FFE08400FFD36D00FFC9
+      5600DEA346003F3C39000000000000000000000000001169DE00A5DDFD00FEFE
+      FF005EB8F8002091F3001D89EF00207DE9000C73E9000561E3000F6AE5003585
+      EA00FEFEFF0077B1F000034BB4000000000000000000DA9D7500FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFEFC00FCF6EF00FCF3E600EDD8C900A0675B00011F
+      FA00011FFA00011FFA000000000000000000000000000000000000000000A426
+      2600000000000000000000000000000000000000000000000000A4262600BB44
+      4400A426260000000000000000000000000000000000000000004B4B4B009089
+      8800EAB65200FFD36D00FFEE8E00FFFAA700FFF8AA00FEE99500FFD87400FFC9
+      5600E2A94D003F3C39000000000000000000000000000F6ADE0041AFFC00C5ED
+      FF00FEFEFF0081C7FA003298F2001D89EF00117EEE00117EEE005CA0EF00FEFE
+      FF009ECAF800025CE200034BB4000000000000000000DA9D7500FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFEFB00FFFEF700DAC1BA00A0675B00E19E
+      5500E68F3100011FFA0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000A4262600A4262600000000000000000000000000000000004B4B4B00918E
+      8C008B816D00978C74009C927600ADA68300BCB48800CEBA7B00DDBA6700FFC0
+      4E00E2A94D0045454600000000000000000000000000000000000F6ADE0045B4
+      FE00A5DDFD00FEFEFF00E9F3FC00CCE2FA00CCE2FA00E9F3FC00FEFEFF0070AF
+      F400045BDE00034BB400000000000000000000000000E7AB7900FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00DCC7C500A0675B00F8B5
+      5C00BF7A5C000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000A4262600A4262600000000000000000000000000000000002D2D
+      2D002D2D2D002D2D2D0059585A007D7B80007D7B8000837F8300908988007875
+      7D008C7B7000443E3E0000000000000000000000000000000000000000000F6A
+      DE001169DE003AA0F60076BDF9008EC7F80082BCF6005DA4F1000F6AE500034B
+      B400034BB40000000000000000000000000000000000E7AB7900FBF4F000FBF4
+      EF00FAF3EF00FAF3EF00F8F2EF00F7F2EF00F7F2EF00D8C2C000A0675B00C183
+      6C00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000046454C0045454600454546004B4B4B005251
+      5200454546000000000000000000000000000000000000000000000000000000
+      0000000000000F6ADE000F6ADE001169DE001169DE000F6ADE000F6ADE000000
+      00000000000000000000000000000000000000000000E7AB7900CF8E6800CF8E
+      6800CF8E6800CF8E6800CF8E6800CF8E6800CF8E6800CF8E6800A0675B000000
+      000000000000000000000000000000000000000000000274AC000274AC000274
+      AC000274AC000274AC000274AC000274AC000274AC000274AC000274AC000274
+      AC000274AC000274AC0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000004B4B4B004B4B4B004B4B4B000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000007078800070788000707880000019100000000000000
+      0000000000000000000000000000000000000274AC00138AC40057B7E0006BCB
+      F8004BBFF7004ABFF7004ABFF7004ABFF7004ABFF6004ABFF7004ABFF6004BC0
+      F7002398CC000274AC0000000000000000000000000000000000004B0000004B
+      0000004B000018430A0018430A000000000000000000004B8200000000000000
+      0000000000000000000000000000000000000000000000000000056695000566
+      95004B4B4B00FEFDFC00CABDBC00CABDBC004B4B4B0000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000808
+      8B000707880007078800BBB7B7008480AA000611B4000011D800000191000000
+      0000000000000000000000000000000000000274AC0033AAE0002392C40089D9
+      FA0054C7F80054C7F70053C7F80054C7F70054C7F80054C7F80054C7F80053C7
+      F700279DCE006ACBE5000274AC000000000000000000004B0000019005000198
+      0300004B000000770300004B8200003E0000004B820022A6F800004B82000000
+      0000004B8200000000000000000000000000000000000274A90030C9E90012CB
+      FE004B4B4B009C979700FEFDFC00CABDBC004545450000000000000000000000
+      000000000000000000000000000000000000000000000707880007078800A19A
+      B200BAB7BC007378C000222CC0000004AF0000039E00000DC100000EC6000002
+      8F00000000000000000000000000000000000274AC0057CAF8000274AC0099E3
+      FB005ED1FA005ED1FA005ED1FA005ED1FA005ED1FA005FD1FA005ED1F8005ED1
+      F8002CA1CE0099EDF7000274AC000000000000000000004B0000079D1100069D
+      0F00004B0000004B820021B5C900004B8200004B820022A6F800004B8200004B
+      820047B4D300004B820000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE003E3E3E00A6A4A300EEEBEA00827F7E004B4B4B004B4B4B000000
+      00000000000000000000000000000000000007078800C7BCC600B7B7D500516F
+      DD000D2FF6000014FA00000FE6000010CE00000AB600000399000009B100000C
+      BD00000191000000000000000000000000000274AC005ED3FA000B81B70082D5
+      EF0079E0FA006ADCFA0069DCFB0069DCFB006ADCFB0069DCFB0069DCFA006ADD
+      FB002FA6CF009FF0F7000274AC000000000000000000004B00000DA71F000DA9
+      1F00004B0000178C5200004B820022C5F4000BB5ED0011A9F6001C9EDA0030AC
+      D400004B82000000000000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE0054DEFF003E3E3E00ADACAC00F0EEEE00BFBAB700C7C0BD004B4B
+      4B004B4B4B004B4B4B004B4B4B0000000000000000001B1B8E002075DC00005C
+      FF000047BB000036CE000022FF000017EE000011D300000BBF0000049E000004
+      A300020BB50008098B0000000000000000000274AC0068DAFB002BA4D1004AB2
+      D70097EBFC0074E5FB0074E5FB0074E5FC0074E5FC0074E5FB0074E5FC00046B
+      0B0033A9CF00A3F4F70052BBD7000274AC0000000000004B000013B12F0012B6
+      2F00004B0000004B8200004B820052DDFF0013B7D400004B82001192B10023A7
+      E600004B8200004B820000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE0054DEFF0074E0F8003E3E3E00B1B0B000EEEBEA00D7D1D100E2D9
+      D800AFA6A40090888600B1A3A0004B4B4B000037B6000079E10000B1FF000074
+      A6000074A600035A0500035A05000022FF000017EE000012D500000CBF000005
+      A30000039C000107A50008098C00000000000274AC0070E3FB005CD1EF001184
+      B600FCFFFF00B8F4FE00BAF4FE00BAF4FE00BAF4FE00B8F4FE00046B0B0025AA
+      4200046B0B00D4F7FA00CAF3F7000274AC0000000000004B00001AC041000FAC
+      2D00004B8200A9DDEF00A6E9F2006CD7F600004B82000B6A1C00004B82001196
+      C20020A3E20035B0DD00004B8200000000000274A9009FFBFE00A3F3FF00B6F2
+      FF00DAF8FF00E5FAFF00D8F7FE009ADCEF003E3E3E00B1B0B000F0EEEE00B5B0
+      AF004B4B4B00AFA6A400A69896004B4B4B00000000000023BD00007588000074
+      A600035A050019982B0013902100035A05000023FF000018F0000012D700000C
+      C0000006A4000002960001039600070789000274AC007AEBFE007AEBFC000A7F
+      B5000274AC000274AC000274AC000274AC000274AC00046B0B0038CE650047E7
+      7F0029B44A00046B0B000274AC000274AC0000000000004B000021CB52001CC2
+      4800004B0000004B8200004B82009EE7FC009EE7FC00004B82000DAADD000DAA
+      DD00004B8200004B820000000000000000000274A900A7E9F3001CAAD3000791
+      C5000788BC00108BBC001F91BF001479AD003E3E3E00AFA6A400C4BFBF004B4B
+      4B00AFA6A4004B4B4B00827F7E004B4B4B0000000000000000000023BD00035A
+      050023A63E002DC04D0023B13C00128E1F00035A05000023FF000018EF000012
+      D800000CC0000006A6000001920001018A000274AC0083F2FE0082F3FE0082F3
+      FE0083F2FC0083F3FE0082F3FE0083F2FE00046B0B002DC051003FDC6E003ED8
+      6E0046E57B0028B04A00046B0B000000000000000000004B000029D862002ADA
+      6500004B00000E9A3900004B8200D5FBFF009CE3F20045BABA002DC4E50012D1
+      FF00004B82000000000000000000000000000274A90031B5D3003FE3FE0012CB
+      FE0020CEFE0054DEFF0074E0F80030B0DA003E3E3E00B1B0B0004B4B4B00C4BF
+      BF004B4B4B0000000000827F7E004B4B4B000000000000000000035A050028AD
+      46003AD1680033C959002ABC490021AF3700118B1C00035A05000023FF000018
+      F0000013D900000DC5000007A900050588000274AC00FEFEFE0089FAFF0089FA
+      FE0089FAFE008AF8FE008AFAFE00046B0B00046B0B00046B0B00046B0B003CD8
+      6A002EBF5300046B0B00046B0B00046B0B0000000000004B000031E36C0032E6
+      7000004B0000004B8200C5EFFF00004B8200004B8200A1F0FF00004B8200004B
+      82000FC5FA00004B820000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE0054DEFF0074E0F80030B0DA003E3E3E00B8B6B600C9C5C400DDD3
+      D300827F7E0086807F00A99E9D004B4B4B0000000000035A050028AD46003DD5
+      6C003DD56C0038D0650031C5550028B845001FAC340010891A00035A05000027
+      FF000017EA000507910008098C0000000000000000000274AC00FEFEFE008FFE
+      FF008FFEFF008FFEFF000273A3002BA4D1002BA4D1002BA4D100046B0B0035D3
+      5E0020A73A00046B0B00000000000000000000000000004B00003BF074003CF4
+      7900004B000030B16600004B820026C26800004B8200CBEDFF00004B8200004B
+      0000004B82000000000000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE0054DEFF0074E0F80030B0DA000386C1004B4B4B004B4B4B004B4B
+      4B004B4B4B004B4B4B004B4B4B0000000000035A0500035A0500035A0500035A
+      0500138121003DD56C0036CE6000035A0500035A0500035A0500035A0500035A
+      050008098C0000000000000000000000000000000000000000000274AC000274
+      AC000274AC000274AC0000000000000000000000000000000000046B0B0028C2
+      4A00046B0B0000000000000000000000000000000000004B000047FF870047FF
+      8B00004B00002FC759003EFB7A0038F06C003ED48100004B820047DC9600004B
+      0000000000000000000000000000000000000274A90073FAFE003FE3FE0012CB
+      FE0020CEFE0054DEFF0074E0F80030B0DA000386C10005669500000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000035E1C003DD56C003CD36A00035A0500002DC100003ED0000D13A6000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000046B0B0017A42B0019A7
+      3000046B0B0000000000000000000000000000000000004B000039E26D0027A1
+      3D00004B0000004B00001FB63F002DDA5E003EF7780041FE800041FE8000004B
+      0000000000000000000000000000000000000274A90078FBFE0068F6FF0055F6
+      FE005FFEFF0078FBFE0089FBFE0048CFF200058BC70005669500000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000035A050028AD46003DD56C00035A05000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000046B0B0011A12200046B
+      0B000000000000000000000000000000000000000000004B0000004B0000645E
+      4100CCB5B000CCD0C000004B0000004B0000004B000041FE800042F67A00004B
+      0000000000000000000000000000000000000274A900FEFDFC00F0FFFF00C6FF
+      FF00A0FFFF009FFBFE009FFBFE0092FFFF0055F6FE0005669500000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000035E10003DD56C003DD56C00035A050000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000046B0B00046B0B00046B0B00046B0B000000
+      0000000000000000000000000000000000000000000000000000000000000A44
+      040018430A0018430A00645E4100B68E8A00B68E8A00004B0000004B0000004B
+      000000000000000000000000000000000000000000000479AF00F0FFFF00DAF8
+      FF00B7FFFF009FFBFE0089FBFE0083FAFB00086B9A0000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000004670600035A05003DD56C00035A0500000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000046B0B00046B0B00046B0B00046B0B0000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000004B0000004B0000004B0000004B0000000000000000
+      00000000000000000000000000000000000000000000000000000274A9000274
+      A9000274A9000274A9000274A9000274A9000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000036E070003650000015D00000056
+      140000510A000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000A5938000A593
+      8000A59380000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000004B8200004B
+      8200004B82008E5D59008E5D59008E5D59008E5D59008E5D59008E5D59008E5D
+      59008E5D59008E5D590073424100000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000018741D00CAC5AA00DBCFC800DBD0
+      C400F2DFCB00A5938000A5938000A5938000A593800000000000000000000000
+      00000000000000000000000000000000000000000000004B820025ACDA0020A7
+      D8001CA3D500A4676900FBE7D300F8EEDC00F6EDD700F4E9D300F4E9D000F4E7
+      D000F4E6CF00F6E7CE0073424100000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000158A2D00CADABB00DDD1CC00D2CF
+      CC00FFF2E000FFF0DA00FFEBD000FFE8C600FFE6BE00A5938000A5938000A593
+      80000000000000000000000000000000000000000000004B82002DB4DE0028AF
+      DC0022AAD900A4676900F3DCCF00DC924100DC913F00DA913F00DA913F00DA90
+      3E00DA913F00EBDAC20073424100000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000710E00BBD5B400D7CCCB00D2CF
+      CC00F1E7DA0070685F0070685F00D2B9A500E2C6AA00E5C6A300FFDDAF00A593
+      80000000000000000000000000000000000000000000004B820034BAE2002EB4
+      E00029AFDD00A66A6A00F6E1D500F7DCC000F7D0AB00F7D0AB00F7D0AB00F6CE
+      A500F2D3B100EBDCC50073424100000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000006F030098BA9500D9CFD200D2CF
+      CC00E9E3DA00D4C9BD00D0C9B20070685F0070685F0070685F00F9D2AF00A593
+      80000000000000000000000000000000000000000000004B82003CBFE70036BA
+      E30031B5E100AA6D6B00F7E5DC00DC924100DC913E00DC913E00DC913E00DC90
+      3D00DA913F00EEDECA0073424100000000000000000046454400464544000000
+      000000000000000000000000000000000000000000006E343500562425005624
+      2500562425005624250000000000000000000000000044434600444346000000
+      00000000000000000000000000000000000000000000282D7A001B2062001B20
+      62001B2062001B20620000000000000000000068000082A98000D5CED100D2CF
+      CC00EAE6E20070685F003B7F3400105F1000105C10001B671800105D10000F5E
+      0F000F5F0F0000000000000000000000000000000000004B820043C5EB003EC1
+      E70038BCE500AF726B00F8EAE200F8E7D400F8DDC200F7DDC100F7DABF00F6D8
+      BB00F2DCC200EFE1D00073424100000000000000000046454400464544005929
+      2A000000000000000000000000000000000069282900C1777700DD808100D567
+      6800BF595A00A648490056242500562425000000000044434600403F45001B20
+      6200000000000000000000000000000000001A1F7500676CD0006C74F0005059
+      EC00434CD400343CBA001B2062001B20620000620000699C6A00D3CFD200D2CF
+      CC00D9D5D6008CA185000C690D00087C080000970000038C0300067B06000970
+      09000C660C000F5F0F000F5E0F000961090000000000004B82004BCBEF0045C7
+      ED0040C2E900B4776C00FBF0EB00DD934100DD903D00DD903D00DC903D00DC90
+      3C00DC914000F4E9DA0073424100000000000000000046454400403E3E009F51
+      5200DA6E6F00B0545500984344007D2C2D0074222200EE9C9C00FE9A9C00FE7D
+      7E00EE707200E1656600A0434400562425000000000044434600444346004047
+      AF005760F1004048C3003139AA001B228E00101685008A91FF0099A0FF007C84
+      FF005F6AFF004B55FB002F37B3001B2062000000000046834700D2CFCC00D2CF
+      CC00D7D6D500257928000E6D12000AA21400049D080000990000009A0000009B
+      0000009D0000009D0000017A01000263020000000000004B820052D0F3004CCC
+      EF0047C7EE00B87B6E00FEF4F000FEF4EB00FAEBDD00FAEADA00F8E7D700F8E9
+      D800F7EBDD00E1DAD30073424100000000000000000046454400403E3E00AB58
+      5900FF888900FF808100EB6D6E00AA35370075191900E6979700FE979800FE7D
+      7E00E66C6D00DA626300A04344005624250000000000444346003D3D4000464D
+      BC008A91FF008188FF005963FF001C27C200060D8800868CF600969CFF00727A
+      FF00555FFF004852F3002F37B3001B2062000000000031753100D2CFCC00FFFB
+      FF006B986A000F6111001AAC320013AC28000DA61B0007A00D00029B03000099
+      0000009C000000850000006500000000000000000000004B820059D5F60054D1
+      F3004FCFF000BD816F00FEF6F200FFFFFF00FEFFFE00FBF8F700FAFAF700A067
+      5B00A0675B00A0675B00A0675B00000000000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00E66C6D00A535360075191900E6979700FE979800F679
+      7A00E66C6D00DA626300A0434400562425000000000044434600403F4500464D
+      BC008188FF007C84FF004F59FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F3003038B3001B206200000000000E5E0E00D2CFCC00EBF2
+      E9001466170020A03D0024BC48001DB63B0017B02F0011AA22000BA3150005A1
+      0A00008A000000660000000000000000000000000000004B82005FDAF8005BD8
+      F60055D3F300C2846F00FFF8F600FFFFFF00FFFFFF00FFFFFF00FFFFFF00A067
+      5B00D7925500F47A4100FF00FE00000000000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00DA6E6F00A535360075191900E6979700FE979800FE7D
+      7E00E66C6D00DA626300A04344005624250000000000444346003D3D4000464D
+      BC008A91FF007C84FF004B55FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F3003038B3001A1F5E0000000000055D0500B9B4B8003E83
+      3F00157C260033CD68002DC55C0027BF4F0021B941001AB3350015B02B000B9B
+      17000168010000000000000000000000000000000000004B820065DEFB0060DC
+      F8005CD8F700C5887000D1926D00D1926D00D1926D00D1926D00D1926D00A067
+      5B00B79A6F00004B820000000000000000000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00E1656600A535360075191900E6979700FE979800F679
+      7A00E66C6D00DA626300A04344005925260000000000444346003D3D4000464D
+      BC008188FF007C84FF004F59FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F300343CBA001B206200000000000464040051734F001464
+      17002FC7620033CB670032CF68002FCC62002AC9570026BF4C001BAC3500046F
+      07000000000000000000000000000000000000000000004B820069E1FE0066DE
+      FB0063DDFB0063DDFB005DD9F80057D5F60050CFF20049C9EE0042C2EA003CBF
+      E70038BBE500004B820000000000000000000000000046454400403E3E00AB58
+      5900FF888900FF808100E66C6D00A535360075191900EE9C9C00FE979800F679
+      7A00E66C6D00DA626300B24C4D005925260000000000444346003D3D40004048
+      C300969CFF007C84FF00555FFF001D26BC00060D8800888EFA00969CFF00727A
+      FF00555FFF004852F300363FC7001B2062000000000000000000156D1C002A72
+      39003BA060003A975A00399A5A0037AA600037A25C002BC55900087810000000
+      00000000000000000000000000000000000000000000004B82006AE2FE006AE2
+      FE005858580058585800585858005858580058585800585858005858580045C7
+      EB0040C1E900004B820000000000000000000000000046454400403E3E009049
+      4A00CC696A00DA6E6F00D3626300A5353600741617008F4F5000834141009E4A
+      4B00A64849009F474800923E3F00592526000000000044434600444346003A41
+      9F00545DE1005059EC004A53EB001D26BC00060D88003A419F00333891003139
+      AA003038B3003038B3002C33A3001B2062000000000000000000454A43003F57
+      42002D5A30002F62350033603A0032734100376B430011822000000000000000
+      00000000000000000000000000000000000000000000004B82006AE2FE006AE2
+      FE0058585800C1B0AA00C1B0A900C1B0A900C1B0A900C0ACA400585858004DCC
+      F00047C7ED00004B820000000000000000000000000046454400464544005C3E
+      3D00592526008B4141009E4A4B00692829006420210059252600000000000000
+      0000000000000000000056242500562425000000000044434600444346003637
+      6200191E6B0031369A003038B3001B217900111772001B206200000000000000
+      000000000000000000001A1F5E001A1F5E00000000000000000000000000454A
+      4300454A4300454A4300435045004351450038563A0000000000000000000000
+      0000000000000000000000000000000000000000000000000000004B8200004B
+      820058585800D9CCC600F8F7F600F7F6F400F7F6F400C2B5AD0058585800004B
+      8200004B82000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000005858580058585800585858005858580058585800000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000005B7000005B7000000000000000000000000000000
+      0000000000000000000000000000824B4B004E1E1F0000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000005B7000005B7000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000005B7000005B700000000000000000000000000000000000000
+      0000824B4B00824B4B00A64B4B00A94D4D004E1E1F0000000000000000000000
+      000000000000000000000000000000000000811E000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000005B7000005B7000005
+      B700000000000000000000000000000000000000000000000000000000000000
+      00000005B7000005B70000000000000000000000000000000000824B4B00824B
+      4B00B64F5000C24F5000C54D4E00B24D4E004E1E1F00824B4B00824B4B00824B
+      4B00824B4B00824B4B00824B4B000000000000000000811E0000811E00000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000005B7000005B6000005
+      B7000005B7000000000000000000000000000000000000000000000000000005
+      B7000005B7000000000000000000000000000000000000000000824B4B00D458
+      5900CB555600C9545500C9525300B74F52004E1E1F00FE8B8C00FB9A9C00F8AA
+      AB00F7B5B600F7B5B600824B4B00000000000000000000000000811E0000811E
+      0000811E00000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000006D7000005
+      BA000005B7000005B700000000000000000000000000000000000005B7000005
+      B700000000000000000000000000000000000000000000000000824B4B00D75C
+      5D00D05A5B00CF595A00CF575800BD5356004E1E1F0023B54A0013C1480016BD
+      48000CBC4100F7B5B600824B4B0000000000000000000000000000000000811E
+      000095440F00811E000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000005B7000005B7000005B600000000000005B6000005B7000005B7000000
+      0000000000000000000000000000000000000000000000000000824B4B00DD63
+      6400D75F6000D55E5F00D55C5D00C2575A004E1E1F002AB44D001CBF4C001EBC
+      4C0013BC4500F7B5B600824B4B00000000000000000000000000000000000000
+      0000811E0000A7632F00811E0000811E00000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      00000000000000000000000000000000000000000000346E3800255728002557
+      2800255728002557280000000000000000000000000000000000000000000000
+      0000000000000005B6000006C7000006C7000006CE000005B400000000000000
+      0000000000000000000000000000000000000000000000000000824B4B00E368
+      6900DD656600DA636400DE666700C6595B004E1E1F0026B1490016BC48001BBB
+      490010BB4300F7B5B600824B4B00000000000000000000000000000000000000
+      000000000000811E0000BF8B6200CCA17E00811E0000811E0000000000000000
+      0000000000000000000000000000000000000000000044464500444645002959
+      2C000000000000000000000000000000000028692D0077C17D0080DD870067D5
+      6F0059BF600048A64F0025572800255728000000000000000000000000000000
+      000000000000000000000006C1000005C1000006DA0000000000000000000000
+      0000000000000000000000000000000000000000000000000000824B4B00EB6D
+      6E00E2676800E67E7F00FAD3D400CC6E70004E1E1F00A5D8970050D16F0042C9
+      66002DC75800F7B5B600824B4B00000000000000000000000000000000000000
+      00000000000000000000811E0000D8B69C00E6D1BF00E7D3C400811E00000000
+      00000000000000000000000000000000000000000000444645003E403E00519F
+      56006EDA760054B05A00439849002C7D3200227429009CEEA3009AFEA0007DFE
+      870070EE780065E16E0043A04A00255728000000000000000000000000000000
+      0000000000000005B6000006D7000006CE000006DA000006E900000000000000
+      0000000000000000000000000000000000000000000000000000824B4B00F273
+      7400E96C6D00EB818200FCD1D300CF6E70004E1E1F00FFF2CC00FFFFD700FFFF
+      D400E6FCC700F7B5B600824B4B00000000000000000000000000000000000000
+      0000000000000000000000000000811E0000F0E2D900FCF7F200FAF0E600811E
+      0000811E000000000000000000000000000000000000444645003E403E0058AB
+      5E0088FF910080FF89006DEB760035AA3D001975210097E69D0097FE9F007DFE
+      87006CE6750062DA6B0043A04A00255728000000000000000000000000000000
+      00000006E5000006DA000006D30000000000000000000006E5000006EF000000
+      0000000000000000000000000000000000000000000000000000824B4B00F878
+      7900F0757600EE727300F0737400D16566004E1E1F00FCEFC700FFFFD500FFFF
+      D300FFFFD700F7B5B600824B4B00000000000000000000000000000000000000
+      0000000000000000000000000000811E0000D8AF9600F4E2CF00F0D7BD00D8A7
+      8400811E0000811E0000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE87006CE6750035A53D001975210097E69D0097FE9F0079F6
+      82006CE6750062DA6B0043A04A00255728000000000000000000000000000006
+      F8000006DA000006EF00000000000000000000000000000000000006F8000006
+      F600000000000000000000000000000000000000000000000000824B4B00FE7F
+      8000F77A7B00F6797A00F7777900D76B6B004E1E1F00FCEFC700FFFFD500FFFF
+      D300FFFFD500F7B5B600824B4B00000000000000000000000000000000000000
+      00000000000000000000811E0000F3DECA00EFD4B800EBC9A700DAA67D00811E
+      00000000000000000000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE87006EDA760035A53D001975210097E69D0097FE9F007DFE
+      87006CE6750062DA6B0043A04A002455270000000000000000000006F6000006
+      F6000006F8000000000000000000000000000000000000000000000000000006
+      F6000006F6000000000000000000000000000000000000000000824B4B00FF83
+      8400FC7F8000FB7E7F00FE7F8000DA6E6F004E1E1F00FCEFC700FFFFD500FFFF
+      D300FFFFD500F7B5B600824B4B00000000000000000000000000000000000000
+      0000000000000000000000000000811E0000E7BB9200E3B08100E0A67200D592
+      5A00811E000000000000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE870065E16E0035A53D001975210097E69D0097FE9F0079F6
+      82006CE6750062DA6B0043A04A0025592800000000000006F6000006F6000006
+      F600000000000000000000000000000000000000000000000000000000000000
+      0000000000000006F60000000000000000000000000000000000824B4B00FF88
+      8900FF828300FF818200FF828300E07374004E1E1F00FCEFC700FFFFD500FFFF
+      D300FFFFD500F7B5B600824B4B00000000000000000000000000000000000000
+      000000000000000000000000000000000000811E0000DA995E00D78F5000D384
+      4100CF7B3500811E0000000000000000000000000000444645003E403E0058AB
+      5E0088FF910080FF89006CE6750035A53D00197521009CEEA30097FE9F0079F6
+      82006CE6750062DA6B004CB25300255928000006F6000006F6000006F6000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000824B4B00824B
+      4B00E2757600FE818200FF868700E57677004E1E1F00FAEBC500FCFBD100FCFB
+      CF00FCFBD100F7B5B600824B4B00000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000811E0000811E0000811E
+      0000811E0000811E0000811E00000000000000000000444645003E403E004990
+      4E0069CC70006EDA760067D56F0035A53D0016741D004F8F5300418346004A9E
+      50004AA350004398490043984900255728000006F6000006F600000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000824B4B009C565700CB6C6D00CF6E6E004E1E1F00824B4B00824B4B00824B
+      4B00824B4B00824B4B00824B4B00000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645003D5C
+      410025592800418B47004398490028692D002064250025572800000000000000
+      0000000000000000000024552700245527000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000824B4B00824B4B004E1E1F0000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000500000000100010000000000800200000000000000000000
+      000000000000000000000000FFFFFF00C001FFFF9FFF0000C00100070FFF0000
+      C001000707FF0000C001000783FF0000C0010007C1FF0000C0010007E10F0000
+      C0010007F0030000C0010007FC010000C0010007FC010000C0010007F8000000
+      C0010003F8000000C0010001F8000000C0010000FC010000C0030000FC010000
+      C0070010FE030000C00F0039FF8F0000FFFFFC1FF81FFFFFFFFFF00FE0078003
+      FCFFF00FC0038003F87FF00F80018003F03FE01F80018003E01FC00700008003
+      C10FC00300008003E0C7C00300008003E063C00300008003C039C00300008003
+      821CC00300008003C78FC00380018003EFC7C00380018003FFF3C003C0038007
+      FFF9E003E007800FFFFFFE07F81F801F8003FFFFF8FFFC3F0003C1BFC07FE01F
+      00018017807F800F00018003001F000700018007000180030000800300000001
+      0000800100008000000080030000C000000180070004C0000000800300008001
+      8003800700010007C3C7800F003FF01FFF87800F003FF0FFFF8F800F003FF87F
+      FE1FE00F807FFC3FF87FFC3FC0FFFF079FFF9FFFC7FFC0019FFF9FFF007F8001
+      9FFF9FFF000F80019FFF9FFF000F80019FFF9FFF000F80019F839F8300078001
+      8F008F0000008001800080008000800180008000800180018000800080038001
+      800080008007800380008000800F800380008000C01F800380008000C03F8003
+      803C803CE07FC0079FFF9FFFFFFFF83FFFFCFE7FFFFF9FFF9FF9F07F7FFF9FFF
+      8FF3C0019FFF9FFF87E7C001C7FF9FFFC3CFC001E3FF9FFFF11FC001F0FF9F83
+      F83FC001F83F8F00FC7FC001FC1F8000F83FC001FE078000F19FC001FE038000
+      E3CFC001FC0F8000C7E7C001FE0780008FFBC001FF0380001FFFC001FF818000
+      3FFFF001FFFF803CFFFFFC7FFFFF9FFF00000000000000000000000000000000
+      000000000000}
+  end
+  object dtsModulos: TDataSource
+    DataSet = dmModulos.cdsModulos
+    OnStateChange = dtsModulosStateChange
+    OnDataChange = dtsModulosDataChange
+    Left = 568
+    Top = 162
+  end
+  object dtsUpdate: TDataSource
+    Left = 648
+    Top = 162
+  end
+  object SaveDialogSalvar: TSaveDialog
+    Filter = 'Arquivo de texto|*.txt'
+    Left = 568
+    Top = 120
+  end
+  object OpenDialogCarregar: TOpenDialog
+    Filter = 'Arquivo de texto|*.txt'
+    Left = 720
+    Top = 80
+  end
+  object dtsVersoesUpd: TDataSource
+    Left = 688
+    Top = 160
+  end
+  object dtsVersoes: TDataSource
+    DataSet = dmVersoes.cdsVersoes
+    OnDataChange = dtsVersoesDataChange
+    Left = 608
+    Top = 160
+  end
+  object ApplicationEvents1: TApplicationEvents
+    OnMinimize = ApplicationEvents1Minimize
+    Left = 528
+    Top = 120
+  end
+  object AdvMainMenu1: TAdvMainMenu
+    Images = ImageListImagens
+    MenuStyler = AdvMenuStyler1
+    Version = '2.5.3.3'
+    Left = 648
+    Top = 80
+    object Arquivo1: TMenuItem
+      Caption = '&Arquivo'
+      object Compilar1: TMenuItem
+        Caption = '&Compilar'
+        ShortCut = 120
+        OnClick = Compilar1Click
+      end
+      object DiretivasCompilacao: TMenuItem
+        Caption = 'Diretivas de compila'#231#227'o'
+        OnClick = DiretivasCompilacaoClick
+      end
+      object ExecutarMdulos1: TMenuItem
+        Caption = '&Executar m'#243'dulos'
+        ShortCut = 16453
+        OnClick = ExecutarMdulos1Click
+      end
+      object N6: TMenuItem
+        Caption = '-'
+      end
+      object Acessarbasededados1: TMenuItem
+        Caption = '&Definir &base de dados'
+        ShortCut = 16450
+        OnClick = Acessarbasededados1Click
+      end
+      object N9: TMenuItem
+        Caption = '-'
+      end
+      object Minimizarparaabandejadowindows1: TMenuItem
+        Caption = '&Minimizar para a bandeja do windows'
+        ShortCut = 27
+        OnClick = Minimizarparaabandejadowindows1Click
+      end
+      object rocardeUsurio1: TMenuItem
+        Caption = '&Trocar de usu'#225'rio'
+        ShortCut = 114
+        OnClick = rocardeUsurio1Click
+      end
+      object Sair2: TMenuItem
+        Caption = '&Sair'
+        ImageIndex = 1
+        OnClick = Sair2Click
+      end
+    end
+    object ortoise1: TMenuItem
+      Caption = 'Controle de &Vers'#227'o'
+      object GIT1: TMenuItem
+        Caption = 'GIT'
+        object CheckoutSwitch1: TMenuItem
+          Caption = 'Checkout/Switch...'
+          OnClick = CheckoutSwitch1Click
+        end
+        object N12: TMenuItem
+          Caption = '-'
+        end
+        object Checkformodifications2: TMenuItem
+          Caption = 'Check for modifications'
+          Hint = 'Verificar altera'#231#245'es'
+          OnClick = Checkformodifications2Click
+        end
+        object N2: TMenuItem
+          Caption = '-'
+        end
+        object Commit1: TMenuItem
+          Caption = 'Commit'
+          Hint = 'Persistir localmente'
+          OnClick = Commit1Click
+        end
+        object Push1: TMenuItem
+          Caption = 'Push'
+          Hint = 'Persistir remoto'
+          OnClick = Push1Click
+        end
+        object N10: TMenuItem
+          Caption = '-'
+        end
+        object Merge1: TMenuItem
+          Caption = 'Merge'
+          OnClick = Merge1Click
+        end
+        object N5: TMenuItem
+          Caption = '-'
+        end
+        object Pull1: TMenuItem
+          Caption = 'Pull'
+          Hint = 'Baixar altera'#231#245'es remotas'
+          OnClick = Pull1Click
+        end
+        object N7: TMenuItem
+          Caption = '-'
+        end
+        object Rebase1: TMenuItem
+          Caption = 'Rebase'
+          OnClick = Rebase1Click
+        end
+        object N11: TMenuItem
+          Caption = '-'
+        end
+        object Reflog1: TMenuItem
+          Caption = 'Reflog'
+          OnClick = Reflog1Click
+        end
+        object Refbrowse1: TMenuItem
+          Caption = 'Refbrowse'
+          OnClick = Refbrowse1Click
+        end
+        object N8: TMenuItem
+          Caption = '-'
+        end
+        object Linhadecomando1: TMenuItem
+          Caption = 'Bash'
+          Hint = 'Prompt de comando'
+          ShortCut = 16455
+          OnClick = Linhadecomando1Click
+        end
+      end
+      object SVN1: TMenuItem
+        Caption = 'SVN'
+        object Commit2: TMenuItem
+          Caption = 'Commit'
+          object VersoSelecionada2: TMenuItem
+            Caption = 'Geral'
+            OnClick = VersoSelecionada2Click
+          end
+          object odasasverses2: TMenuItem
+            Caption = 'RevendaWindows'
+            OnClick = odasasverses2Click
+          end
+        end
+        object Update2: TMenuItem
+          Caption = 'Update'
+          object Versoselecionada3: TMenuItem
+            Caption = 'Vers'#227'o selecionada'
+            OnClick = Versoselecionada3Click
+          end
+          object odasasverses3: TMenuItem
+            Caption = 'Todas as vers'#245'es'
+            OnClick = odasasverses3Click
+          end
+        end
+        object N1: TMenuItem
+          Caption = '-'
+        end
+        object Checkformodifications1: TMenuItem
+          Caption = 'Check for modifications'
+          object Geral3: TMenuItem
+            Caption = 'Geral'
+            OnClick = Geral3Click
+          end
+          object RevendaWindows3: TMenuItem
+            Caption = 'RevendaWindows'
+            OnClick = RevendaWindows3Click
+          end
+        end
+      end
+    end
+    object Extras1: TMenuItem
+      Caption = '&Utilit'#225'rios'
+      object Messenger1: TMenuItem
+        Caption = '&Messenger'
+        ShortCut = 16461
+        OnClick = Messenger1Click
+      end
+    end
+    object Sobre1: TMenuItem
+      Caption = 'Siste&ma'
+      object Parmetros1: TMenuItem
+        Caption = '&Configurar par'#226'metros'
+        ShortCut = 16464
+        OnClick = Parmetros1Click
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object CadastrarUsurios1: TMenuItem
+        Caption = 'Manuten'#231#227'o de &usu'#225'rios'
+        ShortCut = 113
+        OnClick = CadastrarUsurios1Click
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object Sobre2: TMenuItem
+        Caption = '&Sobre...'
+        OnClick = Sobre2Click
+      end
+    end
+  end
+  object AdvMenuStyler1: TAdvMenuStyler
+    AntiAlias = aaNone
+    Background.Position = bpCenter
+    SelectedItem.Font.Charset = DEFAULT_CHARSET
+    SelectedItem.Font.Color = clWindowText
+    SelectedItem.Font.Height = -11
+    SelectedItem.Font.Name = 'Tahoma'
+    SelectedItem.Font.Style = []
+    SelectedItem.NotesFont.Charset = DEFAULT_CHARSET
+    SelectedItem.NotesFont.Color = clWindowText
+    SelectedItem.NotesFont.Height = -8
+    SelectedItem.NotesFont.Name = 'Tahoma'
+    SelectedItem.NotesFont.Style = []
+    RootItem.Font.Charset = DEFAULT_CHARSET
+    RootItem.Font.Color = clMenuText
+    RootItem.Font.Height = -11
+    RootItem.Font.Name = 'Tahoma'
+    RootItem.Font.Style = []
+    Glyphs.SubMenu.Data = {
+      5A000000424D5A000000000000003E0000002800000004000000070000000100
+      0100000000001C0000000000000000000000020000000200000000000000FFFF
+      FF0070000000300000001000000000000000100000003000000070000000}
+    Glyphs.Check.Data = {
+      7E000000424D7E000000000000003E0000002800000010000000100000000100
+      010000000000400000000000000000000000020000000200000000000000FFFF
+      FF00FFFF0000FFFF0000FFFF0000FFFF0000FDFF0000F8FF0000F07F0000F23F
+      0000F71F0000FF8F0000FFCF0000FFEF0000FFFF0000FFFF0000FFFF0000FFFF
+      0000}
+    Glyphs.Radio.Data = {
+      7E000000424D7E000000000000003E0000002800000010000000100000000100
+      010000000000400000000000000000000000020000000200000000000000FFFF
+      FF00FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FC3F0000F81F0000F81F
+      0000F81F0000F81F0000FC3F0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF
+      0000}
+    SideBar.Font.Charset = DEFAULT_CHARSET
+    SideBar.Font.Color = clWhite
+    SideBar.Font.Height = -19
+    SideBar.Font.Name = 'Tahoma'
+    SideBar.Font.Style = [fsBold, fsItalic]
+    SideBar.Image.Position = bpCenter
+    SideBar.Background.Position = bpCenter
+    SideBar.SplitterColorTo = clBlack
+    Separator.GradientType = gtBoth
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMenuText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    NotesFont.Charset = DEFAULT_CHARSET
+    NotesFont.Color = clGray
+    NotesFont.Height = -8
+    NotesFont.Name = 'Tahoma'
+    NotesFont.Style = []
+    ButtonAppearance.CaptionFont.Charset = DEFAULT_CHARSET
+    ButtonAppearance.CaptionFont.Color = clWindowText
+    ButtonAppearance.CaptionFont.Height = -11
+    ButtonAppearance.CaptionFont.Name = 'Tahoma'
+    ButtonAppearance.CaptionFont.Style = []
+    Left = 608
+    Top = 80
+  end
+  object popLog: TAdvPopupMenu
+    Images = ImageListImagens
+    MenuStyler = AdvMenuStyler1
+    Version = '2.5.3.3'
+    Left = 528
+    Top = 48
+    object teste11: TMenuItem
+      Caption = '&Carregar Log'
+      ImageIndex = 8
+      OnClick = teste11Click
+    end
+    object SalvarLog2: TMenuItem
+      Caption = '&Salvar Log'
+      ImageIndex = 6
+      OnClick = SalvarLog2Click
+    end
+    object teste21: TMenuItem
+      Caption = '-'
+    end
+    object LimparLog1: TMenuItem
+      Caption = '&Limpar Log'
+      ImageIndex = 0
+      OnClick = LimparLog1Click
+    end
+  end
+  object popAplicacao: TAdvPopupMenu
+    Images = ImageListImagens
+    MenuStyler = AdvMenuStyler1
+    Version = '2.5.3.3'
+    Left = 568
+    Top = 48
+    object MenuItem1: TMenuItem
+      Caption = '&Restaurar'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = '-'
+    end
+    object Sair3: TMenuItem
+      Caption = '&Sair'
+      ImageIndex = 1
+    end
+  end
+  object TcpClient1: TTcpClient
+    Left = 648
+    Top = 120
+  end
+  object TcpServer1: TTcpServer
+    OnAccept = TcpServer1Accept
+    Left = 688
+    Top = 120
+  end
+  object ImageListTray: TImageList
+    Left = 568
+    Top = 82
+    Bitmap = {
+      494C0101030004000C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000001000000001002000000000000010
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      00000000000000000000000000000000000000000000346E3800255728002557
+      2800255728002557280000000000000000000000000046454400464544000000
+      000000000000000000000000000000000000000000006E343500562425005624
+      2500562425005624250000000000000000000000000044434600444346000000
+      00000000000000000000000000000000000000000000282D7A001B2062001B20
+      62001B2062001B20620000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645002959
+      2C000000000000000000000000000000000028692D0077C17D0080DD870067D5
+      6F0059BF600048A64F0025572800255728000000000046454400464544005929
+      2A000000000000000000000000000000000069282900C1777700DD808100D567
+      6800BF595A00A648490056242500562425000000000044434600403F45001B20
+      6200000000000000000000000000000000001A1F7500676CD0006C74F0005059
+      EC00434CD400343CBA001B2062001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E00519F
+      56006EDA760054B05A00439849002C7D3200227429009CEEA3009AFEA0007DFE
+      870070EE780065E16E0043A04A00255728000000000046454400403E3E009F51
+      5200DA6E6F00B0545500984344007D2C2D0074222200EE9C9C00FE9A9C00FE7D
+      7E00EE707200E1656600A0434400562425000000000044434600444346004047
+      AF005760F1004048C3003139AA001B228E00101685008A91FF0099A0FF007C84
+      FF005F6AFF004B55FB002F37B3001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E0058AB
+      5E0088FF910080FF89006DEB760035AA3D001975210097E69D0097FE9F007DFE
+      87006CE6750062DA6B0043A04A00255728000000000046454400403E3E00AB58
+      5900FF888900FF808100EB6D6E00AA35370075191900E6979700FE979800FE7D
+      7E00E66C6D00DA626300A04344005624250000000000444346003D3D4000464D
+      BC008A91FF008188FF005963FF001C27C200060D8800868CF600969CFF00727A
+      FF00555FFF004852F3002F37B3001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE87006CE6750035A53D001975210097E69D0097FE9F0079F6
+      82006CE6750062DA6B0043A04A00255728000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00E66C6D00A535360075191900E6979700FE979800F679
+      7A00E66C6D00DA626300A0434400562425000000000044434600403F4500464D
+      BC008188FF007C84FF004F59FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F3003038B3001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE87006EDA760035A53D001975210097E69D0097FE9F007DFE
+      87006CE6750062DA6B0043A04A00245527000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00DA6E6F00A535360075191900E6979700FE979800FE7D
+      7E00E66C6D00DA626300A04344005624250000000000444346003D3D4000464D
+      BC008A91FF007C84FF004B55FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F3003038B3001A1F5E000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E0057AA
+      5D0088FF91007DFE870065E16E0035A53D001975210097E69D0097FE9F0079F6
+      82006CE6750062DA6B0043A04A00255928000000000046454400403E3E00AA57
+      5800FF888900FE7D7E00E1656600A535360075191900E6979700FE979800F679
+      7A00E66C6D00DA626300A04344005925260000000000444346003D3D4000464D
+      BC008188FF007C84FF004F59FB001D26BC00060D8800868CF600969CFF00727A
+      FF00555FFF004852F300343CBA001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E0058AB
+      5E0088FF910080FF89006CE6750035A53D00197521009CEEA30097FE9F0079F6
+      82006CE6750062DA6B004CB25300255928000000000046454400403E3E00AB58
+      5900FF888900FF808100E66C6D00A535360075191900EE9C9C00FE979800F679
+      7A00E66C6D00DA626300B24C4D005925260000000000444346003D3D40004048
+      C300969CFF007C84FF00555FFF001D26BC00060D8800888EFA00969CFF00727A
+      FF00555FFF004852F300363FC7001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000444645003E403E004990
+      4E0069CC70006EDA760067D56F0035A53D0016741D004F8F5300418346004A9E
+      50004AA350004398490043984900255728000000000046454400403E3E009049
+      4A00CC696A00DA6E6F00D3626300A5353600741617008F4F5000834141009E4A
+      4B00A64849009F474800923E3F00592526000000000044434600444346003A41
+      9F00545DE1005059EC004A53EB001D26BC00060D88003A419F00333891003139
+      AA003038B3003038B3002C33A3001B2062000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645003D5C
+      410025592800418B47004398490028692D002064250025572800000000000000
+      0000000000000000000024552700245527000000000046454400464544005C3E
+      3D00592526008B4141009E4A4B00692829006420210059252600000000000000
+      0000000000000000000056242500562425000000000044434600444346003637
+      6200191E6B0031369A003038B3001B217900111772001B206200000000000000
+      000000000000000000001A1F5E001A1F5E000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044464500444645000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000046454400464544000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000044434600444346000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000100000000100010000000000800000000000000000000000
+      000000000000000000000000FFFFFF009FFF9FFF9FFF00009FFF9FFF9FFF0000
+      9FFF9FFF9FFF00009FFF9FFF9FFF00009FFF9FFF9FFF00009F839F839F830000
+      8F008F008F000000800080008000000080008000800000008000800080000000
+      8000800080000000800080008000000080008000800000008000800080000000
+      803C803C803C00009FFF9FFF9FFF000000000000000000000000000000000000
+      000000000000}
+  end
+  object dtsDiretivas: TDataSource
+    DataSet = dmDiretivas.cdsDiretivas
+    OnStateChange = dtsDiretivasStateChange
+    Left = 528
+    Top = 162
+  end
+  object IdFTP1: TIdFTP
+    AutoLogin = True
+    ProxySettings.ProxyType = fpcmNone
+    ProxySettings.Port = 0
+    Left = 608
+    Top = 120
+  end
+  object stbStylerInfo: TAdvOfficeStatusBarOfficeStyler
+    Style = psOffice2010Blue
+    BorderColor = 10981241
+    PanelAppearanceLight.BorderColor = clNone
+    PanelAppearanceLight.BorderColorHot = 5819121
+    PanelAppearanceLight.BorderColorDown = 3181250
+    PanelAppearanceLight.Color = 16643823
+    PanelAppearanceLight.ColorTo = 15784647
+    PanelAppearanceLight.ColorHot = 14285309
+    PanelAppearanceLight.ColorHotTo = 9102333
+    PanelAppearanceLight.ColorDown = 8122111
+    PanelAppearanceLight.ColorDownTo = 7131391
+    PanelAppearanceLight.ColorMirror = clNone
+    PanelAppearanceLight.ColorMirrorTo = clNone
+    PanelAppearanceLight.ColorMirrorHot = 9102333
+    PanelAppearanceLight.ColorMirrorHotTo = 14285309
+    PanelAppearanceLight.ColorMirrorDown = 7131391
+    PanelAppearanceLight.ColorMirrorDownTo = 8122111
+    PanelAppearanceLight.TextColor = 7551263
+    PanelAppearanceLight.TextColorHot = 7551263
+    PanelAppearanceLight.TextColorDown = 7551263
+    PanelAppearanceLight.TextStyle = []
+    PanelAppearanceDark.BorderColor = clNone
+    PanelAppearanceDark.BorderColorHot = 5819121
+    PanelAppearanceDark.BorderColorDown = 3181250
+    PanelAppearanceDark.Color = 16181468
+    PanelAppearanceDark.ColorTo = 10981241
+    PanelAppearanceDark.ColorHot = 14285309
+    PanelAppearanceDark.ColorHotTo = 9102333
+    PanelAppearanceDark.ColorDown = 8122111
+    PanelAppearanceDark.ColorDownTo = 7131391
+    PanelAppearanceDark.ColorMirror = clNone
+    PanelAppearanceDark.ColorMirrorTo = clNone
+    PanelAppearanceDark.ColorMirrorHot = 9102333
+    PanelAppearanceDark.ColorMirrorHotTo = 14285309
+    PanelAppearanceDark.ColorMirrorDown = 7131391
+    PanelAppearanceDark.ColorMirrorDownTo = 8122111
+    PanelAppearanceDark.TextColor = 7551263
+    PanelAppearanceDark.TextColorHot = 7551263
+    PanelAppearanceDark.TextColorDown = 7551263
+    PanelAppearanceDark.TextStyle = []
+    Left = 720
+    Top = 48
+  end
+end

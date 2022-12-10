@@ -1,0 +1,17 @@
+1) Cabeçalho das Unit's:
+{-----------------------------------------------------------------------------
+ Nome da Unit: %UNIT%
+ Autor:             %PROGRAMMERNAME%
+ Data:              %DATE%
+ Propósito:      <Propósito desta unit>
+-----------------------------------------------------------------------------}
+
+2) Cabeçaho dos Procedimentos e Funções:
+{$REGION %PROCNAME%}
+{-----------------------------------------------------------------------------
+  Método:     %METHODCLASS%
+  Descrição:  <Descrição deste método>
+  Parâmetros: %ARGUMENTS%
+  Histórico :   <%PROGRAMMERNAME% %DATE% Descrição da Implementação>
+-----------------------------------------------------------------------------}
+{$ENDREGION}

@@ -1,0 +1,272 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{2307AE9E-9B17-448D-A7F7-CF72BE2FB14A}</ProjectGuid>
+			<MainSource>ALXCompiler.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<BRCC_OutputDir>D:\ALXSystem\Executáveis</BRCC_OutputDir>
+			<DCC_DependencyCheckOutputName>D:\ALXSystem\Executáveis\ALXCompiler.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_MapFile>3</DCC_MapFile>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_ExeOutput>D:\ALXSystem\Executáveis</DCC_ExeOutput>
+			<DCC_UsePackage>vcl;vclx;dbrtl;Rave65VCL;bdertl;rtl;vcldb;adortl;dbxcds;dbexpress;vclib;ibxpress;xmlrtl;vclactnband;inet;IntrawebDB_80_100;Intraweb_80_100;vclie;inetdbbde;inetdbxpress;IndyCore;IndySystem;dclOfficeXP;VclSmp;soaprtl;dsnap;IndyProtocols;teeui;teedb;tee;vcldbx;dsnapcon;websnap;webdsnap;rbTCUI1010;rbTC1010;rbRCL1010;rbDIDE1010;rbDAD1010;rbUSERDesign1010;rbUSER1010;dclRBBDE1010;rbDBDE1010;rbBDE1010;rbDB1010;dclRBADO1010;rbADO1010;dclRBDBE1010;rbDBE1010;dclRBIBE1010;rbIBE1010;rbIDE1010;rbCIDE1010;rbRIDE1010;rbRAP1010;Jcl;JclVcl;JvCoreD10R;JvSystemD10R;JvStdCtrlsD10R;JvAppFrmD10R;JvBandsD10R;JvDBD10R;JvDlgsD10R;JvBDED10R;JvCmpD10R;JvCryptD10R;JvCtrlsD10R;JvCustomD10R;JvDockingD10R;JvDotNetCtrlsD10R;JvEDID10R;JvGlobusD10R;JvHMID10R;JvInterpreterD10R;JvJansD10R;JvManagedThreadsD10R;JvMMD10R;JvNetD10R;JvPageCompsD10R;JvPluginD10R;JvPrintPreviewD10R;JvRuntimeDesignD10R;JvTimeFrameworkD10R;JvUIBD10R;JvValidatorsD10R;JvWizardD10R;JvXPCtrlsD10R;ARWordRptD7;xtradev7;QR4StdRunD2006;ZCore;ZParseSql;ZPlain;ZDbc;ZComponent;DelPrint2006;gbCob6;FreeBoleto_D9;BuilderControlsPackageDesign;rsControlsRtl100;rsChart100;rsRadarCubeRtl100;rbCT1010;xhRB10;xhStd100;xhCntrls100;xhExport100;xhChart100;rmZLib_D7;rmCmpLib_d10</DCC_UsePackage>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="ALXCompiler.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\src\UPrincipal.pas">
+				<Form>frmPrincipal</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DPrincipal.pas">
+				<Form>dmPrincipal</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UVersoes.pas">
+				<Form>frmVersoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DVersoes.pas">
+				<Form>dmVersoes</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\DModulos.pas">
+				<Form>dmModulos</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UModulos.pas">
+				<Form>frmModulos</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DBases.pas">
+				<Form>dmBases</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UBases.pas">
+				<Form>frmBases</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutBases.pas">
+				<Form>frmManutBases</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UParametros.pas">
+				<Form>frmParametros</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DParametros.pas">
+				<Form>dmParametros</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UValidaInicializacao.pas"/>
+			<DCCReference Include="..\src\UExecutar.pas">
+				<Form>frmExecutar</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DExecutar.pas">
+				<Form>dmExecutar</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\USobre.pas">
+				<Form>frmSobre</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UVersaoBase.pas">
+				<Form>frmVersaoBase</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DVersaoBase.pas">
+				<Form>dmVersaoBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\USelecionaModulos.pas">
+				<Form>frmSelecionaModulos</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutDados.pas">
+				<Form>frmManutDados</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DManutDados.pas">
+				<Form>dmManutDados</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UUsuarios.pas">
+				<Form>frmUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DUsuarios.pas">
+				<Form>dmUsuarios</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutUsuarios.pas">
+				<Form>frmManutUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UPermissao.pas">
+				<Form>frmPermissao</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\ULogin.pas">
+				<Form>frmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\TurboDB.pas"/>
+			<DCCReference Include="..\src\DInfoDB.pas">
+				<Form>dmInfoDB</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\turboVariaveis.pas"/>
+			<DCCReference Include="..\src\UMessenger.pas">
+				<Form>frmMessenger</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\USelecionaVersoes.pas">
+				<Form>frmSelecionaVersoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutAuto.pas">
+				<Form>frmManutAuto</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UAuto.pas">
+				<Form>frmAuto</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DAuto.pas">
+				<Form>dmAuto</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UPesVersoes.pas">
+				<Form>frmPesVersoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UDiretivas.pas">
+				<Form>frmDiretivas</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DDiretivas.pas">
+				<Form>dmDiretivas</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutDiretivas.pas">
+				<Form>frmManutDiretivas</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutDiretorios.pas">
+				<Form>frmManutDiretorios</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UDiretorios.pas">
+				<Form>frmDiretorios</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UDataHora.pas">
+				<Form>frmDataHora</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UUsuariosBD.pas">
+				<Form>frmUsuariosBD</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\DUsuariosBD.pas">
+				<Form>dmUsuariosBD</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\src\ULibraryPath.pas">
+				<Form>frmLibraryPath</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\UManutLibraryPath.pas">
+				<Form>frmManutLibraryPath</Form>
+			</DCCReference>
+			<DCCReference Include="..\src\USubDiretorios.pas">
+				<Form>frmSubDiretorio</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\UfirstProgressBar.pas">
+				<Form>FUfirstProgressBar</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\UfirstProgressBar.pas">
+				<Form>FUfirstProgressBar</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\firstFuncoes.pas"/>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\firstOpcoes.pas">
+				<Form>frmOpcoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\firstProcessos.pas"/>
+			<DCCReference Include="..\..\..\Biblioteca\Metodos\firstArquivos.pas"/>
+			<DCCReference Include="..\..\..\Biblioteca\Heranca\UMasterPes.pas"/>
+			<DCCReference Include="..\..\..\Biblioteca\Heranca\UMaster.pas">
+				<Form>FMaster</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Heranca\UMasterCad.pas">
+				<Form>frmMasterCad</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\..\Biblioteca\Heranca\UMasterMnt.pas">
+				<Form>frmMasterMnt</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">ALXCompiler.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">6</VersionInfo>
+						<VersionInfo Name="MinorVer">6</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">1stONE</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">Want GUI for Delphi Win32 - by Alex Almeida</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">6.6.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">6.6.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">Developed by Alex Almeida</VersionInfoKeys>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

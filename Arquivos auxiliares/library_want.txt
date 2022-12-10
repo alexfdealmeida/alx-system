@@ -1,0 +1,9 @@
+D:\ALXSystem\Fontes\Want\Siagri\src\elements
+D:\ALXSystem\Fontes\Want\Siagri\src\jal\lib\paszlib
+D:\ALXSystem\Fontes\Want\Siagri\lib\dunit-7.2.1\src
+D:\ALXSystem\Fontes\Want\Siagri\lib\perlre-1.1
+D:\ALXSystem\Fontes\Want\Siagri\src\lib
+D:\ALXSystem\Fontes\Want\Siagri\src\jal\src
+D:\ALXSystem\Fontes\Want\Siagri\src\input
+D:\ALXSystem\Fontes\Want\Siagri\src
+D:\ALXSystem\Fontes\Want\Siagri\src\tasks

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{CC9A75DA-EF97-4481-9FAF-ECDB74059CD7}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    <Projects>
+      <Projects Name="ALXCompiler.exe">ALXCompiler.bdsproj</Projects>
+      <Projects Name="AdaptadorALXCompiler.exe">..\..\Adaptador ALXCompiler\bin\AdaptadorALXCompiler.bdsproj</Projects>
+      <Projects Name="AtualizadorALXCompiler.exe">..\..\Atualizador ALXCompiler\bin\AtualizadorALXCompiler.bdsproj</Projects>
+      <Projects Name="Targets">ALXCompiler.exe AdaptadorALXCompiler.exe AtualizadorALXCompiler.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

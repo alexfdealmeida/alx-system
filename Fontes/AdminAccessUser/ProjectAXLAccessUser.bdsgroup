@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{9D4D4E6D-DD59-494E-ACC2-40F5669A8E17}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    <Projects>
+      <Projects Name="AdminAccessUser.exe">bin\AdminAccessUser.bdsproj</Projects>
+      <Projects Name="AccessUser.exe">..\AccessUser\bin\AccessUser.bdsproj</Projects>
+      <Projects Name="Targets">AdminAccessUser.exe AccessUser.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

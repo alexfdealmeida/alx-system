@@ -1,0 +1,55 @@
+1) Quais os cadastros basicos do sistema ?
+	-Clientes : Dados obrigatorios : 
+		CPF, é necessário validação de CPF ?
+			Dependentes : Restrições.
+	-Filmes   : Dados obrigatorios
+	Cadastro da Classificação dos filmes (Catalogo, lançamento)
+	Cadastro de generos ( Drama, suspense )
+
+2) Quais as movimentações básicas ?
+	Cliente possui conta ? Sim
+	Locação 
+	Devolução
+Trabalha com créditos no caso de troco etc. antecipação de pagamento. Cliente devolve e não realiza o pagamento.
+sistema não realiza bloqueio para clientes com atraso.
+Devolução do restante de dias da locação.
+
+	Promoções
+Existe um preço único por filmes, parametrizado no sistema.
+
+	Pontuação por cliente ? Não.
+
+	forma de pagamento (Crédito, débito) Dinheiro, 
+
+	Na locação o usuário informa o período da locação e informa o preço.
+
+
+3) Como o sistema deve tratar os atrasos ?
+	
+
+4) Como o sistema deve tratar as reservas ?
+	Não realiza reservas.
+
+5) É necessário cadastro de outros produtos ?
+	Não
+
+
+6) É realizado venda de filmes ?
+	Só de VHS
+
+7) Existe algum contrato entre locadora e cliente ?
+	Não
+
+8) O sistema deve realizar o controle de caixa ?
+	Sim
+
+9) Realiza o controle de permissões de usuários.
+	
+
+Qual o nome do sistema
+	www.prosysnet.com.br
+
+Qual a marca da impressora
+	Não sei.
+	
+

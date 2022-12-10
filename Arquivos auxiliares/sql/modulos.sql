@@ -1,0 +1,72 @@
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (197, 'Adaptador', 'adap', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (1, 'Vendas e Faturamento', 'vfat', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (2, 'Transacionadores', 'tran', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (172, 'Basf', 'basf', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (6, 'Compras e Estoque', 'cest', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (7, 'UBS', 'ubs', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (4, 'Login', 'login', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (8, 'Escrita Fiscal', 'efis', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (9, 'Financeiro', 'fina', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (5, 'OMS', 'oms', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (10, 'CRM', 'crm', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (11, 'Gestor', 'ges', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (12, 'Planejamento', 'plan', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (15, 'Ponto de Venda', 'vecf', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (17, 'PCP', 'pcp', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (19, 'Relacionamento com o Cliente', 'rpar', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (14, 'Ármazens Gerais', 'armz', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (13, 'Login Modular', 'login_modular', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (22, 'Oficina', 'ofic', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (28, 'Exportação', 'expo', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (25, 'Frota', 'frot', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (29, 'Service Desk', 'ctr', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (26, 'Controle de Ponto', 'cpto', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (16, 'Transportadora', 'trsp', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (27, 'Ponto', 'pto', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (18, 'Contabilidade', 'cont', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (30, 'Syngenta', 'syn', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (23, 'Patrimônio', 'patr', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (31, 'Log', 'log', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (32, 'Palm', 'palm', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (21, 'Report', 'repo', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (24, 'Apontamento', 'apont', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (39, 'Trocas', 'troca', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (208, 'PAF-ECF', 'vecfpaf', 21);
+INSERT INTO MODULO (CODI_MOD, DESC_MOD, WANT_MOD, CODI_USU)
+            VALUES (279, 'Folha de Pagamento', 'sisfpg', 21);
+
+COMMIT WORK;

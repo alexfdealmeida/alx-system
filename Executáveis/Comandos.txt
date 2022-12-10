@@ -1,0 +1,3 @@
+ncftpput.exe -u "siagri1" -p "sibemol159357" -F -R -m -v "siagri.com.br" "/public_html/3.2.1.17" "z:\3.2.1.16\zip\sagradap19102009.exe"
+
+

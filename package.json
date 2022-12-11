@@ -1,0 +1,28 @@
+{
+  "name": "alx-system",
+  "version": "1.0.0",
+  "description": "Repositório destinado aos projetos Delphi da ALX System.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexfdealmeida/alx-system.git"
+  },
+  "author": "alex.almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexfdealmeida/alx-system/issues"
+  },
+  "homepage": "https://github.com/alexfdealmeida/alx-system#readme",
+  "devDependencies": {
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./copy-git-hooks.sh --update-only-git-hooks",
+      "post-checkout": "./copy-git-hooks.sh --update-only-git-hooks"
+    }
+  }
+}
